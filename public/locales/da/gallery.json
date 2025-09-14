@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "title": "Projektgalleri",
+    "subtitle": "Se vores arbejde i praksis",
+    "description": "Udforsk vores portefølje af færdige projekter og oplev kvaliteten og håndværket, der adskiller os. Fra køkkenforvandlinger til totale boligrenoveringer – hvert projekt fortæller en historie om dansk design i topklasse."
+  },
+  "filters": {
+    "all": "Alle projekter",
+    "kitchen": "Køkkenrenoveringer",
+    "bathroom": "Baderenoveringer",
+    "living": "Opholdsrum",
+    "outdoor": "Udendørsarealer",
+    "complete": "Totalrenoveringer"
+  },
+  "sorting": {
+    "newest": "Nyeste først",
+    "oldest": "Ældste først",
+    "popular": "Mest populære",
+    "alphabetical": "A–Å"
+  },
+  "project": {
+    "viewDetails": "Se projektdetaljer",
+    "beforeAfter": "Før & efter",
+    "gallery": "Projektgalleri",
+    "testimonial": "Kundeudtalelse",
+    "specifications": "Projektspecifikationer",
+    "timeline": "Tidsplan",
+    "budget": "Budget",
+    "team": "Projektteam"
+  },
+  "details": {
+    "overview": "Projektoversigt",
+    "challenge": "Udfordringen",
+    "solution": "Vores løsning",
+    "result": "Resultatet",
+    "client": "Kunde",
+    "location": "Lokation",
+    "duration": "Varighed",
+    "budget": "Budget",
+    "team": "Projektteam",
+    "materials": "Materialer",
+    "features": "Nøglefunktioner"
+  },
+  "testimonial": {
+    "title": "Hvad siger kunden",
+    "readMore": "Læs hele udtalelsen",
+    "rating": "Kundevurdering",
+    "verified": "Verificeret projekt"
+  },
+  "specifications": {
+    "title": "Projektspecifikationer",
+    "area": "Areal i alt",
+    "rooms": "Antal rum",
+    "duration": "Projektvarighed",
+    "team": "Teamstørrelse",
+    "materials": "Materialer",
+    "features": "Særlige kendetegn"
+  },
+  "categories": {
+    "kitchen": {
+      "title": "Køkkenrenoveringer",
+      "description": "Gør dit køkken funktionelt og smukt med vores ekspertise i dansk design.",
+      "count": "{count, plural, =0 {Ingen køkkenprojekter} =1 {# køkkenprojekt} other {# køkkenprojekter}}"
+    },
+    "bathroom": {
+      "title": "Baderenoveringer",
+      "description": "Skab luksuriøse badeværelser, der kombinerer funktionalitet og flot design.",
+      "count": "{count, plural, =0 {Ingen badeværelsesprojekter} =1 {# badeværelsesprojekt} other {# badeværelsesprojekter}}"
+    },
+    "living": {
+      "title": "Opholdsrum",
+      "description": "Redesign af stuer og opholdsrum med fokus på komfort, funktion og æstetik.",
+      "count": "{count, plural, =0 {Ingen opholdsprojekter} =1 {# opholdsprojekt} other {# opholdsprojekter}}"
+    },
+    "outdoor": {
+      "title": "Udendørsarealer",
+      "description": "Udvid boligen udendørs med skræddersyede terrasser, gårdrum og haver.",
+      "count": "{count, plural, =0 {Ingen udendørsprojekter} =1 {# udendørsprojekt} other {# udendørsprojekter}}"
+    },
+    "complete": {
+      "title": "Totalrenoveringer",
+      "description": "Helhedsprojekter der realiserer hele din boligvision.",
+      "count": "{count, plural, =0 {Ingen totalrenoveringer} =1 {# totalrenovering} other {# totalrenoveringer}}"
+    }
+  },
+  "search": {
+    "placeholder": "Søg i projekter...",
+    "noResults": "Ingen projekter matcher dine kriterier",
+    "clearFilters": "Ryd alle filtre",
+    "results": "Viser {count} af {total} projekter"
+  },
+  "pagination": {
+    "previous": "Forrige",
+    "next": "Næste",
+    "page": "Side {current} af {total}",
+    "showing": "Viser {start}–{end} af {total} projekter"
+  },
+  "lightbox": {
+    "close": "Luk",
+    "previous": "Forrige billede",
+    "next": "Næste billede",
+    "zoom": "Zoom",
+    "download": "Download billede",
+    "share": "Del billede",
+    "image": "Billede {current} af {total}"
+  },
+  "cta": {
+    "title": "Blev du inspireret?",
+    "subtitle": "Lad os tale om, hvordan vi kan realisere din vision.",
+    "primary": "Start dit projekt",
+    "secondary": "Book konsultation"
+  },
+  "meta": {
+    "title": "Projektgalleri - Aarhus Contractor | Køkken, bad & boligrenoveringer",
+    "description": "Se vores portefølje. Gennemgå før/efter-billeder, læs kundeudtalelser, og bliv inspireret til dit eget projekt.",
+    "keywords": "renoveringsportefølje Aarhus, før efter billeder, køkkenrenovering galleri, baderenovering eksempler, boligprojekter"
+  }
+}

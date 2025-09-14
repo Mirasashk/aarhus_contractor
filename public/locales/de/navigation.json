@@ -1,0 +1,46 @@
+{
+  "menu": {
+    "home": "Startseite",
+    "gallery": "Galerie",
+    "ourCraft": "Unser Handwerk",
+    "services": "Leistungen",
+    "consultation": "Beratung",
+    "about": "Über uns",
+    "more": "Mehr",
+    "contact": "Kontakt",
+    "projects": "Projekte",
+    "testimonials": "Referenzen",
+    "blog": "Blog",
+    "news": "News",
+    "careers": "Karriere",
+    "privacy": "Datenschutz",
+    "terms": "Bedingungen"
+  },
+  "language": {
+    "switch": "Sprache wechseln",
+    "english": "Englisch",
+    "danish": "Dänisch",
+    "german": "Deutsch",
+    "current": "Aktuelle Sprache",
+    "select": "Sprache auswählen"
+  },
+  "breadcrumbs": {
+    "home": "Startseite",
+    "currentPage": "Aktuelle Seite",
+    "separator": ">"
+  },
+  "search": {
+    "placeholder": "Suchen...",
+    "noResults": "Keine Ergebnisse gefunden",
+    "results": "Suchergebnisse",
+    "clear": "Suche löschen"
+  },
+  "user": {
+    "account": "Mein Konto",
+    "profile": "Profil",
+    "settings": "Einstellungen",
+    "logout": "Abmelden",
+    "login": "Anmelden",
+    "register": "Registrieren"
+  }
+}

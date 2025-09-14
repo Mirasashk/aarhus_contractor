@@ -1,0 +1,87 @@
+{
+  "buttons": {
+    "beginJourney": "Beginnen Sie Ihre Reise",
+    "goBack": "Zurück",
+    "backToHome": "Zur Startseite",
+    "learnMore": "Mehr erfahren",
+    "getStarted": "Loslegen",
+    "contactUs": "Kontakt aufnehmen",
+    "bookConsultation": "Beratung buchen",
+    "viewGallery": "Galerie ansehen",
+    "readMore": "Weiterlesen",
+    "close": "Schließen",
+    "submit": "Senden",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "share": "Teilen",
+    "download": "Herunterladen"
+  },
+  "labels": {
+    "loading": "Wird geladen...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "close": "Schließen",
+    "menu": "Menü",
+    "search": "Suche",
+    "filter": "Filtern",
+    "sort": "Sortieren",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "page": "Seite",
+    "of": "von",
+    "results": "Ergebnisse",
+    "noResults": "Keine Ergebnisse gefunden",
+    "tryAgain": "Erneut versuchen",
+    "refresh": "Aktualisieren"
+  },
+  "company": {
+    "name": "Aarhus Contractor",
+    "tagline": "Dänisches Handwerk",
+    "founded": "Seit 1987",
+    "location": "Aarhus, Dänemark",
+    "phone": "Telefon",
+    "email": "E‑Mail",
+    "address": "Adresse",
+    "website": "Webseite"
+  },
+  "meta": {
+    "title": "Aarhus Contractor – Dänisches Handwerk & Renovierung",
+    "description": "Professionelle Renovierungen und Handwerk in Aarhus. Dänische Qualität und Tradition seit 1987.",
+    "keywords": "Renovierung, Handwerk, Aarhus, dänisch, Bau, Wohnungsmodernisierung, Tischlerarbeit"
+  },
+  "accessibility": {
+    "skipToContent": "Zum Hauptinhalt springen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "openLanguageMenu": "Sprachauswahl öffnen",
+    "closeLanguageMenu": "Sprachauswahl schließen",
+    "previousImage": "Vorheriges Bild",
+    "nextImage": "Nächstes Bild",
+    "playVideo": "Video abspielen",
+    "pauseVideo": "Video pausieren"
+  },
+  "time": {
+    "today": "Heute",
+    "yesterday": "Gestern",
+    "tomorrow": "Morgen",
+    "thisWeek": "Diese Woche",
+    "lastWeek": "Letzte Woche",
+    "nextWeek": "Nächste Woche",
+    "thisMonth": "Diesen Monat",
+    "lastMonth": "Letzten Monat",
+    "nextMonth": "Nächsten Monat",
+    "thisYear": "Dieses Jahr",
+    "lastYear": "Letztes Jahr",
+    "nextYear": "Nächstes Jahr"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "available": "Verfügbar",
+    "unavailable": "Nicht verfügbar",
+    "busy": "Beschäftigt",
+    "away": "Abwesend"
+  }
+}

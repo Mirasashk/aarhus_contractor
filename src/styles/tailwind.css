@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --color-background: #FEFDFB; /* Pure content canvas, gallery-quality backdrop */
+    --color-foreground: #2C2B28; /* Rich charcoal, extended reading comfort */
+    --color-card: #F7F5F3; /* Warm white foundation, Danish interior calm */
+    --color-card-foreground: #2C2B28; /* Rich charcoal, extended reading comfort */
+    --color-popover: #F7F5F3; /* Warm white foundation, Danish interior calm */
+    --color-popover-foreground: #2C2B28; /* Rich charcoal, extended reading comfort */
+    --color-primary: #8B7355; /* Warm Danish oak tone, craftsmanship heritage */
+    --color-primary-foreground: #FEFDFB; /* Pure content canvas, gallery-quality backdrop */
+    --color-secondary: #E8E6E1; /* Subtle surface differentiation, natural linen texture */
+    --color-secondary-foreground: #2C2B28; /* Rich charcoal, extended reading comfort */
+    --color-muted: #F1EFE9; /* Gentle elevation, handcrafted paper feel */
+    --color-muted-foreground: #6B6A65; /* Clear hierarchy, supporting information */
+    --color-accent: #8B9A7A; /* Sage green focus, Nordic forest connection */
+    --color-accent-foreground: #FEFDFB; /* Pure content canvas, gallery-quality backdrop */
+    --color-destructive: #A67B5B; /* Clay red, helpful concern */
+    --color-destructive-foreground: #FEFDFB; /* Pure content canvas, gallery-quality backdrop */
+    --color-success: #7A8B6C; /* Muted forest green, positive confirmation */
+    --color-success-foreground: #FEFDFB; /* Pure content canvas, gallery-quality backdrop */
+    --color-warning: #B8956A; /* Warm amber, gentle attention */
+    --color-warning-foreground: #2C2B28; /* Rich charcoal, extended reading comfort */
+    --color-error: #A67B5B; /* Clay red, helpful concern */
+    --color-error-foreground: #FEFDFB; /* Pure content canvas, gallery-quality backdrop */
+    --color-border: #E8E6E1; /* Subtle surface differentiation, natural linen texture */
+    --color-input: #F7F5F3; /* Warm white foundation, Danish interior calm */
+    --color-ring: #8B7355; /* Warm Danish oak tone, craftsmanship heritage */
+    
+    /* Brand Specific Colors */
+    --color-brand-primary: #8B7355; /* Warm Danish oak tone, craftsmanship heritage */
+    --color-brand-secondary: #A8B5A0; /* Sage green reflecting Danish interior trends */
+    --color-conversion-accent: #D4A574; /* Warm honey tone for call-to-action elements */
+    --color-trust-builder: #6B7280; /* Professional gray for certifications */
+    --color-text-secondary: #4B5563; /* Medium gray for body text */
+    
+    /* Seasonal Dynamic Colors */
+    --season-primary: #8B7355; /* Default autumn tone */
+    --season-background: #FEFCF8; /* Warm breathing background */
+    --season-background-alt: #F8F6F2; /* Alternate breathing background */
+    
+    /* Typography Scale */
+    --font-family-headlines: 'Inter', sans-serif;
+    --font-family-body: 'Crimson Text', serif;
+    --font-family-cta: 'Inter', sans-serif;
+    --font-family-accent: 'Playfair Display', serif;
+    
+    /* Spacing Scale - Golden Ratio */
+    --spacing-xs: 8px;
+    --spacing-sm: 13px;
+    --spacing-md: 21px;
+    --spacing-lg: 34px;
+    --spacing-xl: 55px;
+    
+    /* Border Radius */
+    --radius: 8px;
+    
+    /* Shadows */
+    --shadow-subtle: 0 4px 16px rgba(139, 115, 85, 0.1);
+    --shadow-card: 0 4px 20px rgba(44, 43, 40, 0.08);
+    --shadow-elevated: 0 20px 40px rgba(0, 0, 0, 0.1);
+    
+    /* Animation Timing */
+    --timing-gentle: cubic-bezier(0.4, 0.0, 0.2, 1);
+    --duration-fast: 300ms;
+    --duration-medium: 500ms;
+    --duration-slow: 800ms;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-family-body);
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-headlines);
+    line-height: 1.2;
+  }
+  
+  /* Hygge Warmth Breathing Animation */
+  .hygge-breathing {
+    animation: hygge-warmth 8s ease-in-out infinite alternate;
+  }
+  
+  @keyframes hygge-warmth {
+    0% { background-color: var(--season-background); }
+    100% { background-color: var(--season-background-alt); }
+  }
+  
+  /* Gentle Hover Elevations */
+  .gentle-hover {
+    transition: transform var(--duration-fast) var(--timing-gentle), 
+                box-shadow var(--duration-fast) var(--timing-gentle);
+  }
+  
+  .gentle-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  /* Material Texture Overlays */
+  .material-texture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23000" opacity="0.02"/><circle cx="80" cy="40" r="1" fill="%23000" opacity="0.02"/><circle cx="40" cy="80" r="1" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+  
+  /* Artisan Badge Styling */
+  .artisan-badge {
+    transform: rotate(-2deg);
+    transition: transform var(--duration-fast) var(--timing-gentle);
+  }
+  
+  .artisan-badge:nth-child(even) {
+    transform: rotate(2deg);
+  }
+  
+  .artisan-badge:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
+  
+  /* Consultation Booking Elevation */
+  .consultation-widget {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-elevated);
+    border-radius: 16px;
+  }
+  
+  /* Scroll Snap for Galleries */
+  .gallery-scroll {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .gallery-item {
+    scroll-snap-align: center;
+  }
+  
+  /* Focus Styles for Accessibility */
+  .focus-visible:focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Typography Components */
+  .headline-primary {
+    font-family: var(--font-family-headlines);
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.1;
+    color: var(--color-foreground);
+  }
+  
+  .headline-secondary {
+    font-family: var(--font-family-headlines);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--color-foreground);
+  }
+  
+  .body-primary {
+    font-family: var(--font-family-body);
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-foreground);
+  }
+  
+  .body-secondary {
+    font-family: var(--font-family-body);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+  }
+  
+  .cta-text {
+    font-family: var(--font-family-cta);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .accent-text {
+    font-family: var(--font-family-accent);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  
+  /* Button Components */
+  .btn-primary {
+    background-color: var(--color-conversion-accent);
+    color: var(--color-foreground);
+    padding: 16px 32px;
+    border-radius: var(--radius);
+    font-family: var(--font-family-cta);
+    font-weight: 500;
+    transition: all var(--duration-fast) var(--timing-gentle);
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-brand-primary);
+    color: var(--color-primary-foreground);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--color-brand-primary);
+    border: 1px solid var(--color-brand-primary);
+    padding: 16px 32px;
+    border-radius: var(--radius);
+    font-family: var(--font-family-cta);
+    font-weight: 500;
+    transition: all var(--duration-fast) var(--timing-gentle);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--color-brand-primary);
+    color: var(--color-primary-foreground);
+  }
+  
+  /* Card Components */
+  .card-elevated {
+    background-color: var(--color-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+    padding: var(--spacing-lg);
+    transition: all var(--duration-fast) var(--timing-gentle);
+  }
+  
+  .card-elevated:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  /* Form Components */
+  .form-input {
+    background-color: var(--color-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    font-family: var(--font-family-body);
+    color: var(--color-foreground);
+    transition: all var(--duration-fast) var(--timing-gentle);
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: var(--color-ring);
+    box-shadow: 0 0 0 2px rgba(139, 115, 85, 0.2);
+  }
+  
+  /* Navigation Components */
+  .nav-link {
+    font-family: var(--font-family-headlines);
+    font-weight: 400;
+    color: var(--color-foreground);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    transition: all var(--duration-fast) var(--timing-gentle);
+  }
+  
+  .nav-link:hover {
+    background-color: var(--color-muted);
+    color: var(--color-brand-primary);
+  }
+  
+  .nav-link.active {
+    background-color: var(--color-brand-primary);
+    color: var(--color-primary-foreground);
+  }
+}
+
+@layer utilities {
+  /* Spacing Utilities */
+  .space-xs { margin: var(--spacing-xs); }
+  .space-sm { margin: var(--spacing-sm); }
+  .space-md { margin: var(--spacing-md); }
+  .space-lg { margin: var(--spacing-lg); }
+  .space-xl { margin: var(--spacing-xl); }
+  
+  .gap-xs { gap: var(--spacing-xs); }
+  .gap-sm { gap: var(--spacing-sm); }
+  .gap-md { gap: var(--spacing-md); }
+  .gap-lg { gap: var(--spacing-lg); }
+  .gap-xl { gap: var(--spacing-xl); }
+  
+  /* Brand Color Utilities */
+  .text-brand-primary { color: var(--color-brand-primary); }
+  .text-brand-secondary { color: var(--color-brand-secondary); }
+  .text-conversion-accent { color: var(--color-conversion-accent); }
+  .text-trust-builder { color: var(--color-trust-builder); }
+  
+  .bg-brand-primary { background-color: var(--color-brand-primary); }
+  .bg-brand-secondary { background-color: var(--color-brand-secondary); }
+  .bg-conversion-accent { background-color: var(--color-conversion-accent); }
+  .bg-trust-builder { background-color: var(--color-trust-builder); }
+  
+  /* Animation Utilities */
+  .animate-gentle { animation-timing-function: var(--timing-gentle); }
+  .duration-fast { animation-duration: var(--duration-fast); }
+  .duration-medium { animation-duration: var(--duration-medium); }
+  .duration-slow { animation-duration: var(--duration-slow); }
+  
+  /* Shadow Utilities */
+  .shadow-subtle { box-shadow: var(--shadow-subtle); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+}

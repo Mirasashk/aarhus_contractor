@@ -1,0 +1,150 @@
+{
+	"hero": {
+		"title": "Book Your Free Consultation",
+		"subtitle": "Let's discuss your vision and create a plan together",
+		"description": "Our expert team is ready to help you transform your space. Schedule a free consultation to discuss your project, get professional advice, and receive a detailed estimate."
+	},
+	"form": {
+		"title": "Schedule Your Consultation",
+		"subtitle": "Fill out the form below and we'll contact you within 24 hours",
+		"fields": {
+			"name": {
+				"label": "Full Name",
+				"placeholder": "Enter your full name",
+				"required": "Name is required"
+			},
+			"email": {
+				"label": "Email Address",
+				"placeholder": "Enter your email address",
+				"required": "Email is required",
+				"invalid": "Please enter a valid email address"
+			},
+			"phone": {
+				"label": "Phone Number",
+				"placeholder": "Enter your phone number",
+				"required": "Phone number is required"
+			},
+			"projectType": {
+				"label": "Project Type",
+				"placeholder": "Select project type",
+				"options": {
+					"kitchen": "Kitchen Renovation",
+					"bathroom": "Bathroom Renovation",
+					"living": "Living Space Renovation",
+					"outdoor": "Outdoor Living Space",
+					"complete": "Complete Home Renovation",
+					"other": "Other"
+				}
+			},
+			"budget": {
+				"label": "Estimated Budget",
+				"placeholder": "Select budget range",
+				"options": {
+					"under50k": "Under 50,000 DKK",
+					"50k-100k": "50,000 - 100,000 DKK",
+					"100k-200k": "100,000 - 200,000 DKK",
+					"200k-500k": "200,000 - 500,000 DKK",
+					"over500k": "Over 500,000 DKK",
+					"notSure": "Not sure yet"
+				}
+			},
+			"timeline": {
+				"label": "Preferred Timeline",
+				"placeholder": "When would you like to start?",
+				"options": {
+					"asap": "As soon as possible",
+					"1month": "Within 1 month",
+					"3months": "Within 3 months",
+					"6months": "Within 6 months",
+					"flexible": "I'm flexible"
+				}
+			},
+			"message": {
+				"label": "Project Description",
+				"placeholder": "Tell us about your project, goals, and any specific requirements...",
+				"required": "Please describe your project"
+			},
+			"preferredContact": {
+				"label": "Preferred Contact Method",
+				"options": {
+					"phone": "Phone Call",
+					"email": "Email",
+					"either": "Either is fine"
+				}
+			},
+			"newsletter": {
+				"label": "Subscribe to our newsletter for renovation tips and updates",
+				"note": "You can unsubscribe at any time"
+			}
+		},
+		"submit": "Schedule Consultation",
+		"submitting": "Scheduling...",
+		"success": "Thank you! We'll contact you within 24 hours.",
+		"error": "Something went wrong. Please try again or call us directly."
+	},
+	"benefits": {
+		"title": "Why Choose Our Consultation?",
+		"items": {
+			"free": {
+				"title": "Completely Free",
+				"description": "No obligation, no hidden fees - just expert advice to help you plan your project."
+			},
+			"expert": {
+				"title": "Expert Advice",
+				"description": "Get professional insights from experienced craftsmen who understand Danish design and construction."
+			},
+			"detailed": {
+				"title": "Detailed Estimate",
+				"description": "Receive a comprehensive estimate with timeline and material recommendations."
+			},
+			"personalized": {
+				"title": "Personalized Approach",
+				"description": "Every consultation is tailored to your specific needs, space, and budget."
+			}
+		}
+	},
+	"process": {
+		"title": "What Happens Next?",
+		"steps": {
+			"submit": {
+				"title": "Submit Your Request",
+				"description": "Fill out our consultation form with your project details."
+			},
+			"contact": {
+				"title": "We Contact You",
+				"description": "Our team will reach out within 24 hours to schedule your consultation."
+			},
+			"meet": {
+				"title": "Meet & Discuss",
+				"description": "We visit your space to understand your vision and provide expert advice."
+			},
+			"proposal": {
+				"title": "Receive Proposal",
+				"description": "Get a detailed proposal with timeline, costs, and next steps."
+			}
+		}
+	},
+	"contact": {
+		"title": "Prefer to Call?",
+		"subtitle": "Speak directly with our team",
+		"phone": "+45 XX XX XX XX",
+		"email": "info@aarhuscontractor.dk",
+		"hours": "Monday - Friday: 8:00 AM - 6:00 PM",
+		"weekend": "Saturday: 9:00 AM - 2:00 PM"
+	},
+	"testimonials": {
+		"title": "What Clients Say About Our Consultations",
+		"subtitle": "Real feedback from our consultation process"
+	},
+	"cta": {
+		"title": "Ready to Get Started?",
+		"subtitle": "Book your free consultation today and take the first step toward your dream renovation.",
+		"primary": "Book Free Consultation",
+		"secondary": "Call Us Now"
+	},
+	"meta": {
+		"title": "Free Consultation - Aarhus Contractor | Book Your Renovation Planning Session",
+		"description": "Book a free consultation with Aarhus Contractor. Get expert advice, detailed estimates, and professional planning for your renovation project.",
+		"keywords": "free consultation Aarhus, renovation planning, home improvement advice, construction consultation"
+	}
+}

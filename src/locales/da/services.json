@@ -1,0 +1,139 @@
+{
+  "hero": {
+    "title": "Vores specialiserede ydelser",
+    "subtitle": "Komplette renoveringsløsninger",
+    "description": "Fra køkkenforvandlinger til totalrenoveringer tilbyder vi et bredt udvalg af ydelser, der forbedrer din bolig med dansk håndværk og sans for detaljer."
+  },
+  "categories": {
+    "kitchen": {
+      "title": "Køkkenrenoveringer",
+      "description": "Forvandl dit køkken til et funktionelt og smukt rum i dansk design.",
+      "features": [
+        "Skræddersyet skabsdesign",
+        "Integration af moderne hårde hvidevarer",
+        "Effektive opbevaringsløsninger",
+        "Montering af kvalitetsbordplader"
+      ]
+    },
+    "bathroom": {
+      "title": "Baderenoveringer",
+      "description": "Skab et spa-lignende badeværelse med vores ekspertise.",
+      "features": [
+        "Luksusarmaturer og fittings",
+        "Vandtætning og flisearbejde",
+        "Belysning og ventilation",
+        "Tilgængelighedsforbedringer"
+      ]
+    },
+    "living": {
+      "title": "Opholdsrum",
+      "description": "Redesign dine opholdsrum for maksimal komfort, funktion og æstetik.",
+      "features": [
+        "Åbne planløsninger",
+        "Skræddersyede indbyggede løsninger",
+        "Gulve og vægbehandlinger",
+        "Lysdesign"
+      ]
+    },
+    "outdoor": {
+      "title": "Udendørsarealer",
+      "description": "Udvid boligen udendørs med terrasser, udekøkkener og haveprojekter.",
+      "features": [
+        "Skræddersyede terrasser",
+        "Udekøkkener",
+        "Havestrukturer",
+        "Integration med landskab"
+      ]
+    }
+  },
+  "process": {
+    "title": "Vores serviceproces",
+    "steps": {
+      "consultation": {
+        "title": "Gratis konsultation",
+        "description": "Vi besøger dit hjem, afdækker dine behov og giver faglig rådgivning."
+      },
+      "design": {
+        "title": "Skræddersyet design",
+        "description": "Vi udarbejder detaljerede planer tilpasset dit rum og dine ønsker."
+      },
+      "planning": {
+        "title": "Projektplanlægning",
+        "description": "Vi koordinerer alle dele af projektet for en smidig udførelse."
+      },
+      "construction": {
+        "title": "Faglig udførelse",
+        "description": "Dygtige håndværkere realiserer din vision med præcision og omhu."
+      },
+      "completion": {
+        "title": "Afsluttende kontrol",
+        "description": "Vi sikrer, at alt lever op til vores høje standarder inden aflevering."
+      }
+    }
+  },
+  "specializations": {
+    "title": "Vores specialer",
+    "items": {
+      "carpentry": {
+        "title": "Snedker- og tømrerarbejde",
+        "description": "Håndlavede møbler og indbyggede løsninger, der passer perfekt til dit rum."
+      },
+      "flooring": {
+        "title": "Gulvløsninger",
+        "description": "Montering af træ, laminat og fliser med professionel finish."
+      },
+      "electrical": {
+        "title": "El-arbejde",
+        "description": "Sikre og effektive el-installationer og opgraderinger."
+      },
+      "plumbing": {
+        "title": "VVS-arbejde",
+        "description": "Pålidelige VVS-løsninger til alle renoveringsbehov."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Gennemsigtig prissætning",
+    "subtitle": "Fair, ærlig og uden skjulte gebyrer",
+    "description": "Vi tror på gennemsigtighed. Hvert projekt får et detaljeret overslag og en tydelig tidsplan.",
+    "guarantees": [
+      "Gratis, detaljerede tilbud",
+      "Fastpriskontrakter",
+      "5 års garanti på håndværk",
+      "Materialekvalitet garanteres"
+    ]
+  },
+  "testimonials": {
+    "title": "Kundehistorier",
+    "subtitle": "Se hvordan vi har transformeret hjem",
+    "viewAll": "Se alle projekter"
+  },
+  "cta": {
+    "title": "Klar til at starte dit projekt?",
+    "subtitle": "Få en gratis konsultation og et detaljeret tilbud.",
+    "primary": "Book gratis konsultation",
+    "secondary": "Se vores portefølje"
+  },
+  "faq": {
+    "title": "Ofte stillede spørgsmål",
+    "questions": {
+      "timeline": {
+        "question": "Hvor lang tid tager en typisk renovering?",
+        "answer": "Tidsplanen afhænger af omfanget. De fleste køkkener tager 4–6 uger, mens badeværelser typisk tager 2–3 uger."
+      },
+      "cost": {
+        "question": "Hvad påvirker prisen?",
+        "answer": "Materialer, projektets omfang, kompleksitet og eventuelle konstruktionsændringer. Vi giver altid et detaljeret tilbud."
+      },
+      "warranty": {
+        "question": "Hvilken garanti tilbyder I?",
+        "answer": "Vi giver 5 års garanti på håndværk og 1 år på materialer, så din investering er beskyttet."
+      }
+    }
+  },
+  "meta": {
+    "title": "Renoveringsydelser - Aarhus Contractor | Køkken, bad & bolig",
+    "description": "Professionelle renoveringsydelser i Aarhus. Køkken, bad og totalrenovering med dansk håndværk og sans for detaljer.",
+    "keywords": "renoveringsydelser Aarhus, køkkenrenovering, baderenovering, boligforbedring, dansk håndværk"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "hero": {
+    "title": "Unsere spezialisierten Leistungen",
+    "subtitle": "Komplette Renovierungslösungen",
+    "description": "Von Küchen-Upgrades bis zu Komplettsanierungen – wir bieten ein breites Spektrum an Leistungen, die Ihr Zuhause mit dänischem Handwerk und Liebe zum Detail verbessern."
+  },
+  "categories": {
+    "kitchen": {
+      "title": "Küchenrenovierungen",
+      "description": "Verwandeln Sie Ihre Küche in einen funktionalen und stilvollen Raum im dänischen Design.",
+      "features": [
+        "Maßgefertigte Schranklösungen",
+        "Integration moderner Geräte",
+        "Effiziente Stauraumkonzepte",
+        "Montage hochwertiger Arbeitsplatten"
+      ]
+    },
+    "bathroom": {
+      "title": "Badsanierungen",
+      "description": "Schaffen Sie ein Bad mit Spa-Gefühl – funktional und elegant.",
+      "features": [
+        "Hochwertige Armaturen und Beschläge",
+        "Abdichtung und Fliesenarbeiten",
+        "Beleuchtung und Belüftung",
+        "Verbesserungen der Barrierefreiheit"
+      ]
+    },
+    "living": {
+      "title": "Wohnbereiche",
+      "description": "Neugestaltung Ihrer Wohnräume für maximalen Komfort, Funktion und Ästhetik.",
+      "features": [
+        "Offene Grundrisse",
+        "Maßgefertigte Einbauten",
+        "Böden und Wandbearbeitungen",
+        "Lichtplanung"
+      ]
+    },
+    "outdoor": {
+      "title": "Außenbereiche",
+      "description": "Erweitern Sie Ihr Wohnen nach draußen – mit Terrassen, Außenküchen und Gartenprojekten.",
+      "features": [
+        "Individuelle Terrassen",
+        "Außenküchen",
+        "Gartenstrukturen",
+        "Integration in die Landschaft"
+      ]
+    }
+  },
+  "process": {
+    "title": "Unser Serviceprozess",
+    "steps": {
+      "consultation": {
+        "title": "Kostenlose Beratung",
+        "description": "Wir besuchen Sie, erfassen Ihre Bedürfnisse und beraten fachkundig."
+      },
+      "design": {
+        "title": "Maßgeschneidertes Design",
+        "description": "Wir erarbeiten detaillierte Pläne passend zu Ihrem Raum und Ihren Wünschen."
+      },
+      "planning": {
+        "title": "Projektplanung",
+        "description": "Wir koordinieren alle Gewerke für eine reibungslose Ausführung."
+      },
+      "construction": {
+        "title": "Fachgerechte Umsetzung",
+        "description": "Erfahrene Handwerker realisieren Ihre Vision präzise und sorgfältig."
+      },
+      "completion": {
+        "title": "Abschlusskontrolle",
+        "description": "Wir stellen vor der Übergabe sicher, dass alles unseren Standards entspricht."
+      }
+    }
+  },
+  "specializations": {
+    "title": "Unsere Schwerpunkte",
+    "items": {
+      "carpentry": {
+        "title": "Schreiner- & Zimmererarbeiten",
+        "description": "Handgefertigte Möbel und Einbauten, die perfekt zu Ihrem Raum passen."
+      },
+      "flooring": {
+        "title": "Bodenlösungen",
+        "description": "Verlegung von Holz, Laminat und Fliesen mit professionellem Finish."
+      },
+      "electrical": {
+        "title": "Elektroarbeiten",
+        "description": "Sichere und effiziente Elektroinstallationen und Upgrades."
+      },
+      "plumbing": {
+        "title": "Sanitärarbeiten",
+        "description": "Zuverlässige Sanitärlösungen für alle Renovierungsbedürfnisse."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Transparente Preise",
+    "subtitle": "Fair, ehrlich und ohne versteckte Gebühren",
+    "description": "Transparenz ist uns wichtig. Jedes Projekt erhält einen detaillierten Kostenvoranschlag und einen klaren Zeitplan.",
+    "guarantees": [
+      "Kostenlose, detaillierte Angebote",
+      "Festpreisverträge",
+      "5 Jahre Gewährleistung auf Handwerk",
+      "Materialqualität garantiert"
+    ]
+  },
+  "testimonials": {
+    "title": "Kundengeschichten",
+    "subtitle": "So haben wir Zuhause verwandelt",
+    "viewAll": "Alle Projekte ansehen"
+  },
+  "cta": {
+    "title": "Bereit, Ihr Projekt zu starten?",
+    "subtitle": "Sichern Sie sich eine kostenlose Beratung und ein detailliertes Angebot.",
+    "primary": "Kostenlose Beratung buchen",
+    "secondary": "Unser Portfolio ansehen"
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "questions": {
+      "timeline": {
+        "question": "Wie lange dauert eine typische Renovierung?",
+        "answer": "Die Dauer hängt vom Umfang ab. Die meisten Küchen dauern 4–6 Wochen, Bäder normalerweise 2–3 Wochen."
+      },
+      "cost": {
+        "question": "Was beeinflusst die Kosten?",
+        "answer": "Materialien, Projektumfang, Komplexität und bauliche Anpassungen. Wir liefern immer ein detailliertes Angebot."
+      },
+      "warranty": {
+        "question": "Welche Gewährleistung bieten Sie?",
+        "answer": "5 Jahre auf Handwerk und 1 Jahr auf Materialien – Ihre Investition ist geschützt."
+      }
+    }
+  },
+  "meta": {
+    "title": "Renovierungsleistungen – Aarhus Contractor | Küche, Bad & Wohnen",
+    "description": "Professionelle Renovierungsleistungen in Aarhus. Küche, Bad und Komplettsanierung mit dänischem Handwerk und Liebe zum Detail.",
+    "keywords": "Renovierungsleistungen Aarhus, Küchenrenovierung, Badsanierung, Wohnungsmodernisierung, dänisches Handwerk"
+  }
+}

@@ -1,0 +1,96 @@
+{
+	"hero": {
+		"badge": "Danish Craftsmanship Excellence",
+		"headline": {
+			"line1": "Thoughtful Renovation,",
+			"line2": "Crafted for Life"
+		},
+		"description": "Where Danish design philosophy meets exceptional construction expertise. We transform spaces into sanctuaries that embody hygge and timeless beauty.",
+		"cta": {
+			"primary": "Begin Your Journey",
+			"secondary": "View Our Work"
+		},
+		"stats": {
+			"years": "37+ Years",
+			"yearsLabel": "Danish Craftsmanship",
+			"projects": "500+ Projects",
+			"projectsLabel": "Completed with Pride",
+			"clients": "200+ Happy",
+			"clientsLabel": "Families Served"
+		}
+	},
+	"sections": {
+		"projectShowcase": "Featured Project Transformations",
+		"philosophy": "Danish Design Philosophy & Process",
+		"consultation": "Consultation Booking Widget",
+		"testimonials": "Client Testimonials Carousel",
+		"trustSignals": "Trust Signals & Certifications",
+		"whyChooseUs": "Why Choose Aarhus Contractor",
+		"ourProcess": "Our Proven Process",
+		"getInTouch": "Get In Touch"
+	},
+	"philosophy": {
+		"title": "Danish Design Philosophy",
+		"subtitle": "Where Form Meets Function",
+		"description": "Our approach is rooted in Danish design principles: simplicity, functionality, and beauty. Every project reflects our commitment to creating spaces that enhance daily life.",
+		"principles": {
+			"simplicity": {
+				"title": "Simplicity",
+				"description": "Clean lines and uncluttered spaces that promote peace and focus."
+			},
+			"functionality": {
+				"title": "Functionality",
+				"description": "Every element serves a purpose, creating efficient and practical living spaces."
+			},
+			"beauty": {
+				"title": "Beauty",
+				"description": "Timeless aesthetics that bring joy and inspiration to everyday moments."
+			},
+			"hygge": {
+				"title": "Hygge",
+				"description": "Creating cozy, comfortable environments that foster well-being and connection."
+			}
+		}
+	},
+	"testimonials": {
+		"title": "What Our Clients Say",
+		"subtitle": "Real Stories from Real Families",
+		"viewAll": "View All Testimonials",
+		"rating": "out of 5 stars",
+		"verified": "Verified Customer"
+	},
+	"process": {
+		"title": "Our Proven Process",
+		"subtitle": "From Concept to Completion",
+		"steps": {
+			"consultation": {
+				"title": "Initial Consultation",
+				"description": "We listen to your vision and assess your space to create a tailored plan."
+			},
+			"design": {
+				"title": "Design & Planning",
+				"description": "Detailed blueprints and 3D visualizations bring your project to life."
+			},
+			"construction": {
+				"title": "Expert Construction",
+				"description": "Skilled craftsmen execute every detail with precision and care."
+			},
+			"completion": {
+				"title": "Final Walkthrough",
+				"description": "We ensure every detail meets our high standards before handover."
+			}
+		}
+	},
+	"cta": {
+		"title": "Ready to Transform Your Space?",
+		"subtitle": "Let's discuss your vision and create something extraordinary together.",
+		"primary": "Book Free Consultation",
+		"secondary": "Call Us Today",
+		"phone": "+45 XX XX XX XX"
+	},
+	"meta": {
+		"title": "Aarhus Contractor - Danish Craftsmanship & Renovation",
+		"description": "Professional renovation and craftsmanship in Aarhus. Danish quality and tradition since 1987. Transform your space with our expert team.",
+		"keywords": "renovation Aarhus, Danish craftsmanship, home improvement, construction, carpentry, design"
+	}
+}

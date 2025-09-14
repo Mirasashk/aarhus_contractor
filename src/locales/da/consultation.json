@@ -1,0 +1,150 @@
+{
+  "hero": {
+    "title": "Book din gratis konsultation",
+    "subtitle": "Lad os drøfte din vision og lægge en plan sammen",
+    "description": "Vores eksperter står klar til at hjælpe dig med at forvandle dit hjem. Book en gratis konsultation, få professionel rådgivning og et detaljeret tilbud."
+  },
+  "form": {
+    "title": "Planlæg din konsultation",
+    "subtitle": "Udfyld formularen – vi kontakter dig inden for 24 timer",
+    "fields": {
+      "name": {
+        "label": "Fulde navn",
+        "placeholder": "Indtast dit fulde navn",
+        "required": "Navn er påkrævet"
+      },
+      "email": {
+        "label": "E-mailadresse",
+        "placeholder": "Indtast din e-mailadresse",
+        "required": "E-mail er påkrævet",
+        "invalid": "Indtast en gyldig e-mailadresse"
+      },
+      "phone": {
+        "label": "Telefonnummer",
+        "placeholder": "Indtast dit telefonnummer",
+        "required": "Telefonnummer er påkrævet"
+      },
+      "projectType": {
+        "label": "Projekttype",
+        "placeholder": "Vælg projekttype",
+        "options": {
+          "kitchen": "Køkkenrenovering",
+          "bathroom": "Baderenovering",
+          "living": "Renovering af opholdsrum",
+          "outdoor": "Udendørsareal",
+          "complete": "Totalrenovering",
+          "other": "Andet"
+        }
+      },
+      "budget": {
+        "label": "Estimeret budget",
+        "placeholder": "Vælg budgetinterval",
+        "options": {
+          "under50k": "Under 50.000 kr.",
+          "50k-100k": "50.000 - 100.000 kr.",
+          "100k-200k": "100.000 - 200.000 kr.",
+          "200k-500k": "200.000 - 500.000 kr.",
+          "over500k": "Over 500.000 kr.",
+          "notSure": "Ikke afklaret endnu"
+        }
+      },
+      "timeline": {
+        "label": "Foretrukken tidsplan",
+        "placeholder": "Hvornår vil du gerne starte?",
+        "options": {
+          "asap": "Så hurtigt som muligt",
+          "1month": "Inden for 1 måned",
+          "3months": "Inden for 3 måneder",
+          "6months": "Inden for 6 måneder",
+          "flexible": "Jeg er fleksibel"
+        }
+      },
+      "message": {
+        "label": "Projektbeskrivelse",
+        "placeholder": "Fortæl om dit projekt, mål og særlige ønsker...",
+        "required": "Beskriv venligst dit projekt"
+      },
+      "preferredContact": {
+        "label": "Foretrukken kontaktmetode",
+        "options": {
+          "phone": "Telefon",
+          "email": "E-mail",
+          "either": "Begge dele er fine"
+        }
+      },
+      "newsletter": {
+        "label": "Tilmeld nyhedsbrev med tips og opdateringer",
+        "note": "Du kan altid afmelde dig igen"
+      }
+    },
+    "submit": "Book konsultation",
+    "submitting": "Booker...",
+    "success": "Tak! Vi kontakter dig inden for 24 timer.",
+    "error": "Noget gik galt. Prøv igen eller ring til os."
+  },
+  "benefits": {
+    "title": "Hvorfor vælge vores konsultation?",
+    "items": {
+      "free": {
+        "title": "Helt gratis",
+        "description": "Ingen forpligtelser og ingen skjulte omkostninger – kun faglig rådgivning."
+      },
+      "expert": {
+        "title": "Ekspertindsigt",
+        "description": "Få professionel sparring fra erfarne håndværkere med forståelse for dansk design og byggeri."
+      },
+      "detailed": {
+        "title": "Detaljeret tilbud",
+        "description": "Du modtager et gennemarbejdet overslag med tidsplan og materialeforslag."
+      },
+      "personalized": {
+        "title": "Personlig tilgang",
+        "description": "Hver konsultation tilpasses dine behov, dit rum og dit budget."
+      }
+    }
+  },
+  "process": {
+    "title": "Hvad sker der derefter?",
+    "steps": {
+      "submit": {
+        "title": "Send din forespørgsel",
+        "description": "Udfyld vores formular med dine projektoplysninger."
+      },
+      "contact": {
+        "title": "Vi kontakter dig",
+        "description": "Vores team ringer eller skriver inden for 24 timer for at planlægge."
+      },
+      "meet": {
+        "title": "Møde & dialog",
+        "description": "Vi besøger dit hjem, forstår din vision og giver faglige råd."
+      },
+      "proposal": {
+        "title": "Modtag tilbud",
+        "description": "Du får et detaljeret oplæg med tidslinje, priser og næste skridt."
+      }
+    }
+  },
+  "contact": {
+    "title": "Vil du hellere ringe?",
+    "subtitle": "Tal direkte med vores team",
+    "phone": "+45 XX XX XX XX",
+    "email": "info@aarhuscontractor.dk",
+    "hours": "Mandag - fredag: 08:00 - 18:00",
+    "weekend": "Lørdag: 09:00 - 14:00"
+  },
+  "testimonials": {
+    "title": "Hvad siger kunderne om vores konsultationer",
+    "subtitle": "Ægte feedback fra processen"
+  },
+  "cta": {
+    "title": "Klar til at komme i gang?",
+    "subtitle": "Book din gratis konsultation i dag og tag første skridt mod din drømmerenovering.",
+    "primary": "Book gratis konsultation",
+    "secondary": "Ring til os nu"
+  },
+  "meta": {
+    "title": "Gratis konsultation - Aarhus Contractor | Book planlægningsmøde",
+    "description": "Book en gratis konsultation hos Aarhus Contractor. Få ekspert-råd, detaljerede overslag og professionel planlægning af din renovering.",
+    "keywords": "gratis konsultation Aarhus, renoveringsplan, rådgivning, bygge-konsultation"
+  }
+}

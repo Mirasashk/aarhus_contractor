@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "badge": "Exzellenz des dänischen Handwerks",
+    "headline": {
+      "line1": "Durchdachte Renovierung,",
+      "line2": "geschaffen fürs Leben"
+    },
+    "description": "Wo dänische Designphilosophie auf exzellente Baukompetenz trifft. Wir verwandeln Räume in Zuhause, die Hygge und zeitlose Schönheit ausstrahlen.",
+    "cta": {
+      "primary": "Starten Sie Ihre Reise",
+      "secondary": "Unsere Arbeiten ansehen"
+    },
+    "stats": {
+      "years": "37+ Jahre",
+      "yearsLabel": "Dänisches Handwerk",
+      "projects": "500+ Projekte",
+      "projectsLabel": "Mit Stolz abgeschlossen",
+      "clients": "200+ zufriedene",
+      "clientsLabel": "Familien unterstützt"
+    }
+  },
+  "sections": {
+    "projectShowcase": "Ausgewählte Projekt-Transformationen",
+    "philosophy": "Dänische Designphilosophie & Prozess",
+    "consultation": "Buchungs-Widget für Beratungen",
+    "testimonials": "Kundenstimmen",
+    "trustSignals": "Vertrauenssiegel & Zertifizierungen",
+    "whyChooseUs": "Warum Aarhus Contractor",
+    "ourProcess": "Unser bewährter Prozess",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "philosophy": {
+    "title": "Dänische Designphilosophie",
+    "subtitle": "Wo Form auf Funktion trifft",
+    "description": "Unser Ansatz beruht auf dänischen Designprinzipien: Einfachheit, Funktionalität und Schönheit. Jedes Projekt spiegelt unser Engagement wider, Räume zu schaffen, die den Alltag bereichern.",
+    "principles": {
+      "simplicity": {
+        "title": "Einfachheit",
+        "description": "Klare Linien und aufgeräumte Räume, die Ruhe und Fokus bringen."
+      },
+      "functionality": {
+        "title": "Funktionalität",
+        "description": "Jedes Element hat einen Zweck und schafft effiziente, praktische Umgebungen."
+      },
+      "beauty": {
+        "title": "Schönheit",
+        "description": "Zeitlose Ästhetik, die Freude und Inspiration in den Alltag bringt."
+      },
+      "hygge": {
+        "title": "Hygge",
+        "description": "Wir schaffen warme, behagliche Umgebungen, die Wohlbefinden und Nähe fördern."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Was unsere Kunden sagen",
+    "subtitle": "Echte Geschichten von echten Familien",
+    "viewAll": "Alle Bewertungen ansehen",
+    "rating": "von 5 Sternen",
+    "verified": "Verifizierter Kunde"
+  },
+  "process": {
+    "title": "Unser bewährter Prozess",
+    "subtitle": "Von der Idee bis zur Übergabe",
+    "steps": {
+      "consultation": {
+        "title": "Erstberatung",
+        "description": "Wir hören Ihre Vision und bewerten Ihren Raum, um einen maßgeschneiderten Plan zu erstellen."
+      },
+      "design": {
+        "title": "Design & Planung",
+        "description": "Detaillierte Zeichnungen und 3D-Visualisierungen lassen das Projekt lebendig werden."
+      },
+      "construction": {
+        "title": "Fachgerechte Ausführung",
+        "description": "Erfahrene Handwerker setzen jedes Detail präzise und sorgfältig um."
+      },
+      "completion": {
+        "title": "Abschluss & Abnahme",
+        "description": "Wir stellen sicher, dass alles unseren hohen Standards entspricht, bevor wir übergeben."
+      }
+    }
+  },
+  "cta": {
+    "title": "Bereit, Ihr Zuhause zu verwandeln?",
+    "subtitle": "Lassen Sie uns Ihre Vision besprechen und gemeinsam Außergewöhnliches schaffen.",
+    "primary": "Kostenlose Beratung buchen",
+    "secondary": "Rufen Sie uns an",
+    "phone": "+45 XX XX XX XX"
+  },
+  "meta": {
+    "title": "Aarhus Contractor – Dänisches Handwerk & Renovierung",
+    "description": "Professionelle Renovierungen in Aarhus. Dänische Qualität und Tradition seit 1987. Verwandeln Sie Ihr Zuhause mit unserem erfahrenen Team.",
+    "keywords": "Renovierung Aarhus, dänisches Handwerk, Wohnungsmodernisierung, Bau, Tischler, Design"
+  }
+}

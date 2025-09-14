@@ -1,0 +1,87 @@
+{
+  "buttons": {
+    "beginJourney": "Start din rejse",
+    "goBack": "Gå tilbage",
+    "backToHome": "Tilbage til forsiden",
+    "learnMore": "Læs mere",
+    "getStarted": "Kom i gang",
+    "contactUs": "Kontakt os",
+    "bookConsultation": "Book konsultation",
+    "viewGallery": "Se galleri",
+    "readMore": "Læs mere",
+    "close": "Luk",
+    "submit": "Send",
+    "cancel": "Annuller",
+    "save": "Gem",
+    "edit": "Rediger",
+    "delete": "Slet",
+    "share": "Del",
+    "download": "Download"
+  },
+  "labels": {
+    "loading": "Indlæser...",
+    "error": "Fejl",
+    "success": "Succes",
+    "close": "Luk",
+    "menu": "Menu",
+    "search": "Søg",
+    "filter": "Filtrer",
+    "sort": "Sortér",
+    "next": "Næste",
+    "previous": "Forrige",
+    "page": "Side",
+    "of": "af",
+    "results": "resultater",
+    "noResults": "Ingen resultater fundet",
+    "tryAgain": "Prøv igen",
+    "refresh": "Opdater"
+  },
+  "company": {
+    "name": "Aarhus Contractor",
+    "tagline": "Dansk håndværk",
+    "founded": "Siden 1987",
+    "location": "Aarhus, Danmark",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "address": "Adresse",
+    "website": "Website"
+  },
+  "meta": {
+    "title": "Aarhus Contractor - Dansk håndværk & renovering",
+    "description": "Professionel renovering og håndværk i Aarhus. Dansk kvalitet og tradition siden 1987.",
+    "keywords": "renovering, håndværk, Aarhus, dansk, byggeri, boligforbedring, tømrerarbejde"
+  },
+  "accessibility": {
+    "skipToContent": "Gå til hovedindhold",
+    "openMenu": "Åbn menu",
+    "closeMenu": "Luk menu",
+    "openLanguageMenu": "Åbn sprogmenu",
+    "closeLanguageMenu": "Luk sprogmenu",
+    "previousImage": "Forrige billede",
+    "nextImage": "Næste billede",
+    "playVideo": "Afspil video",
+    "pauseVideo": "Pause video"
+  },
+  "time": {
+    "today": "I dag",
+    "yesterday": "I går",
+    "tomorrow": "I morgen",
+    "thisWeek": "Denne uge",
+    "lastWeek": "Sidste uge",
+    "nextWeek": "Næste uge",
+    "thisMonth": "Denne måned",
+    "lastMonth": "Sidste måned",
+    "nextMonth": "Næste måned",
+    "thisYear": "I år",
+    "lastYear": "Sidste år",
+    "nextYear": "Næste år"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "available": "Tilgængelig",
+    "unavailable": "Utilgængelig",
+    "busy": "Optaget",
+    "away": "Væk"
+  }
+}

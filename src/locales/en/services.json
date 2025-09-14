@@ -1,0 +1,139 @@
+{
+	"hero": {
+		"title": "Our Specialized Services",
+		"subtitle": "Comprehensive Renovation Solutions",
+		"description": "From kitchen transformations to complete home renovations, we offer a full range of services designed to enhance your living space with Danish craftsmanship and attention to detail."
+	},
+	"categories": {
+		"kitchen": {
+			"title": "Kitchen Renovations",
+			"description": "Transform your kitchen into a functional and beautiful space that reflects Danish design principles.",
+			"features": [
+				"Custom cabinetry design",
+				"Modern appliance integration",
+				"Efficient storage solutions",
+				"Quality countertop installation"
+			]
+		},
+		"bathroom": {
+			"title": "Bathroom Renovations",
+			"description": "Create a spa-like retreat with our expert bathroom renovation services.",
+			"features": [
+				"Luxury fixtures and fittings",
+				"Waterproofing and tiling",
+				"Lighting and ventilation",
+				"Accessibility modifications"
+			]
+		},
+		"living": {
+			"title": "Living Space Renovations",
+			"description": "Redesign your living areas to maximize comfort, functionality, and aesthetic appeal.",
+			"features": [
+				"Open concept layouts",
+				"Custom built-in storage",
+				"Flooring and wall treatments",
+				"Lighting design"
+			]
+		},
+		"outdoor": {
+			"title": "Outdoor Living Spaces",
+			"description": "Extend your living space outdoors with our deck, patio, and garden solutions.",
+			"features": [
+				"Custom deck construction",
+				"Outdoor kitchens",
+				"Garden structures",
+				"Landscaping integration"
+			]
+		}
+	},
+	"process": {
+		"title": "Our Service Process",
+		"steps": {
+			"consultation": {
+				"title": "Free Consultation",
+				"description": "We visit your home to understand your needs and provide expert advice."
+			},
+			"design": {
+				"title": "Custom Design",
+				"description": "Our team creates detailed plans tailored to your space and preferences."
+			},
+			"planning": {
+				"title": "Project Planning",
+				"description": "We coordinate all aspects of your project for smooth execution."
+			},
+			"construction": {
+				"title": "Expert Construction",
+				"description": "Skilled craftsmen bring your vision to life with precision and care."
+			},
+			"completion": {
+				"title": "Final Inspection",
+				"description": "We ensure everything meets our high standards before handover."
+			}
+		}
+	},
+	"specializations": {
+		"title": "Our Specializations",
+		"items": {
+			"carpentry": {
+				"title": "Custom Carpentry",
+				"description": "Handcrafted furniture and built-ins that perfectly fit your space."
+			},
+			"flooring": {
+				"title": "Flooring Solutions",
+				"description": "Hardwood, laminate, and tile installation with expert finishing."
+			},
+			"electrical": {
+				"title": "Electrical Work",
+				"description": "Safe and efficient electrical installations and upgrades."
+			},
+			"plumbing": {
+				"title": "Plumbing Services",
+				"description": "Reliable plumbing solutions for all your renovation needs."
+			}
+		}
+	},
+	"pricing": {
+		"title": "Transparent Pricing",
+		"subtitle": "Fair, honest, and upfront costs",
+		"description": "We believe in transparent pricing with no hidden fees. Every project includes a detailed estimate and timeline.",
+		"guarantees": [
+			"Free detailed estimates",
+			"Fixed-price contracts",
+			"5-year warranty on workmanship",
+			"Material quality guarantee"
+		]
+	},
+	"testimonials": {
+		"title": "Client Success Stories",
+		"subtitle": "See how we've transformed homes",
+		"viewAll": "View All Projects"
+	},
+	"cta": {
+		"title": "Ready to Start Your Project?",
+		"subtitle": "Get a free consultation and detailed estimate for your renovation.",
+		"primary": "Book Free Consultation",
+		"secondary": "View Our Portfolio"
+	},
+	"faq": {
+		"title": "Frequently Asked Questions",
+		"questions": {
+			"timeline": {
+				"question": "How long does a typical renovation take?",
+				"answer": "Project timelines vary based on scope, but most kitchen renovations take 4-6 weeks, while bathroom renovations typically take 2-3 weeks."
+			},
+			"cost": {
+				"question": "What factors affect renovation costs?",
+				"answer": "Costs depend on materials, project scope, complexity, and any structural changes required. We provide detailed estimates for all projects."
+			},
+			"warranty": {
+				"question": "What warranty do you provide?",
+				"answer": "We offer a 5-year warranty on all workmanship and a 1-year warranty on materials, ensuring your investment is protected."
+			}
+		}
+	},
+	"meta": {
+		"title": "Renovation Services - Aarhus Contractor | Kitchen, Bathroom & Home Renovations",
+		"description": "Professional renovation services in Aarhus. Kitchen, bathroom, and complete home renovations with Danish craftsmanship and attention to detail.",
+		"keywords": "renovation services Aarhus, kitchen renovation, bathroom renovation, home improvement, Danish craftsmanship"
+	}
+}

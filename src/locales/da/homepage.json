@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "badge": "Dansk håndværkskvalitet",
+    "headline": {
+      "line1": "Gennemtænkt renovering,",
+      "line2": "skabt til livet"
+    },
+    "description": "Hvor dansk designfilosofi møder solid byggefaglighed. Vi forvandler rum til hjem, der udstråler hygge og tidløs skønhed.",
+    "cta": {
+      "primary": "Start din rejse",
+      "secondary": "Se vores arbejde"
+    },
+    "stats": {
+      "years": "37+ år",
+      "yearsLabel": "Dansk håndværk",
+      "projects": "500+ projekter",
+      "projectsLabel": "Fuldført med stolthed",
+      "clients": "200+ glade",
+      "clientsLabel": "familier hjulpet"
+    }
+  },
+  "sections": {
+    "projectShowcase": "Udvalgte projektforvandlinger",
+    "philosophy": "Dansk designfilosofi & proces",
+    "consultation": "Booking-widget til konsultation",
+    "testimonials": "Kundeudtalelser",
+    "trustSignals": "Troværdighed & certificeringer",
+    "whyChooseUs": "Hvorfor vælge Aarhus Contractor",
+    "ourProcess": "Vores gennemprøvede proces",
+    "getInTouch": "Kontakt os"
+  },
+  "philosophy": {
+    "title": "Dansk designfilosofi",
+    "subtitle": "Hvor form møder funktion",
+    "description": "Vores tilgang er forankret i danske designprincipper: enkelhed, funktionalitet og skønhed. Hvert projekt afspejler vores engagement i at skabe rum, der forhøjer hverdagen.",
+    "principles": {
+      "simplicity": {
+        "title": "Enkelhed",
+        "description": "Rene linjer og ryddelige rum, der giver ro og fokus."
+      },
+      "functionality": {
+        "title": "Funktionalitet",
+        "description": "Hvert element har et formål og skaber effektive, praktiske omgivelser."
+      },
+      "beauty": {
+        "title": "Skønhed",
+        "description": "Tidløs æstetik, der bringer glæde og inspiration i hverdagen."
+      },
+      "hygge": {
+        "title": "Hygge",
+        "description": "Vi skaber varme, behagelige rammer, der styrker trivsel og nærvær."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Hvad siger vores kunder",
+    "subtitle": "Ægte historier fra ægte familier",
+    "viewAll": "Se alle udtalelser",
+    "rating": "ud af 5 stjerner",
+    "verified": "Verificeret kunde"
+  },
+  "process": {
+    "title": "Vores gennemprøvede proces",
+    "subtitle": "Fra idé til aflevering",
+    "steps": {
+      "consultation": {
+        "title": "Indledende konsultation",
+        "description": "Vi lytter til din vision og vurderer dit rum for at skabe en skræddersyet plan."
+      },
+      "design": {
+        "title": "Design & planlægning",
+        "description": "Detaljerede tegninger og 3D-visualiseringer bringer projektet til live."
+      },
+      "construction": {
+        "title": "Faglig udførelse",
+        "description": "Dygtige håndværkere udfører alle detaljer med præcision og omhu."
+      },
+      "completion": {
+        "title": "Afsluttende gennemgang",
+        "description": "Vi sikrer, at alt lever op til vores høje standarder, før vi afleverer."
+      }
+    }
+  },
+  "cta": {
+    "title": "Klar til at forvandle dit hjem?",
+    "subtitle": "Lad os drøfte din vision og skabe noget ekstraordinært sammen.",
+    "primary": "Book gratis konsultation",
+    "secondary": "Ring til os i dag",
+    "phone": "+45 XX XX XX XX"
+  },
+  "meta": {
+    "title": "Aarhus Contractor - Dansk håndværk & renovering",
+    "description": "Professionel renovering og håndværk i Aarhus. Dansk kvalitet og tradition siden 1987. Forvandl dit hjem med vores erfarne team.",
+    "keywords": "renovering Aarhus, dansk håndværk, boligforbedring, byggeri, tømrer, design"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "hero": {
+    "title": "Kostenlose Beratung buchen",
+    "subtitle": "Lassen Sie uns Ihre Vision besprechen und gemeinsam planen",
+    "description": "Unser Expertenteam hilft Ihnen, Ihr Zuhause zu verwandeln. Buchen Sie eine kostenlose Beratung, erhalten Sie fachkundigen Rat und ein detailliertes Angebot."
+  },
+  "form": {
+    "title": "Planen Sie Ihre Beratung",
+    "subtitle": "Füllen Sie das Formular aus – wir melden uns innerhalb von 24 Stunden",
+    "fields": {
+      "name": {
+        "label": "Vollständiger Name",
+        "placeholder": "Geben Sie Ihren Namen ein",
+        "required": "Name ist erforderlich"
+      },
+      "email": {
+        "label": "E‑Mail‑Adresse",
+        "placeholder": "Geben Sie Ihre E‑Mail ein",
+        "required": "E‑Mail ist erforderlich",
+        "invalid": "Bitte geben Sie eine gültige E‑Mail‑Adresse ein"
+      },
+      "phone": {
+        "label": "Telefonnummer",
+        "placeholder": "Geben Sie Ihre Telefonnummer ein",
+        "required": "Telefonnummer ist erforderlich"
+      },
+      "projectType": {
+        "label": "Projekttyp",
+        "placeholder": "Projekttyp wählen",
+        "options": {
+          "kitchen": "Küchenrenovierung",
+          "bathroom": "Badsanierung",
+          "living": "Wohnbereich",
+          "outdoor": "Außenbereich",
+          "complete": "Komplettsanierung",
+          "other": "Sonstiges"
+        }
+      },
+      "budget": {
+        "label": "Geschätztes Budget",
+        "placeholder": "Budgetbereich wählen",
+        "options": {
+          "under50k": "Unter 50.000 DKK",
+          "50k-100k": "50.000 – 100.000 DKK",
+          "100k-200k": "100.000 – 200.000 DKK",
+          "200k-500k": "200.000 – 500.000 DKK",
+          "over500k": "Über 500.000 DKK",
+          "notSure": "Noch nicht sicher"
+        }
+      },
+      "timeline": {
+        "label": "Bevorzugter Zeitplan",
+        "placeholder": "Wann möchten Sie starten?",
+        "options": {
+          "asap": "So bald wie möglich",
+          "1month": "Innerhalb eines Monats",
+          "3months": "Innerhalb von 3 Monaten",
+          "6months": "Innerhalb von 6 Monaten",
+          "flexible": "Flexibel"
+        }
+      },
+      "message": {
+        "label": "Projektbeschreibung",
+        "placeholder": "Beschreiben Sie Ihr Projekt, Ziele und besondere Wünsche...",
+        "required": "Bitte beschreiben Sie Ihr Projekt"
+      },
+      "preferredContact": {
+        "label": "Bevorzugte Kontaktmethode",
+        "options": {
+          "phone": "Telefon",
+          "email": "E‑Mail",
+          "either": "Beides ist in Ordnung"
+        }
+      },
+      "newsletter": {
+        "label": "Für Tipps & Updates anmelden",
+        "note": "Abmeldung jederzeit möglich"
+      }
+    },
+    "submit": "Beratung buchen",
+    "submitting": "Wird gebucht...",
+    "success": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden.",
+    "error": "Etwas ist schiefgelaufen. Bitte erneut versuchen oder uns anrufen."
+  },
+  "benefits": {
+    "title": "Warum unsere Beratung?",
+    "items": {
+      "free": {
+        "title": "Kostenlos",
+        "description": "Keine Verpflichtungen und keine versteckten Kosten – nur fachkundige Beratung."
+      },
+      "expert": {
+        "title": "Expertenwissen",
+        "description": "Professioneller Austausch mit erfahrenen Handwerkern mit Sinn für dänisches Design und Baukultur."
+      },
+      "detailed": {
+        "title": "Detailliertes Angebot",
+        "description": "Sie erhalten einen sorgfältig ausgearbeiteten Kostenvoranschlag mit Zeitplan und Materialvorschlägen."
+      },
+      "personalized": {
+        "title": "Individuelle Betreuung",
+        "description": "Jede Beratung wird auf Ihre Bedürfnisse, Ihren Raum und Ihr Budget zugeschnitten."
+      }
+    }
+  },
+  "process": {
+    "title": "Wie geht es weiter?",
+    "steps": {
+      "submit": {
+        "title": "Anfrage senden",
+        "description": "Füllen Sie unser Formular mit Ihren Projektdaten aus."
+      },
+      "contact": {
+        "title": "Wir melden uns",
+        "description": "Wir rufen an oder schreiben innerhalb von 24 Stunden, um zu planen."
+      },
+      "meet": {
+        "title": "Termin & Austausch",
+        "description": "Wir besuchen Sie, verstehen Ihre Vision und beraten fachkundig."
+      },
+      "proposal": {
+        "title": "Angebot erhalten",
+        "description": "Sie erhalten ein detailliertes Angebot mit Zeitlinie, Preisen und nächsten Schritten."
+      }
+    }
+  },
+  "contact": {
+    "title": "Sie rufen lieber an?",
+    "subtitle": "Sprechen Sie direkt mit unserem Team",
+    "phone": "+45 XX XX XX XX",
+    "email": "info@aarhuscontractor.dk",
+    "hours": "Montag – Freitag: 08:00 – 18:00",
+    "weekend": "Samstag: 09:00 – 14:00"
+  },
+  "testimonials": {
+    "title": "Feedback zu unseren Beratungen",
+    "subtitle": "Echte Rückmeldungen aus dem Prozess"
+  },
+  "cta": {
+    "title": "Bereit für den ersten Schritt?",
+    "subtitle": "Buchen Sie Ihre kostenlose Beratung und starten Sie Ihr Renovierungsprojekt.",
+    "primary": "Kostenlose Beratung buchen",
+    "secondary": "Jetzt anrufen"
+  },
+  "meta": {
+    "title": "Kostenlose Beratung – Aarhus Contractor | Termin vereinbaren",
+    "description": "Kostenlose Beratung bei Aarhus Contractor. Expertenrat, detaillierte Angebote und professionelle Planung für Ihre Renovierung.",
+    "keywords": "kostenlose Beratung Aarhus, Renovierungsplanung, Bauberatung"
+  }
+}

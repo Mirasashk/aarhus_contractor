@@ -1,0 +1,46 @@
+{
+  "menu": {
+    "home": "Forside",
+    "gallery": "Galleri",
+    "ourCraft": "Vores håndværk",
+    "services": "Ydelser",
+    "consultation": "Konsultation",
+    "about": "Om os",
+    "more": "Mere",
+    "contact": "Kontakt",
+    "projects": "Projekter",
+    "testimonials": "Anbefalinger",
+    "blog": "Blog",
+    "news": "Nyheder",
+    "careers": "Job",
+    "privacy": "Privatlivspolitik",
+    "terms": "Vilkår"
+  },
+  "language": {
+    "switch": "Skift sprog",
+    "english": "Engelsk",
+    "danish": "Dansk",
+    "german": "Tysk",
+    "current": "Aktuelt sprog",
+    "select": "Vælg sprog"
+  },
+  "breadcrumbs": {
+    "home": "Forside",
+    "currentPage": "Aktuel side",
+    "separator": ">"
+  },
+  "search": {
+    "placeholder": "Søg...",
+    "noResults": "Ingen resultater fundet",
+    "results": "Søgeresultater",
+    "clear": "Ryd søgning"
+  },
+  "user": {
+    "account": "Min konto",
+    "profile": "Profil",
+    "settings": "Indstillinger",
+    "logout": "Log ud",
+    "login": "Log ind",
+    "register": "Registrer"
+  }
+}

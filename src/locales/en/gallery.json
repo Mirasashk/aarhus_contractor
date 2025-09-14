@@ -1,0 +1,118 @@
+{
+	"hero": {
+		"title": "Project Gallery",
+		"subtitle": "See Our Work in Action",
+		"description": "Explore our portfolio of completed projects and discover the quality and craftsmanship that sets us apart. From kitchen transformations to complete home renovations, each project tells a story of Danish design excellence."
+	},
+	"filters": {
+		"all": "All Projects",
+		"kitchen": "Kitchen Renovations",
+		"bathroom": "Bathroom Renovations",
+		"living": "Living Spaces",
+		"outdoor": "Outdoor Spaces",
+		"complete": "Complete Renovations"
+	},
+	"sorting": {
+		"newest": "Newest First",
+		"oldest": "Oldest First",
+		"popular": "Most Popular",
+		"alphabetical": "A-Z"
+	},
+	"project": {
+		"viewDetails": "View Project Details",
+		"beforeAfter": "Before & After",
+		"gallery": "Project Gallery",
+		"testimonial": "Client Testimonial",
+		"specifications": "Project Specifications",
+		"timeline": "Project Timeline",
+		"budget": "Project Budget",
+		"team": "Project Team"
+	},
+	"details": {
+		"overview": "Project Overview",
+		"challenge": "The Challenge",
+		"solution": "Our Solution",
+		"result": "The Result",
+		"client": "Client",
+		"location": "Location",
+		"duration": "Duration",
+		"budget": "Budget",
+		"team": "Project Team",
+		"materials": "Materials Used",
+		"features": "Key Features"
+	},
+	"testimonial": {
+		"title": "What Our Client Says",
+		"readMore": "Read Full Testimonial",
+		"rating": "Client Rating",
+		"verified": "Verified Project"
+	},
+	"specifications": {
+		"title": "Project Specifications",
+		"area": "Total Area",
+		"rooms": "Number of Rooms",
+		"duration": "Project Duration",
+		"team": "Team Size",
+		"materials": "Materials",
+		"features": "Special Features"
+	},
+	"categories": {
+		"kitchen": {
+			"title": "Kitchen Renovations",
+			"description": "Transform your kitchen into a functional and beautiful space with our expert renovation services.",
+			"count": "{count, plural, =0 {No kitchen projects} =1 {1 kitchen project} other {# kitchen projects}}"
+		},
+		"bathroom": {
+			"title": "Bathroom Renovations",
+			"description": "Create luxurious bathroom spaces that combine functionality with stunning design.",
+			"count": "{count, plural, =0 {No bathroom projects} =1 {1 bathroom project} other {# bathroom projects}}"
+		},
+		"living": {
+			"title": "Living Space Renovations",
+			"description": "Redesign your living areas to maximize comfort, functionality, and aesthetic appeal.",
+			"count": "{count, plural, =0 {No living space projects} =1 {1 living space project} other {# living space projects}}"
+		},
+		"outdoor": {
+			"title": "Outdoor Living Spaces",
+			"description": "Extend your living space outdoors with our custom deck, patio, and garden solutions.",
+			"count": "{count, plural, =0 {No outdoor projects} =1 {1 outdoor project} other {# outdoor projects}}"
+		},
+		"complete": {
+			"title": "Complete Home Renovations",
+			"description": "Full home transformations that bring your entire vision to life.",
+			"count": "{count, plural, =0 {No complete renovation projects} =1 {1 complete renovation project} other {# complete renovation projects}}"
+		}
+	},
+	"search": {
+		"placeholder": "Search projects...",
+		"noResults": "No projects found matching your criteria",
+		"clearFilters": "Clear all filters",
+		"results": "Showing {count} of {total} projects"
+	},
+	"pagination": {
+		"previous": "Previous",
+		"next": "Next",
+		"page": "Page {current} of {total}",
+		"showing": "Showing {start} to {end} of {total} projects"
+	},
+	"lightbox": {
+		"close": "Close",
+		"previous": "Previous Image",
+		"next": "Next Image",
+		"zoom": "Zoom",
+		"download": "Download Image",
+		"share": "Share Image",
+		"image": "Image {current} of {total}"
+	},
+	"cta": {
+		"title": "Inspired by Our Work?",
+		"subtitle": "Let's discuss how we can bring your vision to life.",
+		"primary": "Start Your Project",
+		"secondary": "Book Consultation"
+	},
+	"meta": {
+		"title": "Project Gallery - Aarhus Contractor | Kitchen, Bathroom & Home Renovation Portfolio",
+		"description": "Explore our portfolio of completed renovation projects. See before and after photos, read client testimonials, and get inspired for your own project.",
+		"keywords": "renovation portfolio Aarhus, before after photos, kitchen renovation gallery, bathroom renovation examples, home improvement projects"
+	}
+}

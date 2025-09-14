@@ -1,0 +1,112 @@
+{
+  "404": {
+    "title": "Siden blev ikke fundet",
+    "subtitle": "Siden, du leder efter, findes ikke",
+    "description": "Siden, du leder efter, findes ikke. Lad os få dig godt videre!",
+    "goBack": "Gå tilbage",
+    "backToHome": "Til forsiden",
+    "suggestions": {
+      "title": "Mente du måske:",
+      "home": "Forside",
+      "services": "Vores ydelser",
+      "gallery": "Projektgalleri",
+      "about": "Om os",
+      "contact": "Kontakt os"
+    }
+  },
+  "500": {
+    "title": "Serverfejl",
+    "subtitle": "Noget gik galt hos os",
+    "description": "Vi oplever tekniske problemer. Prøv igen senere, eller kontakt os, hvis problemet fortsætter.",
+    "tryAgain": "Prøv igen",
+    "contact": "Kontakt support"
+  },
+  "network": {
+    "title": "Forbindelsesfejl",
+    "subtitle": "Kan ikke oprette forbindelse til serveren",
+    "description": "Kontrollér din internetforbindelse og prøv igen.",
+    "retry": "Forsøg igen",
+    "offline": "Du ser ud til at være offline"
+  },
+  "form": {
+    "validation": {
+      "required": "Dette felt er påkrævet",
+      "email": "Indtast en gyldig e-mailadresse",
+      "phone": "Indtast et gyldigt telefonnummer",
+      "minLength": "Skal være mindst {min} tegn",
+      "maxLength": "Må højst være {max} tegn",
+      "pattern": "Ugyldigt format",
+      "number": "Indtast et gyldigt tal",
+      "date": "Indtast en gyldig dato",
+      "url": "Indtast en gyldig URL"
+    },
+    "submit": {
+      "error": "Formularen kunne ikke sendes. Prøv igen.",
+      "success": "Formularen er sendt!",
+      "processing": "Behandler...",
+      "retry": "Forsøg at sende igen"
+    }
+  },
+  "loading": {
+    "title": "Indlæser...",
+    "description": "Vent venligst mens indholdet hentes",
+    "timeout": "Indlæsning tager længere tid end forventet",
+    "retry": "Prøv igen"
+  },
+  "permission": {
+    "title": "Adgang nægtet",
+    "subtitle": "Du har ikke adgang til denne side",
+    "description": "Du har ikke de nødvendige tilladelser til at se dette indhold.",
+    "goBack": "Gå tilbage",
+    "login": "Login påkrævet"
+  },
+  "maintenance": {
+    "title": "Vedligeholdelse",
+    "subtitle": "Vi opdaterer lige nu hjemmesiden",
+    "description": "Vi udfører planlagt vedligeholdelse for at forbedre din oplevelse. Prøv igen snart.",
+    "estimatedTime": "Forventet afslutningstid: {time}",
+    "contact": "Har du brug for hjælp nu? Kontakt os"
+  },
+  "generic": {
+    "title": "Ups! Noget gik galt",
+    "subtitle": "En uventet fejl opstod",
+    "description": "Vi beklager ulejligheden. Prøv igen, eller kontakt os hvis problemet fortsætter.",
+    "retry": "Prøv igen",
+    "home": "Gå til forsiden",
+    "contact": "Kontakt support"
+  },
+  "search": {
+    "noResults": "Ingen resultater fundet",
+    "tryAgain": "Prøv andre søgeord",
+    "clearFilters": "Ryd alle filtre",
+    "error": "Søgning mislykkedes. Prøv igen."
+  },
+  "file": {
+    "uploadError": "Kunne ikke uploade fil",
+    "fileTooLarge": "Filen er for stor. Maksimal størrelse: {maxSize}",
+    "invalidType": "Ugyldig filtype. Tilladte typer: {allowedTypes}",
+    "corrupted": "Filen ser ud til at være beskadiget",
+    "retry": "Prøv at uploade igen"
+  },
+  "api": {
+    "timeout": "Forespørgslen fik timeout",
+    "unavailable": "Tjenesten er midlertidigt utilgængelig",
+    "rateLimit": "For mange forespørgsler. Vent venligst, før du prøver igen.",
+    "unauthorized": "Godkendelse påkrævet",
+    "forbidden": "Adgang nægtet",
+    "notFound": "Ressourcen blev ikke fundet",
+    "serverError": "Der opstod en serverfejl"
+  },
+  "browser": {
+    "unsupported": "Din browser understøttes ikke",
+    "update": "Opdater din browser til den nyeste version",
+    "javascript": "JavaScript er påkrævet for denne applikation",
+    "cookies": "Cookies er påkrævet for denne applikation"
+  },
+  "accessibility": {
+    "keyboard": "Brug Tab til at navigere, Enter til at vælge, Escape for at lukke",
+    "screenReader": "Indhold venligt for skærmlæsere",
+    "highContrast": "Højkontrasttilstand er tilgængelig",
+    "fontSize": "Skriftstørrelsen kan justeres"
+  }
+}

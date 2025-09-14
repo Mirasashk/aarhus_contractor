@@ -1,0 +1,97 @@
+{
+	"hero": {
+		"badge": "Danish Heritage Since 1987",
+		"headline": {
+			"line1": "Crafting Homes,",
+			"line2": "Building Dreams"
+		},
+		"description": "From traditional Danish carpentry apprenticeship to contemporary renovation mastery, our journey embodies the perfect fusion of cultural heritage and modern expertise.",
+		"stats": {
+			"years": "37+ Years",
+			"yearsLabel": "Danish Craftsmanship",
+			"projects": "500+ Projects",
+			"projectsLabel": "Completed with Pride"
+		}
+	},
+	"founder": {
+		"title": "Meet Our Founder",
+		"name": "Lars Andersen",
+		"role": "Master Craftsman & Founder",
+		"quote": "Building with heart, Danish tradition",
+		"story": {
+			"title": "A Journey of Mastery",
+			"description": "Lars began his journey as a young apprentice in 1987, learning traditional Danish carpentry techniques from master craftsmen. Over three decades, he has refined his skills while adapting to modern construction methods, creating a unique blend of heritage and innovation."
+		}
+	},
+	"team": {
+		"title": "Our Expert Team",
+		"subtitle": "Skilled Craftsmen, Dedicated Professionals",
+		"description": "Each member of our team brings years of experience and a passion for excellence. We work together to deliver projects that exceed expectations.",
+		"roles": {
+			"masterCarpenter": "Master Carpenter",
+			"projectManager": "Project Manager",
+			"designSpecialist": "Design Specialist",
+			"qualityInspector": "Quality Inspector"
+		}
+	},
+	"philosophy": {
+		"title": "Our Craft Philosophy",
+		"subtitle": "Daily Practices and Values",
+		"principles": {
+			"quality": {
+				"title": "Uncompromising Quality",
+				"description": "We use only the finest materials and techniques, ensuring every project stands the test of time."
+			},
+			"tradition": {
+				"title": "Respect for Tradition",
+				"description": "We honor Danish craftsmanship traditions while embracing modern innovations."
+			},
+			"innovation": {
+				"title": "Continuous Innovation",
+				"description": "We stay current with the latest techniques and technologies to serve our clients better."
+			},
+			"integrity": {
+				"title": "Complete Integrity",
+				"description": "Honest communication, fair pricing, and transparent processes in everything we do."
+			}
+		}
+	},
+	"credentials": {
+		"title": "Certifications & Commitments",
+		"subtitle": "Professional Standards and Quality Assurance",
+		"certifications": {
+			"licensed": "Licensed Contractor",
+			"insured": "Fully Insured",
+			"warranty": "5-Year Warranty",
+			"certified": "Certified Craftsmen"
+		},
+		"commitments": {
+			"sustainability": "Sustainable Practices",
+			"safety": "Safety First",
+			"timeline": "On-Time Delivery",
+			"communication": "Clear Communication"
+		}
+	},
+	"whyAarhus": {
+		"title": "Why Aarhus?",
+		"subtitle": "Local Knowledge, Global Standards",
+		"description": "Based in Aarhus, we understand the unique character of Danish homes and the specific challenges of local construction. Our deep knowledge of the area allows us to provide tailored solutions that respect local architecture while meeting modern living needs.",
+		"benefits": {
+			"localKnowledge": "Deep Local Knowledge",
+			"community": "Community Connection",
+			"accessibility": "Easy Accessibility",
+			"understanding": "Cultural Understanding"
+		}
+	},
+	"callToAction": {
+		"title": "Ready to Work with Us?",
+		"subtitle": "Let's discuss your project and see how we can bring your vision to life.",
+		"primary": "Schedule Consultation",
+		"secondary": "View Our Portfolio"
+	},
+	"meta": {
+		"title": "About Our Craft - Aarhus Contractor | Danish Heritage & Modern Expertise",
+		"description": "Discover the story behind Aarhus Contractor - from traditional Danish carpentry apprenticeship to contemporary renovation mastery. Meet our team of craftspeople who blend cultural heritage with modern expertise.",
+		"keywords": "about Aarhus Contractor, Danish craftsmanship, renovation team, construction expertise, master carpenter"
+	}
+}

@@ -1,0 +1,112 @@
+{
+  "404": {
+    "title": "Seite nicht gefunden",
+    "subtitle": "Die gesuchte Seite existiert nicht",
+    "description": "Die von Ihnen gesuchte Seite wurde nicht gefunden. Wir bringen Sie zurück auf den richtigen Weg!",
+    "goBack": "Zurück",
+    "backToHome": "Zur Startseite",
+    "suggestions": {
+      "title": "Meinten Sie:",
+      "home": "Startseite",
+      "services": "Unsere Leistungen",
+      "gallery": "Projektgalerie",
+      "about": "Über uns",
+      "contact": "Kontakt"
+    }
+  },
+  "500": {
+    "title": "Serverfehler",
+    "subtitle": "Bei uns ist etwas schiefgelaufen",
+    "description": "Es gibt technische Probleme. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns, falls das Problem bestehen bleibt.",
+    "tryAgain": "Erneut versuchen",
+    "contact": "Support kontaktieren"
+  },
+  "network": {
+    "title": "Verbindungsfehler",
+    "subtitle": "Keine Verbindung zum Server",
+    "description": "Bitte prüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
+    "retry": "Wiederholen",
+    "offline": "Sie scheinen offline zu sein"
+  },
+  "form": {
+    "validation": {
+      "required": "Dieses Feld ist erforderlich",
+      "email": "Bitte geben Sie eine gültige E‑Mail-Adresse ein",
+      "phone": "Bitte geben Sie eine gültige Telefonnummer ein",
+      "minLength": "Mindestens {min} Zeichen",
+      "maxLength": "Höchstens {max} Zeichen",
+      "pattern": "Ungültiges Format",
+      "number": "Bitte geben Sie eine gültige Zahl ein",
+      "date": "Bitte geben Sie ein gültiges Datum ein",
+      "url": "Bitte geben Sie eine gültige URL ein"
+    },
+    "submit": {
+      "error": "Formular konnte nicht gesendet werden. Bitte erneut versuchen.",
+      "success": "Formular erfolgreich gesendet!",
+      "processing": "Wird verarbeitet...",
+      "retry": "Erneut senden"
+    }
+  },
+  "loading": {
+    "title": "Wird geladen...",
+    "description": "Bitte warten, während die Inhalte geladen werden",
+    "timeout": "Das Laden dauert länger als erwartet",
+    "retry": "Erneut versuchen"
+  },
+  "permission": {
+    "title": "Zugriff verweigert",
+    "subtitle": "Sie haben keinen Zugriff auf diese Seite",
+    "description": "Ihnen fehlen die erforderlichen Berechtigungen, um diesen Inhalt zu sehen.",
+    "goBack": "Zurück",
+    "login": "Anmeldung erforderlich"
+  },
+  "maintenance": {
+    "title": "Wartung",
+    "subtitle": "Wir aktualisieren gerade die Website",
+    "description": "Geplante Wartung zur Verbesserung Ihrer Erfahrung. Bitte versuchen Sie es bald wieder.",
+    "estimatedTime": "Voraussichtliche Fertigstellung: {time}",
+    "contact": "Brauchen Sie jetzt Hilfe? Kontaktieren Sie uns"
+  },
+  "generic": {
+    "title": "Ups! Etwas ist schiefgelaufen",
+    "subtitle": "Ein unerwarteter Fehler ist aufgetreten",
+    "description": "Entschuldigen Sie die Unannehmlichkeiten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns, falls das Problem bestehen bleibt.",
+    "retry": "Erneut versuchen",
+    "home": "Zur Startseite",
+    "contact": "Support kontaktieren"
+  },
+  "search": {
+    "noResults": "Keine Ergebnisse gefunden",
+    "tryAgain": "Versuchen Sie andere Suchbegriffe",
+    "clearFilters": "Alle Filter löschen",
+    "error": "Suche fehlgeschlagen. Bitte erneut versuchen."
+  },
+  "file": {
+    "uploadError": "Datei konnte nicht hochgeladen werden",
+    "fileTooLarge": "Die Datei ist zu groß. Maximalgröße: {maxSize}",
+    "invalidType": "Ungültiger Dateityp. Erlaubte Typen: {allowedTypes}",
+    "corrupted": "Die Datei scheint beschädigt zu sein",
+    "retry": "Erneut hochladen"
+  },
+  "api": {
+    "timeout": "Zeitüberschreitung bei der Anfrage",
+    "unavailable": "Dienst vorübergehend nicht verfügbar",
+    "rateLimit": "Zu viele Anfragen. Bitte warten Sie, bevor Sie es erneut versuchen.",
+    "unauthorized": "Authentifizierung erforderlich",
+    "forbidden": "Zugriff verweigert",
+    "notFound": "Ressource nicht gefunden",
+    "serverError": "Es ist ein Serverfehler aufgetreten"
+  },
+  "browser": {
+    "unsupported": "Ihr Browser wird nicht unterstützt",
+    "update": "Bitte aktualisieren Sie Ihren Browser auf die neueste Version",
+    "javascript": "Für diese Anwendung ist JavaScript erforderlich",
+    "cookies": "Für diese Anwendung sind Cookies erforderlich"
+  },
+  "accessibility": {
+    "keyboard": "Tab zum Navigieren, Enter zum Auswählen, Escape zum Schließen",
+    "screenReader": "Screenreader-freundliche Inhalte",
+    "highContrast": "Hoher Kontrast verfügbar",
+    "fontSize": "Schriftgröße anpassbar"
+  }
+}

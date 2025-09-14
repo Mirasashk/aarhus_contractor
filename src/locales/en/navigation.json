@@ -1,0 +1,46 @@
+{
+	"menu": {
+		"home": "Home",
+		"gallery": "Gallery",
+		"ourCraft": "Our Craft",
+		"services": "Services",
+		"consultation": "Consultation",
+		"about": "About",
+		"more": "More",
+		"contact": "Contact",
+		"projects": "Projects",
+		"testimonials": "Testimonials",
+		"blog": "Blog",
+		"news": "News",
+		"careers": "Careers",
+		"privacy": "Privacy Policy",
+		"terms": "Terms of Service"
+	},
+	"language": {
+		"switch": "Switch Language",
+		"english": "English",
+		"danish": "Dansk",
+		"german": "Deutsch",
+		"current": "Current Language",
+		"select": "Select Language"
+	},
+	"breadcrumbs": {
+		"home": "Home",
+		"currentPage": "Current Page",
+		"separator": ">"
+	},
+	"search": {
+		"placeholder": "Search...",
+		"noResults": "No results found",
+		"results": "Search Results",
+		"clear": "Clear search"
+	},
+	"user": {
+		"account": "My Account",
+		"profile": "Profile",
+		"settings": "Settings",
+		"logout": "Logout",
+		"login": "Login",
+		"register": "Register"
+	}
+}

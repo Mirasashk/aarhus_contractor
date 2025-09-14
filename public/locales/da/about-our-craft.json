@@ -1,0 +1,102 @@
+{
+	"hero": {
+		"badge": "Dansk håndværkskunst siden 1987",
+		"title": {
+			"line1": "Vi bygger hjem,",
+			"line2": "vi skaber drømme"
+		},
+		"description": "Fra traditionel dansk tømrerlære til moderne renoveringsmester – vores rejse forener kulturarv og nutidig ekspertise.",
+		"stats": {
+			"experience": {
+				"value": "37+ år",
+				"label": "Dansk håndværk"
+			},
+			"projects": {
+				"value": "500+ projekter",
+				"label": "Fuldført med stolthed"
+			}
+		},
+
+		"founder": {
+			"title": "Mød vores stifter",
+			"name": "Amir Petros Ahmadzadeh",
+			"role": "Mesterhåndværker & stifter",
+			"quote": "At bygge med hjertet – på dansk tradition",
+			"story": {
+				"title": "En rejse mod mesterskab",
+				"description": "Lars begyndte som ung lærling i 1987 og lærte klassiske danske tømrerteknikker af mesterhåndværkere. Gennem tre årtier har han forfinet sine færdigheder og kombineret dem med moderne metoder – en unik blanding af arv og innovation."
+			}
+		}
+	},
+	"team": {
+		"title": "Vores ekspertteam",
+		"subtitle": "Dygtige håndværkere, dedikerede fagfolk",
+		"description": "Hvert teammedlem bringer mange års erfaring og passion for kvalitet. Sammen leverer vi projekter, der overgår forventningerne.",
+		"roles": {
+			"masterCarpenter": "Mestertømrer",
+			"projectManager": "Projektleder",
+			"designSpecialist": "Designspecialist",
+			"qualityInspector": "Kvalitetsinspektør"
+		}
+	},
+	"philosophy": {
+		"title": "Vores håndværksfilosofi",
+		"subtitle": "Daglige praksisser og værdier",
+		"principles": {
+			"quality": {
+				"title": "Kompromisløs kvalitet",
+				"description": "Vi bruger de bedste materialer og teknikker, så hvert projekt holder i mange år."
+			},
+			"tradition": {
+				"title": "Respekt for tradition",
+				"description": "Vi ærer danske håndværkstraditioner og omfavner samtidig moderne løsninger."
+			},
+			"innovation": {
+				"title": "Kontinuerlig innovation",
+				"description": "Vi følger med de nyeste teknikker og teknologier for at betjene vores kunder bedre."
+			},
+			"integrity": {
+				"title": "Ærlighed og integritet",
+				"description": "Vi står for klar kommunikation, fair priser og gennemsigtige processer."
+			}
+		}
+	},
+	"credentials": {
+		"title": "Certificeringer & forpligtelser",
+		"subtitle": "Faglige standarder og kvalitetssikring",
+		"certifications": {
+			"licensed": "Autoriseret entreprenør",
+			"insured": "Fuldt forsikret",
+			"warranty": "5-års garanti",
+			"certified": "Certificerede håndværkere"
+		},
+		"commitments": {
+			"sustainability": "Bæredygtige praksisser",
+			"safety": "Sikkerhed først",
+			"timeline": "Rettidig levering",
+			"communication": "Tydelig kommunikation"
+		}
+	},
+	"whyAarhus": {
+		"title": "Hvorfor Aarhus?",
+		"subtitle": "Lokalkendskab, internationale standarder",
+		"description": "Med base i Aarhus forstår vi den danske boligkultur og lokale udfordringer. Vores indsigt gør os i stand til at levere løsninger, der respekterer arkitekturen og opfylder moderne behov.",
+		"benefits": {
+			"localKnowledge": "Dybt lokalkendskab",
+			"community": "Tilknytning til lokalsamfundet",
+			"accessibility": "Let tilgængelighed",
+			"understanding": "Kulturel forståelse"
+		}
+	},
+	"callToAction": {
+		"title": "Klar til at arbejde med os?",
+		"subtitle": "Lad os tale om dit projekt og finde vejen til din vision.",
+		"primary": "Book konsultation",
+		"secondary": "Se vores portefølje"
+	},
+	"meta": {
+		"title": "Om vores håndværk - Aarhus Contractor | Dansk arv & moderne ekspertise",
+		"description": "Lær historien bag Aarhus Contractor – fra dansk tømrerlære til moderne renoveringsmester. Mød teamet, der forener kulturarv og nutidig ekspertise.",
+		"keywords": "om Aarhus Contractor, dansk håndværk, renoveringsteam, byggefaglighed, mestertømrer"
+	}
+}

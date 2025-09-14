@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "badge": "Dänisches Erbe seit 1987",
+    "headline": {
+      "line1": "Wir bauen Zuhause,",
+      "line2": "wir erschaffen Träume"
+    },
+    "description": "Von traditioneller dänischer Zimmermannslehre bis zum modernen Renovierungspartner – unsere Reise vereint Kultur­erbe und aktuelle Expertise.",
+    "stats": {
+      "years": "37+ Jahre",
+      "yearsLabel": "Dänisches Handwerk",
+      "projects": "500+ Projekte",
+      "projectsLabel": "Mit Stolz abgeschlossen"
+    }
+  },
+  "founder": {
+    "title": "Lernen Sie unseren Gründer kennen",
+    "name": "Lars Andersen",
+    "role": "Master-Handwerker & Gründer",
+    "quote": "Mit Herz bauen – auf dänischer Tradition",
+    "story": {
+      "title": "Der Weg zur Meisterschaft",
+      "description": "Lars begann 1987 als Lehrling und erlernte klassische dänische Techniken von Meisterhandwerkern. Über drei Jahrzehnte verfeinerte er seine Fähigkeiten und kombinierte sie mit modernen Methoden – eine einzigartige Mischung aus Tradition und Innovation."
+    }
+  },
+  "team": {
+    "title": "Unser Expertenteam",
+    "subtitle": "Erfahrene Handwerker, engagierte Profis",
+    "description": "Jedes Teammitglied bringt langjährige Erfahrung und Leidenschaft für Qualität mit. Gemeinsam liefern wir Projekte, die Erwartungen übertreffen.",
+    "roles": {
+      "masterCarpenter": "Master-Zimmerer",
+      "projectManager": "Projektleiter",
+      "designSpecialist": "Designspezialist",
+      "qualityInspector": "Qualitätsinspektor"
+    }
+  },
+  "philosophy": {
+    "title": "Unsere Handwerksphilosophie",
+    "subtitle": "Tägliche Praxis und Werte",
+    "principles": {
+      "quality": {
+        "title": "Kompromisslose Qualität",
+        "description": "Nur die besten Materialien und Techniken – für Projekte, die Jahrzehnte halten."
+      },
+      "tradition": {
+        "title": "Respekt vor Tradition",
+        "description": "Wir ehren dänisches Handwerk und integrieren zugleich moderne Lösungen."
+      },
+      "innovation": {
+        "title": "Kontinuierliche Innovation",
+        "description": "Wir nutzen aktuelle Techniken und Technologien für bessere Ergebnisse."
+      },
+      "integrity": {
+        "title": "Ehrlichkeit & Integrität",
+        "description": "Klare Kommunikation, faire Preise und transparente Prozesse."
+      }
+    }
+  },
+  "credentials": {
+    "title": "Zertifizierungen & Verpflichtungen",
+    "subtitle": "Fachstandards und Qualitätssicherung",
+    "certifications": {
+      "licensed": "Lizenzierter Auftragnehmer",
+      "insured": "Voll versichert",
+      "warranty": "5‑Jahre Gewährleistung",
+      "certified": "Zertifizierte Handwerker"
+    },
+    "commitments": {
+      "sustainability": "Nachhaltige Praktiken",
+      "safety": "Sicherheit zuerst",
+      "timeline": "Termintreue",
+      "communication": "Klare Kommunikation"
+    }
+  },
+  "whyAarhus": {
+    "title": "Warum Aarhus?",
+    "subtitle": "Lokales Wissen, internationale Standards",
+    "description": "Mit Sitz in Aarhus verstehen wir die dänische Wohnkultur und lokale Anforderungen. Dieses Wissen ermöglicht Lösungen, die die Architektur respektieren und moderne Bedürfnisse erfüllen.",
+    "benefits": {
+      "localKnowledge": "Tiefes lokales Know-how",
+      "community": "Verbundenheit mit der Gemeinschaft",
+      "accessibility": "Gute Erreichbarkeit",
+      "understanding": "Kulturelles Verständnis"
+    }
+  },
+  "callToAction": {
+    "title": "Bereit für die Zusammenarbeit?",
+    "subtitle": "Sprechen wir über Ihr Projekt und den Weg zu Ihrer Vision.",
+    "primary": "Beratung buchen",
+    "secondary": "Unser Portfolio ansehen"
+  },
+  "meta": {
+    "title": "Über unser Handwerk – Aarhus Contractor | Dänisches Erbe & moderne Expertise",
+    "description": "Die Geschichte hinter Aarhus Contractor – von dänischer Lehre bis zum modernen Renovierungspartner. Lernen Sie das Team kennen, das Tradition und Innovation verbindet.",
+    "keywords": "Über Aarhus Contractor, dänisches Handwerk, Renovierungsteam, Baukompetenz, Meisterzimmerer"
+  }
+}

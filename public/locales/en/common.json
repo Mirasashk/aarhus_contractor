@@ -1,0 +1,87 @@
+{
+	"buttons": {
+		"beginJourney": "Begin Your Journey",
+		"goBack": "Go Back",
+		"backToHome": "Back to Home",
+		"learnMore": "Learn More",
+		"getStarted": "Get Started",
+		"contactUs": "Contact Us",
+		"bookConsultation": "Book Consultation",
+		"viewGallery": "View Gallery",
+		"readMore": "Read More",
+		"close": "Close",
+		"submit": "Submit",
+		"cancel": "Cancel",
+		"save": "Save",
+		"edit": "Edit",
+		"delete": "Delete",
+		"share": "Share",
+		"download": "Download"
+	},
+	"labels": {
+		"loading": "Loading...",
+		"error": "Error",
+		"success": "Success",
+		"close": "Close",
+		"menu": "Menu",
+		"search": "Search",
+		"filter": "Filter",
+		"sort": "Sort",
+		"next": "Next",
+		"previous": "Previous",
+		"page": "Page",
+		"of": "of",
+		"results": "results",
+		"noResults": "No results found",
+		"tryAgain": "Try Again",
+		"refresh": "Refresh"
+	},
+	"company": {
+		"name": "Aarhus Contractor",
+		"tagline": "Danish Craftsmanship",
+		"founded": "Since 1987",
+		"location": "Aarhus, Denmark",
+		"phone": "Phone",
+		"email": "Email",
+		"address": "Address",
+		"website": "Website"
+	},
+	"meta": {
+		"title": "Aarhus Contractor - Danish Craftsmanship & Renovation",
+		"description": "Professional renovation and craftsmanship in Aarhus. Danish quality and tradition since 1987.",
+		"keywords": "renovation, craftsmanship, Aarhus, Danish, construction, home improvement, carpentry"
+	},
+	"accessibility": {
+		"skipToContent": "Skip to main content",
+		"openMenu": "Open menu",
+		"closeMenu": "Close menu",
+		"openLanguageMenu": "Open language menu",
+		"closeLanguageMenu": "Close language menu",
+		"previousImage": "Previous image",
+		"nextImage": "Next image",
+		"playVideo": "Play video",
+		"pauseVideo": "Pause video"
+	},
+	"time": {
+		"today": "Today",
+		"yesterday": "Yesterday",
+		"tomorrow": "Tomorrow",
+		"thisWeek": "This week",
+		"lastWeek": "Last week",
+		"nextWeek": "Next week",
+		"thisMonth": "This month",
+		"lastMonth": "Last month",
+		"nextMonth": "Next month",
+		"thisYear": "This year",
+		"lastYear": "Last year",
+		"nextYear": "Next year"
+	},
+	"status": {
+		"online": "Online",
+		"offline": "Offline",
+		"available": "Available",
+		"unavailable": "Unavailable",
+		"busy": "Busy",
+		"away": "Away"
+	}
+}
