@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../hooks/useFirebase';
+import { useAuth } from '../../../hooks/useFirebase';
 import './AdminLogin.css';
 
 const AdminLogin = () => {
@@ -21,7 +21,7 @@ const AdminLogin = () => {
 
 			if (result.success) {
 				// Redirect to root on successful login
-				navigate('/');
+				navigate('/admin');
 			} else {
 				setError(result.error || 'Login failed. Please try again.');
 			}

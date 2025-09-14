@@ -8,6 +8,7 @@ import ProjectModal from './components/ProjectModal';
 import GalleryLightbox from './components/GalleryLightbox';
 import ProjectStats from './components/ProjectStats';
 import Footer from '../../components/ui/Footer';
+import AdminFloatButton from '../../components/AdminFloatButton';
 
 const ProjectTransformationsGallery = () => {
 	const [projects] = useState([
@@ -923,6 +924,7 @@ const ProjectTransformationsGallery = () => {
 				initialImageIndex={lightboxImageIndex}
 			/>
 			<Footer />
+			<AdminFloatButton />
 		</div>
 	);
 };

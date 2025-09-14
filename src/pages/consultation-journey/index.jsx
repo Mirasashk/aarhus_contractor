@@ -8,6 +8,7 @@ import ProjectDetailsForm from './components/ProjectDetailsForm';
 import ConsultationConfirmation from './components/ConsultationConfirmation';
 import Icon from '../../components/AppIcon';
 import Footer from '../../components/ui/Footer';
+import AdminFloatButton from '../../components/AdminFloatButton';
 
 const ConsultationJourney = () => {
 	const [currentStep, setCurrentStep] = useState(1);
@@ -316,6 +317,7 @@ const ConsultationJourney = () => {
 
 				{/* Footer */}
 				<Footer />
+				<AdminFloatButton />
 			</div>
 		</>
 	);

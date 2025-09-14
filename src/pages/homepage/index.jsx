@@ -7,6 +7,7 @@ import ConsultationWidget from './components/ConsultationWidget';
 import TestimonialCarousel from './components/TestimonialCarousel';
 import TrustSignalsSection from './components/TrustSignalsSection';
 import Footer from '../../components/ui/Footer';
+import AdminFloatButton from '../../components/AdminFloatButton';
 
 const Homepage = () => {
 	return (
@@ -34,6 +35,7 @@ const Homepage = () => {
 			</main>
 
 			<Footer />
+			<AdminFloatButton />
 		</div>
 	);
 };

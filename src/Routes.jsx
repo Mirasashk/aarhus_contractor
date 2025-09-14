@@ -15,7 +15,10 @@ import CraftProcessPhilosophy from './pages/craft-process-philosophy';
 import ServiceSpecializations from './pages/service-specializations';
 import AboutOurCraft from './pages/about-our-craft';
 import Homepage from './pages/homepage';
-import AdminLogin from './pages/AdminLogin';
+import AdminLogin from './admin/pages/login';
+import AdminDashboard from './admin/pages/dashboard';
+import AdminLayout from './admin/components/AdminLayout';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const Routes = () => {
 	return (
@@ -57,11 +60,26 @@ const Routes = () => {
 							element={<NotFound />}
 						/>
 					</Route>
-					{/* Admin login route */}
+					{/* Admin login route - standalone without sidebar */}
 					<Route
 						path='/admin-login'
 						element={<AdminLogin />}
 					/>
+					{/* Admin routes with sidebar layout - Protected */}
+					<Route
+						path='/admin'
+						element={
+							<ProtectedRoute>
+								<AdminLayout />
+							</ProtectedRoute>
+						}
+					>
+						<Route
+							index
+							element={<AdminDashboard />}
+						/>
+						{/* Add more admin routes here as needed */}
+					</Route>
 					{/* Default redirect to Danish */}
 					<Route
 						path='/'
