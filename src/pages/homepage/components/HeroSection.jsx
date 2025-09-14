@@ -71,7 +71,7 @@ const HeroSection = () => {
 			<div className='grid grid-cols-2'>
 				{/* Content Container */}
 				<div className='col-span-1'>
-					<div className='w-full max-w-7xl mx-auto px-6 lg:px-8 py-8'>
+					<div className='w-full max-w-7xl mx-auto pl-12 xl:pl-18 py-8 '>
 						<div className='grid gap-12 items-center'>
 							{/* Left Content */}
 							<div className='space-y-8'>
