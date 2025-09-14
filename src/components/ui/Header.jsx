@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
 import LanguageSwitcher from '../LanguageSwitcher';
-import Logo from '../../../public/assets/images/Logo_Black.png';
+import Logo from '/assets/images/Logo_Black.png';
 
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -6,7 +6,7 @@ import DanishPhilosophySection from './components/DanishPhilosophySection';
 import ConsultationWidget from './components/ConsultationWidget';
 import TestimonialCarousel from './components/TestimonialCarousel';
 import TrustSignalsSection from './components/TrustSignalsSection';
-import Footer from './components/Footer';
+import Footer from '../../components/ui/Footer';
 
 const Homepage = () => {
 	return (
@@ -33,7 +33,7 @@ const Homepage = () => {
 				<TrustSignalsSection />
 			</main>
 
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 };

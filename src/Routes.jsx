@@ -29,10 +29,6 @@ const Routes = () => {
 					>
 						<Route
 							index
-							element={<AboutOurCraft />}
-						/>
-						<Route
-							path='homepage'
 							element={<Homepage />}
 						/>
 						<Route
