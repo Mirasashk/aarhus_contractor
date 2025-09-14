@@ -7,4 +7,14 @@ package-lock.json
 .idea/
 vite.config.*s.*
 .env
+.env.example
+FIREBASE_SETUP.md
+REACT_ROAST_IMPLEMENTATION_PLAN.md
+firestore.rules
+storage.rules
+firebase.json
+firestore.indexes.json
+firebase-config.js
+firebase-config.example.js
+firebase-config.example.js
 .firebase/

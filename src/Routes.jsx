@@ -15,6 +15,7 @@ import CraftProcessPhilosophy from './pages/craft-process-philosophy';
 import ServiceSpecializations from './pages/service-specializations';
 import AboutOurCraft from './pages/about-our-craft';
 import Homepage from './pages/homepage';
+import AdminLogin from './pages/AdminLogin';
 
 const Routes = () => {
 	return (
@@ -56,6 +57,11 @@ const Routes = () => {
 							element={<NotFound />}
 						/>
 					</Route>
+					{/* Admin login route */}
+					<Route
+						path='/admin-login'
+						element={<AdminLogin />}
+					/>
 					{/* Default redirect to Danish */}
 					<Route
 						path='/'
