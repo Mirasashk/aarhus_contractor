@@ -15,8 +15,15 @@ import CraftProcessPhilosophy from './pages/craft-process-philosophy';
 import ServiceSpecializations from './pages/service-specializations';
 import AboutOurCraft from './pages/about-our-craft';
 import Homepage from './pages/homepage';
+
+// Admin Routes
 import AdminLogin from './admin/pages/login';
 import AdminDashboard from './admin/pages/dashboard';
+import AdminProjects from './admin/pages/projects';
+import AdminFeedback from './admin/pages/feedback';
+import AdminConsultations from './admin/pages/consultations';
+import AdminTeam from './admin/pages/team';
+import AdminTestimonials from './admin/pages/testimonials';
 import AdminLayout from './admin/components/AdminLayout';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -77,6 +84,26 @@ const Routes = () => {
 						<Route
 							index
 							element={<AdminDashboard />}
+						/>
+						<Route
+							path='projects'
+							element={<AdminProjects />}
+						/>
+						<Route
+							path='feedback'
+							element={<AdminFeedback />}
+						/>
+						<Route
+							path='consultations'
+							element={<AdminConsultations />}
+						/>
+						<Route
+							path='team'
+							element={<AdminTeam />}
+						/>
+						<Route
+							path='testimonials'
+							element={<AdminTestimonials />}
 						/>
 						{/* Add more admin routes here as needed */}
 					</Route>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import {
 	Dialog,
 	DialogBackdrop,
@@ -17,17 +17,41 @@ import {
 	HomeIcon,
 	UsersIcon,
 	XMarkIcon,
+	ChatBubbleBottomCenterTextIcon,
 } from '@heroicons/react/24/outline';
 import { useAuth } from '../../hooks/useFirebase';
 
 const navigation = [
-	{ name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-	{ name: 'Projects', href: '#', icon: FolderIcon, current: false },
-	{ name: 'Consultations', href: '#', icon: CalendarIcon, current: false },
+	{ name: 'Dashboard', href: '/admin', icon: HomeIcon },
+	{
+		name: 'Projects',
+		href: '/admin/projects',
+		icon: FolderIcon,
+	},
+	{
+		name: 'Consultations',
+		href: '/admin/consultations',
+		icon: CalendarIcon,
+	},
+	{
+		name: 'Feedback',
+		href: '/admin/feedback',
+		icon: ChatBubbleBottomCenterTextIcon,
+	},
 ];
 const teams = [
-	{ id: 1, name: 'Testimonials', href: '#', initial: 'H', current: false },
-	{ id: 2, name: 'Team Members', href: '#', initial: 'T', current: false },
+	{
+		id: 1,
+		name: 'Testimonials',
+		href: '/admin/testimonials',
+		initial: 'H',
+	},
+	{
+		id: 2,
+		name: 'Team Members',
+		href: '/admin/team',
+		initial: 'T',
+	},
 ];
 
 function classNames(...classes) {
@@ -83,6 +107,15 @@ export default function Sidebar({ children }) {
 	const [sidebarOpen, setSidebarOpen] = useState(false);
 	const { user, loading, signOut } = useAuth();
 	const navigate = useNavigate();
+	const location = useLocation();
+
+	// Helper function to determine if a route is active
+	const isActiveRoute = (href) => {
+		if (href === '/admin') {
+			return location.pathname === '/admin';
+		}
+		return location.pathname.startsWith(href);
+	};
 
 	const handleLogout = async () => {
 		try {
@@ -165,10 +198,12 @@ export default function Sidebar({ children }) {
 											>
 												{navigation.map((item) => (
 													<li key={item.name}>
-														<a
-															href={item.href}
+														<Link
+															to={item.href}
 															className={classNames(
-																item.current
+																isActiveRoute(
+																	item.href
+																)
 																	? 'bg-indigo-700 text-white dark:bg-indigo-950/25'
 																	: 'text-indigo-200 hover:bg-indigo-700 hover:text-white dark:text-indigo-100 dark:hover:bg-indigo-950/25',
 																'group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold'
@@ -177,14 +212,16 @@ export default function Sidebar({ children }) {
 															<item.icon
 																aria-hidden='true'
 																className={classNames(
-																	item.current
+																	isActiveRoute(
+																		item.href
+																	)
 																		? 'text-white'
 																		: 'text-indigo-200 group-hover:text-white dark:text-indigo-100',
 																	'size-6 shrink-0'
 																)}
 															/>
 															{item.name}
-														</a>
+														</Link>
 													</li>
 												))}
 											</ul>
@@ -199,10 +236,12 @@ export default function Sidebar({ children }) {
 											>
 												{teams.map((team) => (
 													<li key={team.name}>
-														<a
-															href={team.href}
+														<Link
+															to={team.href}
 															className={classNames(
-																team.current
+																isActiveRoute(
+																	team.href
+																)
 																	? 'bg-indigo-700 text-white dark:bg-indigo-950/25'
 																	: 'text-indigo-200 hover:bg-indigo-700 hover:text-white dark:text-indigo-100 dark:hover:bg-indigo-950/25',
 																'group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold'
@@ -214,7 +253,7 @@ export default function Sidebar({ children }) {
 															<span className='truncate'>
 																{team.name}
 															</span>
-														</a>
+														</Link>
 													</li>
 												))}
 											</ul>
@@ -255,10 +294,10 @@ export default function Sidebar({ children }) {
 									>
 										{navigation.map((item) => (
 											<li key={item.name}>
-												<a
-													href={item.href}
+												<Link
+													to={item.href}
 													className={classNames(
-														item.current
+														isActiveRoute(item.href)
 															? 'bg-indigo-700 text-white dark:bg-indigo-950/25'
 															: 'text-indigo-200 hover:bg-indigo-700 hover:text-white dark:text-indigo-100 dark:hover:bg-indigo-950/25',
 														'group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold'
@@ -267,14 +306,16 @@ export default function Sidebar({ children }) {
 													<item.icon
 														aria-hidden='true'
 														className={classNames(
-															item.current
+															isActiveRoute(
+																item.href
+															)
 																? 'text-white'
 																: 'text-indigo-200 group-hover:text-white dark:text-indigo-100',
 															'size-6 shrink-0'
 														)}
 													/>
 													{item.name}
-												</a>
+												</Link>
 											</li>
 										))}
 									</ul>
@@ -289,10 +330,10 @@ export default function Sidebar({ children }) {
 									>
 										{teams.map((team) => (
 											<li key={team.name}>
-												<a
-													href={team.href}
+												<Link
+													to={team.href}
 													className={classNames(
-														team.current
+														isActiveRoute(team.href)
 															? 'bg-indigo-700 text-white dark:bg-indigo-950/25'
 															: 'text-indigo-200 hover:bg-indigo-700 hover:text-white dark:text-indigo-100 dark:hover:bg-indigo-950/25',
 														'group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold'
@@ -304,7 +345,7 @@ export default function Sidebar({ children }) {
 													<span className='truncate'>
 														{team.name}
 													</span>
-												</a>
+												</Link>
 											</li>
 										))}
 									</ul>

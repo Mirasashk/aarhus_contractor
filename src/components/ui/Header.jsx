@@ -15,7 +15,7 @@ const Header = () => {
 	const { t, ready } = useTranslation(['navigation', 'common']);
 
 	const navigationItems = [
-		{ name: t('menu.home'), path: '/homepage', icon: 'Home' },
+		{ name: t('menu.home'), path: '/', icon: 'Home' },
 		{
 			name: t('menu.gallery'),
 			path: '/project-transformations-gallery',
