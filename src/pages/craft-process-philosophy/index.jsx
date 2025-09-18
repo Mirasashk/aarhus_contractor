@@ -2,9 +2,6 @@ import React from 'react';
 import Header from '../../components/ui/Header';
 import PhilosophyHero from './components/PhilosophyHero';
 import ProcessVisualization from './components/ProcessVisualization';
-import HyggeSection from './components/HyggeSection';
-import CraftShowcase from './components/CraftShowcase';
-import ArtisanNetwork from './components/ArtisanNetwork';
 import QualityGuarantees from './components/QualityGuarantees';
 import Icon from '../../components/AppIcon';
 import Button from '../../components/ui/Button';
@@ -18,12 +15,6 @@ const CraftProcessPhilosophy = () => {
 			<PhilosophyHero />
 			{/* Process Visualization */}
 			<ProcessVisualization />
-			{/* Hygge Philosophy */}
-			<HyggeSection />
-			{/* Craft Showcase */}
-			<CraftShowcase />
-			{/* Artisan Network */}
-			<ArtisanNetwork />
 			{/* Quality Guarantees */}
 			<QualityGuarantees />
 			{/* Call to Action Section */}
@@ -39,14 +30,13 @@ const CraftProcessPhilosophy = () => {
 						</div>
 
 						<h2 className='headline-secondary text-3xl lg:text-5xl font-bold text-foreground mb-6'>
-							Ready to Experience Danish Craftsmanship?
+							Ready to Engage a Professional Partner?
 						</h2>
 
-						<p className='body-primary text-xl text-muted-foreground max-w-3xl mx-auto mb-10'>
-							Let's discuss how our philosophy and process can
-							transform your space into a true reflection of
-							Danish comfort and quality. Every great project
-							begins with a conversation.
+						<p className='body-primary text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-10'>
+							Let’s align on scope, compliance, and delivery.
+							Request a project assessment or proposal
+							presentation to get started.
 						</p>
 
 						<div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
@@ -63,7 +53,7 @@ const CraftProcessPhilosophy = () => {
 									size={20}
 									className='mr-2'
 								/>
-								Schedule Your Consultation
+								Request Project Assessment
 							</Button>
 
 							<Button

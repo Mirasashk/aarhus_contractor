@@ -54,7 +54,7 @@ const AboutOurCraft = () => {
 				<WhyAarhusSection />
 
 				{/* Call to Action - Begin consultation journey */}
-				<CallToAction />
+				{/* <CallToAction /> */}
 			</main>
 			<Footer />
 		</div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import Icon from '../AppIcon';
+import Logo from '/assets/images/Logo_White.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
@@ -10,21 +12,23 @@ const Footer = () => {
 						{/* Company Info */}
 						<div className='space-y-4'>
 							<div className='flex items-center space-x-3'>
-								<div className='w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center'>
-									<Icon
-										name='Home'
-										size={16}
-										className='text-background'
-									/>
+								<div className='flex-shrink-0'>
+									<Link
+										to={'/'}
+										className='block'
+									>
+										<img
+											src={Logo}
+											alt='Aarhus Contractor'
+											className='h-12'
+										/>
+									</Link>
 								</div>
-								<span className='font-headlines font-bold text-lg'>
-									Aarhus Contractor
-								</span>
 							</div>
 							<p className='text-background/80 text-sm leading-relaxed'>
-								Danish craftsmanship meets contemporary living.
-								Creating spaces that embody hygge through
-								thoughtful construction and timeless design.
+								Professional Danish construction partner for
+								housing and public sector projects. Certified,
+								compliant, and committed to delivery excellence.
 							</p>
 						</div>
 
@@ -47,7 +51,7 @@ const Footer = () => {
 										href='/project-transformations-gallery'
 										className='text-background/80 hover:text-background text-sm transition-colors'
 									>
-										Gallery
+										Portfolio
 									</a>
 								</li>
 								<li>
@@ -55,7 +59,7 @@ const Footer = () => {
 										href='/service-specializations'
 										className='text-background/80 hover:text-background text-sm transition-colors'
 									>
-										Services
+										Housing Projects
 									</a>
 								</li>
 								<li>
@@ -63,7 +67,7 @@ const Footer = () => {
 										href='/about-our-craft'
 										className='text-background/80 hover:text-background text-sm transition-colors'
 									>
-										About
+										Our Expertise
 									</a>
 								</li>
 							</ul>
@@ -77,71 +81,90 @@ const Footer = () => {
 							<ul className='space-y-2'>
 								<li>
 									<span className='text-background/80 text-sm'>
-										Kitchen Renovations
+										Housing Development
 									</span>
 								</li>
 								<li>
 									<span className='text-background/80 text-sm'>
-										Bathroom Remodeling
+										Government Buildings
 									</span>
 								</li>
 								<li>
 									<span className='text-background/80 text-sm'>
-										Living Space Design
+										Public Infrastructure
 									</span>
 								</li>
 								<li>
 									<span className='text-background/80 text-sm'>
-										Heritage Restoration
+										Project Management
+									</span>
+								</li>
+								<li>
+									<span className='text-background/80 text-sm'>
+										Maintenance Services
 									</span>
 								</li>
 							</ul>
 						</div>
 
-						{/* Contact */}
+						{/* Company & Legal */}
 						<div className='space-y-4'>
 							<h4 className='font-headlines font-semibold text-background'>
-								Contact
+								Company & Legal
 							</h4>
-							<div className='space-y-2'>
-								<div className='flex items-center space-x-2'>
-									<Icon
-										name='Phone'
-										size={14}
-										className='text-background/60'
-									/>
-									<span className='text-background/80 text-sm'>
-										+45 8612 3456
-									</span>
-								</div>
-								<div className='flex items-center space-x-2'>
-									<Icon
-										name='Mail'
-										size={14}
-										className='text-background/60'
-									/>
-									<span className='text-background/80 text-sm'>
-										hello@aarhuscontractor.dk
-									</span>
-								</div>
-								<div className='flex items-center space-x-2'>
-									<Icon
-										name='MapPin'
-										size={14}
-										className='text-background/60'
-									/>
-									<span className='text-background/80 text-sm'>
-										Aarhus, Denmark
-									</span>
-								</div>
-							</div>
+							<ul className='space-y-2'>
+								<li className='text-background/80 text-sm'>
+									CVR: 12345678
+								</li>
+								<li className='text-background/80 text-sm'>
+									EU VAT: DK12345678
+								</li>
+								<li className='text-background/80 text-sm'>
+									Danish Building Authority Licensed
+								</li>
+							</ul>
+							<ul className='space-y-2 pt-2'>
+								<li>
+									<a
+										href='/terms'
+										className='text-background/80 hover:text-background text-sm transition-colors'
+									>
+										Terms & Conditions
+									</a>
+								</li>
+								<li>
+									<a
+										href='/privacy'
+										className='text-background/80 hover:text-background text-sm transition-colors'
+									>
+										Privacy Policy
+									</a>
+								</li>
+								<li>
+									<a
+										href='/cookies'
+										className='text-background/80 hover:text-background text-sm transition-colors'
+									>
+										Cookie Policy
+									</a>
+								</li>
+								<li>
+									<a
+										href='/insurance'
+										className='text-background/80 hover:text-background text-sm transition-colors'
+									>
+										Insurance & Compliance
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 
 					<div className='border-t border-background/20 mt-8 pt-8 text-center'>
 						<p className='text-background/60 text-sm'>
-							© {new Date()?.getFullYear()} Aarhus Contractor. All
-							rights reserved. | Danish craftsmanship since 1999.
+							© {new Date()?.getFullYear()} Aarhus Contractor Aps.
+							All rights reserved. | Danish craftsmanship since
+							2024.
 						</p>
 					</div>
 				</div>

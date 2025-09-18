@@ -19,9 +19,11 @@ const ConsultationWidget = () => {
 	const [showSuccess, setShowSuccess] = useState(false);
 
 	const projectTypeOptions = [
-		{ value: 'residential', label: 'Residential' },
-		{ value: 'commercial', label: 'Commercial' },
-		{ value: 'public', label: 'Public' },
+		{ value: 'housing-development', label: 'Housing Development' },
+		{ value: 'government-buildings', label: 'Government Buildings' },
+		{ value: 'public-infrastructure', label: 'Public Infrastructure' },
+		{ value: 'commercial-construction', label: 'Commercial Construction' },
+		{ value: 'social-housing', label: 'Social Housing' },
 	];
 
 	const timelineOptions = [
@@ -32,11 +34,12 @@ const ConsultationWidget = () => {
 	];
 
 	const budgetOptions = [
-		{ value: 'under-100k', label: 'Under DKK 100,000' },
-		{ value: '100k-200k', label: 'DKK 100,000 - 200,000' },
-		{ value: '200k-400k', label: 'DKK 200,000 - 400,000' },
-		{ value: '400k-600k', label: 'DKK 400,000 - 600,000' },
-		{ value: 'over-600k', label: 'Over DKK 600,000' },
+		{ value: '500k-2m', label: 'DKK 500K - 2M (Small projects)' },
+		{ value: '2m-10m', label: 'DKK 2M - 10M (Medium projects)' },
+		{ value: '10m-25m', label: 'DKK 10M - 25M (Large projects)' },
+		{ value: '25m-50m', label: 'DKK 25M - 50M (Major projects)' },
+		{ value: 'over-50m', label: 'Over DKK 50M (Infrastructure)' },
+		{ value: 'government', label: 'Government Contract (EU compliant)' },
 		{ value: 'discuss', label: 'Prefer to Discuss' },
 	];
 
@@ -83,7 +86,7 @@ const ConsultationWidget = () => {
 
 	if (showSuccess) {
 		return (
-			<section className='py-20 bg-card'>
+			<section className='py-8 bg-card'>
 				<div className='max-w-4xl mx-auto px-6 lg:px-8'>
 					<div className='bg-background rounded-2xl shadow-elevated p-12 text-center space-y-6'>
 						<div className='w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mx-auto'>
@@ -99,9 +102,9 @@ const ConsultationWidget = () => {
 								Thank You for Your Interest!
 							</h3>
 							<p className='body-primary text-muted-foreground max-w-2xl mx-auto'>
-								We've received your consultation request and
+								We've received your project proposal request and
 								will contact you within 24 hours to schedule
-								your personalized design consultation.
+								your professional project assessment.
 							</p>
 						</div>
 
@@ -118,7 +121,7 @@ const ConsultationWidget = () => {
 									/>
 									<span>
 										We'll call you within 24 hours to
-										discuss your project
+										discuss your project requirements
 									</span>
 								</div>
 								<div className='flex items-center space-x-2'>
@@ -128,19 +131,19 @@ const ConsultationWidget = () => {
 										className='text-brand-primary'
 									/>
 									<span>
-										Schedule an in-home consultation at your
+										Schedule a site visit or meeting at your
 										convenience
 									</span>
 								</div>
 								<div className='flex items-center space-x-2'>
 									<Icon
-										name='PenTool'
+										name='FileText'
 										size={16}
 										className='text-brand-primary'
 									/>
 									<span>
-										Receive a detailed proposal tailored to
-										your vision
+										Receive a detailed proposal with
+										timeline and budget breakdown
 									</span>
 								</div>
 							</div>
@@ -152,13 +155,13 @@ const ConsultationWidget = () => {
 	}
 
 	return (
-		<section className='py-20 bg-card'>
+		<section className='py-8 bg-card'>
 			<div className='max-w-6xl mx-auto px-6 lg:px-8'>
-				<div className='grid lg:grid-cols-2 gap-16 items-start'>
+				<div className='grid lg:grid-cols-2 gap-2 items-start'>
 					{/* Left Content */}
-					<div className='space-y-8'>
+					<div className='space-y-2'>
 						<div className='space-y-6'>
-							<div className='inline-flex items-center space-x-2 bg-muted px-4 py-2 rounded-full'>
+							{/* <div className='inline-flex items-center space-x-2 bg-muted px-4 py-2 rounded-full'>
 								<Icon
 									name='Calendar'
 									size={16}
@@ -167,37 +170,31 @@ const ConsultationWidget = () => {
 								<span className='text-sm font-medium text-muted-foreground'>
 									Free Consultation
 								</span>
-							</div>
+							</div> */}
 
 							<h2 className='headline-secondary text-3xl lg:text-4xl font-bold text-foreground'>
-								Begin Your
+								Request Your
 								<span className='block text-brand-primary'>
-									Transformation Journey
+									Project Proposal
 								</span>
 							</h2>
 
 							<p className='body-primary text-lg text-muted-foreground'>
-								Schedule a complimentary consultation where
-								we'll discuss your vision, explore
-								possibilities, and create a roadmap for your
-								dream space.
+								Schedule a professional consultation where we'll
+								assess your project requirements, discuss
+								compliance needs, and create a detailed proposal
+								for your construction project.
 							</p>
 						</div>
 
 						{/* Consultation Benefits */}
-						<div className='space-y-4'>
+						{/* <div className='space-y-4'>
 							<h3 className='font-headlines font-semibold text-lg text-foreground'>
 								What You'll Receive:
 							</h3>
 
 							<div className='space-y-3'>
 								{[
-									{
-										icon: 'Home',
-										title: 'In-Home Assessment',
-										description:
-											'Detailed evaluation of your space and structural possibilities',
-									},
 									{
 										icon: 'PenTool',
 										title: 'Design Concepts',
@@ -239,7 +236,7 @@ const ConsultationWidget = () => {
 									</div>
 								))}
 							</div>
-						</div>
+						</div> */}
 
 						{/* Trust Indicators */}
 						<div className='bg-muted/50 p-6 rounded-xl space-y-4'>
@@ -254,7 +251,7 @@ const ConsultationWidget = () => {
 										className='text-success'
 									/>
 									<span className='text-sm text-muted-foreground'>
-										Fully Licensed & Insured
+										EU Public Procurement Certified
 									</span>
 								</div>
 								<div className='flex items-center space-x-2'>
@@ -264,17 +261,7 @@ const ConsultationWidget = () => {
 										className='text-conversion-accent'
 									/>
 									<span className='text-sm text-muted-foreground'>
-										15+ Years Experience
-									</span>
-								</div>
-								<div className='flex items-center space-x-2'>
-									<Icon
-										name='Star'
-										size={16}
-										className='text-conversion-accent'
-									/>
-									<span className='text-sm text-muted-foreground'>
-										98% Client Satisfaction
+										ISO 9001:2015 Certified
 									</span>
 								</div>
 								<div className='flex items-center space-x-2'>
@@ -284,7 +271,17 @@ const ConsultationWidget = () => {
 										className='text-success'
 									/>
 									<span className='text-sm text-muted-foreground'>
-										Quality Guarantee
+										Government Contract Approved
+									</span>
+								</div>
+								<div className='flex items-center space-x-2'>
+									<Icon
+										name='Leaf'
+										size={16}
+										className='text-success'
+									/>
+									<span className='text-sm text-muted-foreground'>
+										Environmental Compliance
 									</span>
 								</div>
 							</div>
@@ -292,15 +289,15 @@ const ConsultationWidget = () => {
 					</div>
 
 					{/* Right Content - Form */}
-					<div className='bg-background rounded-2xl shadow-elevated p-8'>
+					<div className='bg-background rounded-2xl shadow-elevated p-4'>
 						<div className='space-y-6'>
 							<div className='text-center space-y-2'>
 								<h3 className='font-headlines font-semibold text-xl text-foreground'>
-									Schedule Your Consultation
+									Request Project Assessment
 								</h3>
 								<p className='text-sm text-muted-foreground'>
 									Tell us about your project and we'll create
-									a personalized consultation experience.
+									a detailed proposal for you.
 								</p>
 							</div>
 
@@ -384,7 +381,7 @@ const ConsultationWidget = () => {
 											required
 										/>
 
-										<Select
+										{/* <Select
 											label='Budget Range'
 											placeholder='Select budget range'
 											options={budgetOptions}
@@ -396,7 +393,7 @@ const ConsultationWidget = () => {
 												)
 											}
 											required
-										/>
+										/> */}
 									</div>
 								</div>
 

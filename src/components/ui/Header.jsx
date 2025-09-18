@@ -15,31 +15,26 @@ const Header = () => {
 	const { t, ready } = useTranslation(['navigation', 'common']);
 
 	const navigationItems = [
-		{ name: t('menu.home'), path: '/', icon: 'Home' },
 		{
-			name: t('menu.gallery'),
+			name: 'Portfolio',
 			path: '/project-transformations-gallery',
 			icon: 'Image',
 		},
 		{
-			name: t('menu.ourCraft'),
-			path: '/craft-process-philosophy',
-			icon: 'Hammer',
-		},
-		{
-			name: t('menu.services'),
+			name: 'Housing Projects',
 			path: '/service-specializations',
 			icon: 'Wrench',
 		},
-		{
-			name: t('menu.consultation'),
-			path: '/consultation-journey',
-			icon: 'Calendar',
-		},
+		{ name: 'Our Expertise', path: '/about-our-craft', icon: 'Hammer' },
+		{ name: 'Contact Us', path: '/consultation-journey', icon: 'Phone' },
 	];
 
 	const secondaryItems = [
-		{ name: t('menu.about'), path: '/about-our-craft', icon: 'Users' },
+		{
+			name: 'Methodology & Standards',
+			path: '/craft-process-philosophy',
+			icon: 'ClipboardList',
+		},
 	];
 
 	// Helper function to create localized paths
@@ -93,65 +88,6 @@ const Header = () => {
 	const isActivePath = (path) => {
 		return location?.pathname === getLocalizedPath(path);
 	};
-
-	// const Logo = () => (
-	// 	<div className='flex items-center space-x-3'>
-	// 		<div className='relative'>
-	// 			<svg
-	// 				width='40'
-	// 				height='40'
-	// 				viewBox='0 0 40 40'
-	// 				fill='none'
-	// 				xmlns='http://www.w3.org/2000/svg'
-	// 				className='text-brand-primary'
-	// 			>
-	// 				<rect
-	// 					x='2'
-	// 					y='2'
-	// 					width='36'
-	// 					height='36'
-	// 					rx='8'
-	// 					stroke='currentColor'
-	// 					strokeWidth='2'
-	// 					fill='none'
-	// 				/>
-	// 				<path
-	// 					d='M12 16L20 12L28 16V28C28 29.1046 27.1046 30 26 30H14C12.8954 30 12 29.1046 12 28V16Z'
-	// 					fill='currentColor'
-	// 					fillOpacity='0.1'
-	// 				/>
-	// 				<path
-	// 					d='M12 16L20 12L28 16'
-	// 					stroke='currentColor'
-	// 					strokeWidth='2'
-	// 					strokeLinecap='round'
-	// 					strokeLinejoin='round'
-	// 				/>
-	// 				<path
-	// 					d='M12 16V28C12 29.1046 12.8954 30 14 30H26C27.1046 30 28 29.1046 28 28V16'
-	// 					stroke='currentColor'
-	// 					strokeWidth='2'
-	// 					strokeLinecap='round'
-	// 					strokeLinejoin='round'
-	// 				/>
-	// 				<path
-	// 					d='M16 22H24'
-	// 					stroke='currentColor'
-	// 					strokeWidth='2'
-	// 					strokeLinecap='round'
-	// 				/>
-	// 			</svg>
-	// 		</div>
-	// 		<div className='flex flex-col'>
-	// 			<span className='font-headlines font-semibold text-lg text-foreground leading-tight'>
-	// 				{t('company.name', { ns: 'common' })}
-	// 			</span>
-	// 			<span className='font-body text-xs text-muted-foreground leading-tight'>
-	// 				{t('company.tagline', { ns: 'common' })}
-	// 			</span>
-	// 		</div>
-	// 	</div>
-	// );
 
 	return (
 		<header
@@ -207,12 +143,12 @@ const Header = () => {
 									size={16}
 								/>
 								<span className='font-headlines font-medium text-sm'>
-									{t('menu.more')}
+									More
 								</span>
 							</button>
 
 							{/* Dropdown */}
-							<div className='absolute top-full right-0 mt-2 w-48 bg-popover border border-border rounded-lg shadow-elevated opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-fast'>
+							<div className='absolute top-full right-0 mt-2 w-56 bg-popover border border-border rounded-lg shadow-elevated opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-fast'>
 								<div className='py-2'>
 									{secondaryItems?.map((item) => (
 										<Link
@@ -238,19 +174,35 @@ const Header = () => {
 						</div>
 					</nav>
 
-					{/* Language Switcher and CTA */}
+					{/* Language, Contact, and CTA */}
 					<div className='hidden lg:flex items-center space-x-4'>
+						{/* <div className='hidden xl:flex items-center space-x-4 text-sm text-muted-foreground'>
+							<div className='flex items-center space-x-2'>
+								<Icon
+									name='Phone'
+									size={16}
+								/>
+								<span>+45 8612 3456</span>
+							</div>
+							<div className='flex items-center space-x-2'>
+								<Icon
+									name='Mail'
+									size={16}
+								/>
+								<span>proposals@aarhuscontractor.dk</span>
+							</div>
+						</div> */}
 						<LanguageSwitcher />
 						<Button
 							variant='default'
-							className='bg-conversion-accent hover:bg-brand-primary text-foreground hover:text-primary-foreground font-cta font-medium px-6 py-2 shadow-subtle'
+							className='bg-conversion-accent hover:bg-brand-primary text-foreground hover:text-primary-foreground font-cta font-medium px-4 py-2 shadow-subtle'
 							onClick={() =>
 								(window.location.href = getLocalizedPath(
 									'/consultation-journey'
 								))
 							}
 						>
-							{t('buttons.beginJourney', { ns: 'common' })}
+							Request Proposal
 						</Button>
 					</div>
 
@@ -334,9 +286,7 @@ const Header = () => {
 										);
 									}}
 								>
-									{t('buttons.beginJourney', {
-										ns: 'common',
-									})}
+									Request Proposal
 								</Button>
 							</div>
 						</div>

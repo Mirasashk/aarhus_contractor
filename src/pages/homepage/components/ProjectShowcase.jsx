@@ -8,124 +8,120 @@ const ProjectShowcase = () => {
 
 	const projectCategories = [
 		{ id: 'all', name: 'All Projects', icon: 'Grid3X3' },
-		{ id: 'residential', name: 'Residential', icon: 'Home' },
-		{ id: 'commercial', name: 'Commercial', icon: 'ShoppingBag' },
-		{ id: 'public', name: 'Public', icon: 'Building' },
+		{ id: 'housing', name: 'Housing Projects', icon: 'Home' },
+		{ id: 'government', name: 'Government', icon: 'Building' },
+		{ id: 'infrastructure', name: 'Infrastructure', icon: 'MapPin' },
 	];
 
 	const featuredProjects = [
 		{
 			id: 1,
-			title: 'Modern Danish Kitchen',
-			category: 'residential',
-			location: 'Viby J, Aarhus',
-			image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop',
+			title: 'Social Housing Development - 48 Units',
+			category: 'housing',
+			location: 'Aarhus N, Denmark',
+			image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop',
 			beforeImage:
-				'https://images.unsplash.com/photo-1556909045-f208e2d75806?w=600&h=400&fit=crop',
+				'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop',
 			description:
-				'Transformed a closed-off kitchen into an open, light-filled heart of the home with custom oak cabinetry and natural stone countertops.',
+				'Modern affordable housing complex with energy-efficient design, accessibility compliance, and sustainable materials.',
 			features: [
-				'Custom Oak Cabinetry',
-				'Natural Stone Counters',
-				'Integrated Appliances',
+				'Energy Efficient Design',
+				'Accessibility Compliant',
+				'Sustainable Materials',
 			],
-			timeline: '6 weeks',
-			investment: 'DKK 180,000 - 220,000',
+			timeline: '12 months',
+			investment: 'DKK 15,000,000',
 			completedDate: 'August 2024',
 		},
 		{
 			id: 2,
-			title: 'Spa-Inspired Bathroom',
-			category: 'residential',
-			location: 'Risskov, Aarhus',
-			image: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&h=400&fit=crop',
+			title: 'Municipal Office Renovation',
+			category: 'government',
+			location: 'Aarhus C, Denmark',
+			image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop',
 			beforeImage:
-				'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop',
+				'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop',
 			description:
-				'Created a serene bathroom sanctuary with natural materials, underfloor heating, and custom vanity crafted from reclaimed Danish oak.',
+				'Complete modernization of government building with sustainable materials, smart systems, and improved accessibility.',
 			features: [
-				'Underfloor Heating',
-				'Natural Stone Tiles',
-				'Custom Oak Vanity',
+				'Smart Building Systems',
+				'Sustainable Materials',
+				'Accessibility Improvements',
 			],
-			timeline: '4 weeks',
-			investment: 'DKK 120,000 - 160,000',
+			timeline: '8 months',
+			investment: 'DKK 8,500,000',
 			completedDate: 'July 2024',
 		},
 		{
 			id: 3,
-			title: 'Hygge Living Room',
-			category: 'residential',
-			location: 'Højbjerg, Aarhus',
-			image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop',
+			title: 'Student Housing Complex - 120 Units',
+			category: 'housing',
+			location: 'Aarhus V, Denmark',
+			image: 'https://images.unsplash.com/photo-1529408632839-a54952c491e5?w=600&h=400&fit=crop',
 			beforeImage:
-				'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop',
+				'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&h=400&fit=crop',
 			description:
-				'Opened up traditional room divisions to create a flowing living space that embodies Danish hygge principles with built-in storage and natural lighting.',
+				'Contemporary student accommodation with shared facilities, sustainable design, and modern amenities.',
 			features: [
-				'Built-in Storage',
-				'Natural Oak Flooring',
-				'Custom Lighting',
+				'Shared Facilities',
+				'Sustainable Design',
+				'Modern Amenities',
 			],
-			timeline: '8 weeks',
-			investment: 'DKK 200,000 - 280,000',
+			timeline: '18 months',
+			investment: 'DKK 25,000,000',
 			completedDate: 'September 2024',
 		},
 		{
 			id: 4,
-			title: 'Artisan Kitchen Island',
-			category: 'residential',
+			title: 'Community Center Development',
+			category: 'infrastructure',
 			location: 'Aarhus C, Denmark',
-			image: 'https://images.unsplash.com/photo-1556909045-f208e2d75806?w=600&h=400&fit=crop',
+			image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop',
 			beforeImage:
-				'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop',
+				'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop',
 			description:
-				'Hand-crafted kitchen island becomes the centerpiece of family life, featuring integrated seating and hidden storage solutions.',
-			features: [
-				'Hand-crafted Island',
-				'Integrated Seating',
-				'Hidden Storage',
-			],
-			timeline: '3 weeks',
-			investment: 'DKK 80,000 - 120,000',
+				'Multi-purpose community center with sports facilities, meeting rooms, and cultural spaces for local residents.',
+			features: ['Sports Facilities', 'Meeting Rooms', 'Cultural Spaces'],
+			timeline: '10 months',
+			investment: 'DKK 12,000,000',
 			completedDate: 'June 2024',
 		},
 		{
 			id: 5,
-			title: 'Minimalist Master Bath',
-			category: 'residential',
-			location: 'Brabrand, Aarhus',
-			image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop',
+			title: 'Healthcare Facility Renovation',
+			category: 'government',
+			location: 'Aarhus S, Denmark',
+			image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop',
 			beforeImage:
-				'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&h=400&fit=crop',
+				'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop',
 			description:
-				'Clean lines and natural materials create a peaceful retreat with walk-in shower and floating vanity design.',
+				'Complete renovation of healthcare facility with modern medical equipment integration and patient comfort improvements.',
 			features: [
-				'Walk-in Shower',
-				'Floating Vanity',
-				'Natural Materials',
+				'Medical Equipment Integration',
+				'Patient Comfort',
+				'Modern Design',
 			],
-			timeline: '5 weeks',
-			investment: 'DKK 140,000 - 180,000',
+			timeline: '6 months',
+			investment: 'DKK 6,500,000',
 			completedDate: 'May 2024',
 		},
 		{
 			id: 6,
-			title: 'Open Concept Living',
-			category: 'residential',
-			location: 'Tranbjerg, Aarhus',
-			image: 'https://images.unsplash.com/photo-1560448075-bb485b067938?w=600&h=400&fit=crop',
+			title: 'Educational Campus Expansion',
+			category: 'infrastructure',
+			location: 'Aarhus University, Denmark',
+			image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop',
 			beforeImage:
-				'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop',
+				'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop',
 			description:
-				'Removed walls to create seamless flow between kitchen, dining, and living areas while maintaining structural integrity.',
+				'Expansion of university campus with new lecture halls, research facilities, and student common areas.',
 			features: [
-				'Open Floor Plan',
-				'Structural Modifications',
-				'Seamless Flow',
+				'Lecture Halls',
+				'Research Facilities',
+				'Student Common Areas',
 			],
-			timeline: '10 weeks',
-			investment: 'DKK 250,000 - 350,000',
+			timeline: '15 months',
+			investment: 'DKK 35,000,000',
 			completedDate: 'April 2024',
 		},
 	];
@@ -176,16 +172,16 @@ const ProjectShowcase = () => {
 				{/* Section Header */}
 				<div className='text-center space-y-6 mb-16'>
 					<h2 className='headline-secondary text-3xl lg:text-5xl font-bold text-foreground max-w-3xl mx-auto'>
-						Crafting Spaces That Tell
+						Delivering Projects That
 						<span className='block text-brand-primary'>
-							Your Story
+							Exceed Expectations
 						</span>
 					</h2>
 
 					<p className='body-primary text-lg text-muted-foreground max-w-2xl mx-auto'>
-						Each project reflects our commitment to Danish design
-						principles, exceptional craftsmanship, and creating
-						spaces that enhance daily life.
+						Each project reflects our commitment to professional
+						excellence, government compliance, and creating
+						infrastructure that serves communities.
 					</p>
 				</div>
 
@@ -236,7 +232,7 @@ const ProjectShowcase = () => {
 								'/project-transformations-gallery')
 						}
 					>
-						Explore All Projects
+						View Complete Portfolio
 					</Button>
 				</div>
 			</div>

@@ -22,13 +22,13 @@ const Homepage = () => {
 				<ProjectShowcase />
 
 				{/* Danish Design Philosophy & Process */}
-				<DanishPhilosophySection />
+				{/* <DanishPhilosophySection /> */}
 
 				{/* Consultation Booking Widget */}
 				<ConsultationWidget />
 
 				{/* Client Testimonials Carousel */}
-				<TestimonialCarousel />
+				{/* <TestimonialCarousel /> */}
 
 				{/* Trust Signals & Certifications */}
 				<TrustSignalsSection />

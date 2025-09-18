@@ -19,6 +19,10 @@ const ConsultationJourney = () => {
 		consultationType: '',
 		consultationDate: '',
 		consultationTime: '',
+		companyName: '',
+		cvrNumber: '',
+		clientType: '',
+		fundingSource: '',
 		fullName: '',
 		email: '',
 		phone: '',
@@ -27,6 +31,10 @@ const ConsultationJourney = () => {
 		budget: '',
 		priority: '',
 		description: '',
+		requireISO9001: false,
+		requireISO14001: false,
+		requireOHSAS18001: false,
+		requireEUProcurement: false,
 	});
 
 	const totalSteps = 4;
@@ -57,6 +65,10 @@ const ConsultationJourney = () => {
 			consultationType: '',
 			consultationDate: '',
 			consultationTime: '',
+			companyName: '',
+			cvrNumber: '',
+			clientType: '',
+			fundingSource: '',
 			fullName: '',
 			email: '',
 			phone: '',
@@ -65,6 +77,10 @@ const ConsultationJourney = () => {
 			budget: '',
 			priority: '',
 			description: '',
+			requireISO9001: false,
+			requireISO14001: false,
+			requireOHSAS18001: false,
+			requireEUProcurement: false,
 		});
 		setCurrentStep(1);
 		window.location.href = '/homepage';
@@ -115,24 +131,24 @@ const ConsultationJourney = () => {
 		<>
 			<Helmet>
 				<title>
-					Consultation Journey - Aarhus Contractor | Danish Design
-					Consultation
+					Consultation Journey - Professional Project Assessment &
+					Proposal | Aarhus Contractor
 				</title>
 				<meta
 					name='description'
-					content='Begin your transformation journey with Aarhus Contractor. Schedule a personalized consultation to discuss your Danish design renovation project with our expert craftsmen.'
+					content='Schedule a professional consultation for housing, government, and infrastructure projects. We align on scope, compliance, budget, and timeline to prepare a detailed proposal.'
 				/>
 				<meta
 					name='keywords'
-					content='consultation, Danish design, renovation planning, Aarhus contractor, design consultation'
+					content='construction consultation, government contracts, housing development, EU procurement, project assessment, proposal presentation'
 				/>
 				<meta
 					property='og:title'
-					content='Consultation Journey - Aarhus Contractor'
+					content='Consultation Journey - Professional Project Assessment'
 				/>
 				<meta
 					property='og:description'
-					content='Schedule your personalized Danish design consultation and begin your transformation journey.'
+					content='Request an assessment, proposal presentation, negotiation, or kickoff meeting with our team.'
 				/>
 				<meta
 					property='og:type'
@@ -151,17 +167,16 @@ const ConsultationJourney = () => {
 					<div className='container mx-auto px-6 lg:px-8'>
 						<div className='text-center max-w-4xl mx-auto'>
 							<h1 className='headline-primary text-foreground mb-6'>
-								Begin Your Transformation Journey
+								Professional Consultation Journey
 							</h1>
 							<p className='body-primary text-muted-foreground mb-8'>
-								Experience our Danish approach to consultation -
-								thoughtful, thorough, and tailored to your
-								vision. Let's explore how we can bring your
-								dream space to life.
+								Schedule a project assessment, proposal
+								presentation, negotiation, or kickoff. We ensure
+								compliance, clarity, and alignment from day one.
 							</p>
 
 							{/* Trust Indicators */}
-							<div className='flex flex-wrap justify-center items-center gap-8 mb-12'>
+							<div className='flex flex-wrap justify-center items-center gap-6 sm:gap-8 mb-12'>
 								<div className='flex items-center space-x-2'>
 									<Icon
 										name='Shield'
@@ -169,7 +184,7 @@ const ConsultationJourney = () => {
 										className='text-success'
 									/>
 									<span className='text-sm text-muted-foreground'>
-										Fully Insured
+										EU Procurement Compliant
 									</span>
 								</div>
 								<div className='flex items-center space-x-2'>
@@ -179,7 +194,7 @@ const ConsultationJourney = () => {
 										className='text-success'
 									/>
 									<span className='text-sm text-muted-foreground'>
-										Certified Craftsmen
+										ISO 9001 & 14001
 									</span>
 								</div>
 								<div className='flex items-center space-x-2'>
@@ -189,7 +204,7 @@ const ConsultationJourney = () => {
 										className='text-success'
 									/>
 									<span className='text-sm text-muted-foreground'>
-										15+ Years Experience
+										On-Time Delivery
 									</span>
 								</div>
 								<div className='flex items-center space-x-2'>
@@ -199,7 +214,7 @@ const ConsultationJourney = () => {
 										className='text-success'
 									/>
 									<span className='text-sm text-muted-foreground'>
-										5-Star Rated
+										Government Approved
 									</span>
 								</div>
 							</div>
@@ -246,7 +261,7 @@ const ConsultationJourney = () => {
 									</p>
 								</div>
 
-								<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+								<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 									<div className='text-center'>
 										<div className='w-12 h-12 bg-brand-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3'>
 											<Icon
@@ -289,25 +304,6 @@ const ConsultationJourney = () => {
 										>
 											consultation@aarhuscontractor.dk
 										</a>
-									</div>
-
-									<div className='text-center'>
-										<div className='w-12 h-12 bg-brand-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3'>
-											<Icon
-												name='MessageCircle'
-												size={20}
-												className='text-brand-primary'
-											/>
-										</div>
-										<h4 className='font-headlines font-medium text-foreground mb-1'>
-											Live Chat
-										</h4>
-										<p className='text-sm text-muted-foreground mb-2'>
-											Instant support available
-										</p>
-										<button className='text-brand-primary hover:underline text-sm font-medium'>
-											Start Chat
-										</button>
 									</div>
 								</div>
 							</div>

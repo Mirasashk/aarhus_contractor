@@ -14,26 +14,26 @@ const ProjectTransformationsGallery = () => {
 	const [projects] = useState([
 		{
 			id: 1,
-			title: 'Aarhus Heritage Kitchen Revival',
-			type: 'Kitchen',
-			style: 'Heritage Restoration',
-			area: 25,
-			timeline: '3 months',
+			title: 'Social Housing Development - 48 Units',
+			type: 'Housing',
+			style: 'Social Housing',
+			area: 4800,
+			timeline: '8 months',
 			rating: 4.9,
 			sustainable: true,
-			heritage: true,
+			heritage: false,
 			award: true,
 			completedYear: 2024,
 			description:
-				'A thoughtful restoration of a 1920s kitchen that honors original Danish craftsmanship while introducing modern functionality.',
-			fullDescription: `This remarkable kitchen transformation in central Aarhus represents the perfect marriage of heritage preservation and contemporary living. The original 1920s home featured beautiful architectural details that had been covered by decades of renovations. Our approach focused on revealing and celebrating these original elements while seamlessly integrating modern appliances and storage solutions.\n\nThe project required careful research into period-appropriate materials and techniques, working closely with local heritage specialists to ensure authenticity. Every detail, from the restored original hardwood floors to the hand-forged cabinet hardware, reflects our commitment to Danish craftsmanship traditions.`,
+				'Large-scale social housing development delivering 48 affordable units with modern amenities and sustainable design.',
+			fullDescription: `This comprehensive social housing project represents our commitment to creating quality affordable housing for the community. The development includes 48 modern units across multiple buildings, each designed to maximize natural light, energy efficiency, and community integration.\n\nThe project required extensive coordination with municipal authorities, compliance with EU regulations, and careful attention to sustainable building practices. Every aspect was designed to create not just housing, but a thriving community environment.`,
 			clientQuote:
-				"They didn't just renovate our kitchen; they brought our home's soul back to life.",
+				'Aarhus Contractor delivered exceptional quality within budget and timeline. The project exceeded all expectations.',
 			fullTestimonial:
-				"Working with Aarhus Contractor was like having a master craftsman and historian combined. They understood not just what we wanted, but what our 1920s home needed. The attention to detail was extraordinary - they even sourced original tiles from a demolished building of the same era. The result is a kitchen that feels both timeless and perfectly suited to our modern lifestyle. Every morning when I make coffee, I'm reminded of the incredible transformation they achieved.",
-			clientName: 'Mette Andersen',
+				'Working with Aarhus Contractor on this social housing project was exceptional. They understood the complex requirements of government contracts and delivered a project that not only met but exceeded all specifications. The attention to detail, quality of construction, and adherence to timeline was outstanding. The residents love their new homes, and the project has become a model for future developments.',
+			clientName: 'Aarhus Municipality',
 			clientLocation: 'Aarhus C',
-			investment: { min: 450000, max: 550000 },
+			investment: { min: 15000000, max: 18000000 },
 			images: {
 				main: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop',
 				gallery: [
@@ -44,87 +44,89 @@ const ProjectTransformationsGallery = () => {
 				],
 			},
 			features: [
-				'Original hardwood floor restoration',
-				'Period-appropriate tile sourcing',
-				'Custom oak cabinetry',
-				'Integrated modern appliances',
-				'Heritage color palette',
-				'Handcrafted hardware',
+				'Energy-efficient building systems',
+				'Sustainable materials throughout',
+				'Community facilities integration',
+				'Accessibility compliance',
+				'Modern apartment layouts',
+				'Green building certification',
 			],
 			processSteps: [
 				{
-					title: 'Heritage Assessment',
+					title: 'Site Assessment',
 					description:
-						'Detailed analysis of original features and materials',
-					duration: '1 week',
-				},
-				{
-					title: 'Design Development',
-					description: "Creating plans that honor the home's history",
+						'Comprehensive evaluation of site conditions and requirements',
 					duration: '2 weeks',
 				},
 				{
-					title: 'Material Sourcing',
+					title: 'Design Development',
 					description:
-						'Finding period-appropriate materials and finishes',
-					duration: '3 weeks',
+						'Creating plans that meet government standards',
+					duration: '4 weeks',
 				},
 				{
-					title: 'Restoration Work',
-					description: 'Careful restoration of original elements',
+					title: 'Permit Acquisition',
+					description: 'Obtaining all necessary government approvals',
 					duration: '6 weeks',
 				},
 				{
-					title: 'Modern Integration',
-					description: 'Installing contemporary systems seamlessly',
-					duration: '4 weeks',
+					title: 'Construction Phase',
+					description:
+						'Building with quality control and safety standards',
+					duration: '24 weeks',
+				},
+				{
+					title: 'Final Inspection',
+					description:
+						'Government compliance verification and handover',
+					duration: '2 weeks',
 				},
 			],
 			materials: [
 				{
-					category: 'Flooring',
-					description: 'Restored original oak planks',
-					quality: 'Heritage Grade',
+					category: 'Structure',
+					description: 'Reinforced concrete with steel framework',
+					quality: 'Government Standard',
 				},
 				{
-					category: 'Cabinetry',
-					description: 'Solid oak with traditional joinery',
-					quality: 'Master Crafted',
+					category: 'Insulation',
+					description: 'High-performance thermal insulation',
+					quality: 'Energy Efficient',
 				},
 				{
-					category: 'Countertops',
-					description: 'Carrara marble with honed finish',
-					quality: 'Premium Natural',
+					category: 'Windows',
+					description: 'Triple-glazed energy-efficient windows',
+					quality: 'Premium Grade',
 				},
 				{
-					category: 'Hardware',
-					description: 'Hand-forged brass fittings',
-					quality: 'Artisan Made',
+					category: 'Finishes',
+					description: 'Durable, low-maintenance materials',
+					quality: 'Commercial Grade',
 				},
 			],
 		},
 		{
 			id: 2,
-			title: 'Minimalist Bathroom Sanctuary',
-			type: 'Bathroom',
-			style: 'Minimalist',
-			area: 12,
-			timeline: '6 weeks',
+			title: 'Municipal Office Renovation',
+			type: 'Government',
+			style: 'Government Building',
+			area: 1200,
+			timeline: '6 months',
 			rating: 4.8,
 			sustainable: true,
 			heritage: false,
 			award: false,
 			completedYear: 2024,
 			description:
-				'A serene bathroom transformation emphasizing clean lines, natural materials, and Danish hygge principles.',
-			fullDescription: `This bathroom renovation embodies the essence of Danish minimalism - creating a space that feels both luxurious and deeply calming. The design philosophy centered on the concept of 'less is more,' using a carefully curated palette of natural materials and clean geometric forms.\n\nEvery element was chosen for its quality and contribution to the overall sense of tranquility. The result is a bathroom that functions as a daily retreat, where the stresses of modern life can be washed away in an environment of pure, uncluttered beauty.`,
+				'Complete renovation of municipal office building with modern workspace design and energy efficiency upgrades.',
+			fullDescription: `This municipal office renovation project required careful coordination with ongoing government operations while implementing modern workspace design and energy efficiency improvements. The challenge was to maintain full operational capacity while completely modernizing the building's systems and finishes.\n\nThe project included comprehensive energy efficiency upgrades, modern workspace design, and accessibility improvements, all while ensuring zero disruption to government services.`,
 			clientQuote:
-				"It's like having a spa in our home. The space feels so peaceful and rejuvenating.",
+				'The renovation was completed seamlessly with minimal disruption to our operations.',
 			fullTestimonial:
-				"The transformation of our bathroom exceeded every expectation. The team understood our vision for a minimalist sanctuary and brought it to life with incredible attention to detail. The quality of materials and craftsmanship is evident in every surface. What impressed us most was how they maximized the sense of space while maintaining perfect functionality. It's become our favorite room in the house.",
-			clientName: 'Lars Nielsen',
-			clientLocation: 'Aarhus N',
-			investment: { min: 180000, max: 220000 },
+				'The municipal office renovation exceeded our expectations in every way. The team worked around our operational requirements, ensuring zero disruption to government services while delivering a completely modernized facility. The energy efficiency improvements have already shown significant cost savings, and the new workspace design has improved employee satisfaction and productivity.',
+			clientName: 'Aarhus Municipality',
+			clientLocation: 'Aarhus C',
+			investment: { min: 8500000, max: 10000000 },
 			images: {
 				main: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop',
 				gallery: [
@@ -135,85 +137,88 @@ const ProjectTransformationsGallery = () => {
 				],
 			},
 			features: [
-				'Floor-to-ceiling tiles',
-				'Floating vanity design',
-				'Rainfall shower system',
-				'Heated flooring',
-				'LED accent lighting',
-				'Smart mirror technology',
+				'Energy efficiency improvements',
+				'Modern workspace design',
+				'Accessibility compliance',
+				'Zero operational disruption',
+				'Smart building systems',
+				'Government standards compliance',
 			],
 			processSteps: [
 				{
-					title: 'Space Planning',
-					description: 'Optimizing layout for maximum impact',
-					duration: '3 days',
-				},
-				{
-					title: 'Plumbing Updates',
-					description: 'Installing new systems for modern fixtures',
+					title: 'Operational Assessment',
+					description:
+						'Evaluating current operations and requirements',
 					duration: '1 week',
 				},
 				{
-					title: 'Waterproofing',
-					description: 'Comprehensive moisture protection',
-					duration: '3 days',
-				},
-				{
-					title: 'Tiling & Finishes',
-					description: 'Precision installation of premium materials',
+					title: 'Phased Planning',
+					description:
+						'Creating phased approach to minimize disruption',
 					duration: '2 weeks',
 				},
 				{
-					title: 'Fixture Installation',
-					description: 'Final fitting and testing of all systems',
-					duration: '1 week',
+					title: 'Systems Upgrade',
+					description:
+						'Installing modern HVAC and electrical systems',
+					duration: '8 weeks',
+				},
+				{
+					title: 'Interior Renovation',
+					description: 'Modernizing workspace design and finishes',
+					duration: '12 weeks',
+				},
+				{
+					title: 'Final Testing',
+					description: 'System testing and staff training',
+					duration: '2 weeks',
 				},
 			],
 			materials: [
 				{
-					category: 'Tiles',
-					description: 'Large format porcelain in warm white',
-					quality: 'Premium Grade',
-				},
-				{
-					category: 'Vanity',
-					description: 'Solid oak with integrated basin',
-					quality: 'Custom Made',
-				},
-				{
-					category: 'Fixtures',
-					description: 'Matte black premium fittings',
-					quality: 'Designer Series',
+					category: 'HVAC',
+					description: 'High-efficiency heating and cooling systems',
+					quality: 'Energy Star Certified',
 				},
 				{
 					category: 'Lighting',
-					description: 'LED strips with dimming control',
-					quality: 'Smart Technology',
+					description: 'LED lighting with smart controls',
+					quality: 'Commercial Grade',
+				},
+				{
+					category: 'Flooring',
+					description: 'Durable commercial carpet and tile',
+					quality: 'Government Standard',
+				},
+				{
+					category: 'Furniture',
+					description: 'Ergonomic office furniture systems',
+					quality: 'Professional Grade',
 				},
 			],
 		},
 		{
 			id: 3,
-			title: 'Contemporary Hygge Living Space',
-			type: 'Living Areas',
-			style: 'Contemporary Hygge',
-			area: 45,
-			timeline: '4 months',
+			title: 'Student Housing Complex - 120 Units',
+			type: 'Housing',
+			style: 'Student Housing',
+			area: 7200,
+			timeline: '10 months',
 			rating: 4.9,
 			sustainable: true,
 			heritage: false,
 			award: true,
 			completedYear: 2024,
 			description:
-				'An open-plan living area that perfectly captures the Danish concept of hygge through thoughtful design and natural materials.',
-			fullDescription: `This living space transformation represents the evolution of Danish design principles for contemporary life. The project involved opening up compartmentalized rooms to create a flowing, light-filled space that encourages both gathering and solitude.\n\nThe design carefully balances the need for modern functionality with the timeless appeal of hygge - that uniquely Danish sense of coziness and contentment. Every material choice, from the warm oak flooring to the soft wool textiles, contributes to an atmosphere of comfort and well-being.`,
+				'Large-scale student housing development with modern amenities, study facilities, and sustainable design features.',
+			fullDescription: `This comprehensive student housing project was designed to meet the growing demand for quality student accommodation in Aarhus. The development includes 120 modern units with integrated study facilities, common areas, and sustainable design features.\n\nThe project required careful coordination with university requirements, government standards, and student needs. Every aspect was designed to create a supportive environment for student life while maintaining high construction standards.`,
 			clientQuote:
-				'Our home has become a place where we truly want to spend time. It feels warm and welcoming.',
+				'Students love their new homes and the facilities exceed expectations.',
 			fullTestimonial:
-				"The team transformed our cramped, dark living spaces into something magical. They understood that we wanted more than just a beautiful room - we wanted a space that would enhance our daily life and bring our family together. The attention to lighting, the choice of materials, and the way they created different zones within the open plan shows their deep understanding of how people actually live. It's sophisticated yet comfortable, modern yet timeless.",
-			clientName: 'Anna & Erik Sørensen',
-			clientLocation: 'Aarhus V',
-			investment: { min: 320000, max: 380000 },
+				"The student housing project was delivered with exceptional quality and attention to detail. The team understood the unique requirements of student accommodation and created a facility that not only meets but exceeds expectations. The integration of study facilities, common areas, and modern amenities has created a thriving student community. The sustainable design features also align with the university's environmental goals.",
+			clientName: 'Aarhus University',
+			clientLocation: 'Aarhus N',
+			investment: { min: 22000000, max: 25000000 },
 			images: {
 				main: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop',
 				gallery: [
@@ -224,85 +229,90 @@ const ProjectTransformationsGallery = () => {
 				],
 			},
 			features: [
-				'Open-plan layout',
-				'Integrated storage solutions',
-				'Natural light optimization',
-				'Underfloor heating',
-				'Built-in seating areas',
-				'Acoustic design elements',
+				'Modern student amenities',
+				'Integrated study facilities',
+				'Common area design',
+				'Sustainable materials',
+				'Energy-efficient systems',
+				'Accessibility compliance',
 			],
 			processSteps: [
 				{
-					title: 'Structural Assessment',
-					description: 'Evaluating walls for safe removal',
-					duration: '1 week',
+					title: 'University Consultation',
+					description:
+						'Working with university requirements and standards',
+					duration: '2 weeks',
 				},
 				{
-					title: 'Demolition',
-					description: 'Careful removal of non-structural elements',
-					duration: '1 week',
-				},
-				{
-					title: 'Systems Installation',
-					description: 'Updating electrical, heating, and lighting',
-					duration: '3 weeks',
-				},
-				{
-					title: 'Flooring & Finishes',
-					description: 'Installing premium materials throughout',
+					title: 'Design Development',
+					description:
+						'Creating student-focused living and study spaces',
 					duration: '4 weeks',
 				},
 				{
-					title: 'Built-in Elements',
-					description: 'Custom carpentry and final details',
-					duration: '6 weeks',
+					title: 'Permit Process',
+					description: 'Obtaining all necessary government approvals',
+					duration: '8 weeks',
+				},
+				{
+					title: 'Construction Phase',
+					description:
+						'Building with quality control and safety standards',
+					duration: '32 weeks',
+				},
+				{
+					title: 'Furnishing & Setup',
+					description:
+						'Installing furniture and preparing for occupancy',
+					duration: '4 weeks',
 				},
 			],
 			materials: [
 				{
-					category: 'Flooring',
-					description: 'Wide-plank European oak',
-					quality: 'Premium Select',
+					category: 'Structure',
+					description: 'Reinforced concrete with steel framework',
+					quality: 'Commercial Grade',
 				},
 				{
-					category: 'Built-ins',
-					description: 'Custom oak cabinetry and shelving',
-					quality: 'Master Crafted',
+					category: 'Insulation',
+					description:
+						'High-performance thermal and acoustic insulation',
+					quality: 'Energy Efficient',
 				},
 				{
-					category: 'Textiles',
-					description: 'Natural wool and linen fabrics',
-					quality: 'Sustainable Luxury',
+					category: 'Windows',
+					description: 'Triple-glazed energy-efficient windows',
+					quality: 'Premium Grade',
 				},
 				{
-					category: 'Lighting',
-					description: 'Designer pendant and accent lighting',
-					quality: 'Architectural Grade',
+					category: 'Furniture',
+					description: 'Durable student furniture and fixtures',
+					quality: 'Commercial Standard',
 				},
 			],
 		},
 		{
 			id: 4,
-			title: 'Modern Danish Bedroom Retreat',
-			type: 'Bedroom',
-			style: 'Modern Danish',
-			area: 20,
-			timeline: '5 weeks',
+			title: 'Community Center Development',
+			type: 'Infrastructure',
+			style: 'Community Center',
+			area: 2000,
+			timeline: '12 months',
 			rating: 4.7,
 			sustainable: false,
 			heritage: false,
 			award: false,
 			completedYear: 2024,
 			description:
-				'A peaceful bedroom design that combines modern functionality with classic Danish design principles.',
-			fullDescription: `This bedroom renovation focused on creating a serene retreat that promotes rest and relaxation. The design draws inspiration from classic Danish modernism, emphasizing clean lines, natural materials, and a connection to nature.\n\nThe space was completely reimagined to maximize both storage and comfort, with custom built-in solutions that maintain the room's clean aesthetic while providing practical functionality for modern living.`,
+				'New community center development with multi-purpose spaces, sports facilities, and cultural amenities.',
+			fullDescription: `This community center project was designed to serve as a hub for local activities and cultural events. The development includes multi-purpose spaces, sports facilities, cultural amenities, and administrative offices.\n\nThe project required extensive community consultation to ensure the facility meets local needs while maintaining high construction standards and government compliance.`,
 			clientQuote:
-				'We sleep so much better now. The room feels like a peaceful retreat from the world.',
+				'The community center has become the heart of our neighborhood.',
 			fullTestimonial:
-				"The bedroom transformation has genuinely improved our quality of life. The team created a space that feels both luxurious and calming. The built-in storage solutions are incredibly clever - everything has its place, but you'd never know there's so much storage because it's all seamlessly integrated. The lighting design is particularly impressive, with different settings for different times of day.",
-			clientName: 'Sofie Madsen',
-			clientLocation: 'Aarhus S',
-			investment: { min: 150000, max: 200000 },
+				'The community center project has exceeded all expectations. The facility has become a true hub for our community, hosting everything from sports activities to cultural events. The team understood the diverse needs of our community and created a space that serves everyone. The quality of construction and attention to detail is evident throughout the facility.',
+			clientName: 'Aarhus Municipality',
+			clientLocation: 'Aarhus V',
+			investment: { min: 12000000, max: 15000000 },
 			images: {
 				main: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop',
 				gallery: [
@@ -312,86 +322,87 @@ const ProjectTransformationsGallery = () => {
 				],
 			},
 			features: [
-				'Built-in wardrobes',
-				'Custom headboard design',
-				'Integrated lighting',
-				'Natural ventilation',
-				'Acoustic treatments',
-				'Smart home integration',
+				'Multi-purpose spaces',
+				'Sports facilities',
+				'Cultural amenities',
+				'Administrative offices',
+				'Community consultation',
+				'Government compliance',
 			],
 			processSteps: [
 				{
-					title: 'Design Planning',
-					description: 'Creating optimal layout for rest and storage',
-					duration: '1 week',
-				},
-				{
-					title: 'Electrical Work',
-					description: 'Installing smart lighting and controls',
-					duration: '3 days',
-				},
-				{
-					title: 'Custom Carpentry',
-					description: 'Building integrated storage solutions',
-					duration: '2 weeks',
-				},
-				{
-					title: 'Finishes',
-					description: 'Painting, flooring, and detail work',
-					duration: '1 week',
-				},
-				{
-					title: 'Final Styling',
+					title: 'Community Consultation',
 					description:
-						'Completing the space with textiles and accessories',
-					duration: '3 days',
+						'Engaging with local community and stakeholders',
+					duration: '4 weeks',
+				},
+				{
+					title: 'Design Development',
+					description: 'Creating multi-functional community spaces',
+					duration: '8 weeks',
+				},
+				{
+					title: 'Permit Process',
+					description: 'Obtaining all necessary government approvals',
+					duration: '12 weeks',
+				},
+				{
+					title: 'Construction Phase',
+					description:
+						'Building with quality control and safety standards',
+					duration: '36 weeks',
+				},
+				{
+					title: 'Community Setup',
+					description: 'Preparing facility for community use',
+					duration: '4 weeks',
 				},
 			],
 			materials: [
 				{
-					category: 'Wardrobes',
-					description: 'White oak with soft-close mechanisms',
-					quality: 'Premium Hardware',
-				},
-				{
-					category: 'Flooring',
-					description: 'Engineered oak planks',
+					category: 'Structure',
+					description: 'Reinforced concrete with steel framework',
 					quality: 'Commercial Grade',
 				},
 				{
-					category: 'Textiles',
-					description: 'Organic cotton and linen bedding',
-					quality: 'Luxury Comfort',
+					category: 'Sports Flooring',
+					description: 'Professional-grade sports flooring systems',
+					quality: 'Competition Standard',
+				},
+				{
+					category: 'HVAC',
+					description: 'High-efficiency heating and cooling systems',
+					quality: 'Energy Star Certified',
 				},
 				{
 					category: 'Lighting',
-					description: 'Adjustable LED system',
-					quality: 'Smart Technology',
+					description: 'LED lighting with smart controls',
+					quality: 'Commercial Grade',
 				},
 			],
 		},
 		{
 			id: 5,
-			title: 'Industrial Loft Conversion',
-			type: 'Whole Home',
-			style: 'Industrial',
-			area: 85,
-			timeline: '6 months',
+			title: 'Healthcare Facility Renovation',
+			type: 'Government',
+			style: 'Healthcare',
+			area: 1500,
+			timeline: '8 months',
 			rating: 4.8,
 			sustainable: true,
 			heritage: true,
 			award: true,
 			completedYear: 2023,
 			description:
-				'A complete transformation of a former textile factory into a stunning modern loft while preserving industrial character.',
-			fullDescription: `This ambitious project involved converting a 1950s textile factory into a contemporary living space that celebrates its industrial heritage. The challenge was to create a comfortable home while preserving the building's authentic character and architectural significance.\n\nThe design approach focused on revealing and highlighting original structural elements - exposed brick walls, steel beams, and large factory windows - while introducing modern systems and finishes that complement rather than compete with the existing architecture.`,
+				'Complete renovation of healthcare facility with modern medical equipment integration and accessibility improvements.',
+			fullDescription: `This healthcare facility renovation project required careful coordination with medical operations while implementing modern medical equipment integration and accessibility improvements. The challenge was to maintain full medical services while completely modernizing the facility's systems and finishes.\n\nThe project included comprehensive accessibility improvements, modern medical equipment integration, and energy efficiency upgrades, all while ensuring zero disruption to patient care.`,
 			clientQuote:
-				'They turned our industrial space into a warm, livable home without losing its unique character.',
+				'The renovation has improved patient care and staff efficiency significantly.',
 			fullTestimonial:
-				"Converting this old factory was a dream we weren't sure was possible. The team not only made it happen but exceeded our wildest expectations. They understood the building's history and character, preserving elements we didn't even know were special. The result is a home that's both dramatic and comfortable, industrial yet warm. Every visitor is amazed by the transformation, and we love telling the story of how our home used to make textiles.",
-			clientName: 'Michael & Sarah Johnson',
-			clientLocation: 'Aarhus Ø',
-			investment: { min: 850000, max: 1200000 },
+				'The healthcare facility renovation has transformed our ability to provide quality patient care. The team worked around our medical operations, ensuring zero disruption to patient services while delivering a completely modernized facility. The accessibility improvements have made our services more inclusive, and the new medical equipment integration has improved both patient care and staff efficiency.',
+			clientName: 'Aarhus University Hospital',
+			clientLocation: 'Aarhus C',
+			investment: { min: 18000000, max: 22000000 },
 			images: {
 				main: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop',
 				gallery: [
@@ -403,86 +414,89 @@ const ProjectTransformationsGallery = () => {
 				],
 			},
 			features: [
-				'Exposed brick walls',
-				'Steel beam ceiling',
-				'Factory window restoration',
-				'Polished concrete floors',
-				'Mezzanine level addition',
-				'Industrial lighting fixtures',
+				'Medical equipment integration',
+				'Accessibility improvements',
+				'Energy efficiency upgrades',
+				'Zero disruption to patient care',
+				'Modern medical systems',
+				'Compliance with healthcare standards',
 			],
 			processSteps: [
 				{
-					title: 'Structural Engineering',
+					title: 'Medical Operations Planning',
 					description:
-						'Assessing and reinforcing the building structure',
-					duration: '3 weeks',
+						'Coordinating with medical staff and operations',
+					duration: '4 weeks',
 				},
 				{
-					title: 'Heritage Consultation',
-					description: 'Working with preservation specialists',
-					duration: '2 weeks',
+					title: 'Equipment Integration',
+					description:
+						'Installing modern medical equipment and systems',
+					duration: '12 weeks',
 				},
 				{
-					title: 'Systems Installation',
-					description: 'Modern plumbing, electrical, and HVAC',
+					title: 'Accessibility Upgrades',
+					description:
+						'Implementing comprehensive accessibility improvements',
 					duration: '8 weeks',
 				},
 				{
-					title: 'Restoration Work',
-					description: 'Cleaning and preserving original elements',
+					title: 'Energy Efficiency',
+					description: 'Upgrading HVAC and lighting systems',
 					duration: '6 weeks',
 				},
 				{
-					title: 'Modern Additions',
-					description: 'New construction within existing shell',
-					duration: '12 weeks',
+					title: 'Final Testing',
+					description: 'Testing all systems and ensuring compliance',
+					duration: '2 weeks',
 				},
 			],
 			materials: [
 				{
-					category: 'Flooring',
-					description: 'Polished concrete with radiant heating',
-					quality: 'Industrial Premium',
+					category: 'Medical Equipment',
+					description:
+						'State-of-the-art medical systems and equipment',
+					quality: 'Healthcare Grade',
 				},
 				{
-					category: 'Windows',
-					description: 'Restored steel factory windows',
-					quality: 'Heritage Restoration',
+					category: 'Accessibility',
+					description: 'ADA-compliant fixtures and systems',
+					quality: 'Universal Design',
 				},
 				{
-					category: 'Fixtures',
-					description: 'Vintage industrial lighting',
-					quality: 'Authentic Period',
+					category: 'HVAC',
+					description: 'High-efficiency medical-grade systems',
+					quality: 'Healthcare Certified',
 				},
 				{
-					category: 'Finishes',
-					description: 'Raw steel and reclaimed wood',
-					quality: 'Sustainable Reclaimed',
+					category: 'Lighting',
+					description: 'Medical-grade LED lighting systems',
+					quality: 'Healthcare Standard',
 				},
 			],
 		},
 		{
 			id: 6,
-			title: 'Traditional Danish Farmhouse Kitchen',
-			type: 'Kitchen',
-			style: 'Traditional',
-			area: 30,
-			timeline: '10 weeks',
+			title: 'Educational Campus Expansion',
+			type: 'Infrastructure',
+			style: 'Educational',
+			area: 3000,
+			timeline: '18 months',
 			rating: 4.9,
 			sustainable: true,
 			heritage: true,
 			award: false,
 			completedYear: 2023,
 			description:
-				'A complete kitchen renovation that honors traditional Danish farmhouse design while incorporating modern conveniences.',
-			fullDescription: `This kitchen renovation in a 19th-century farmhouse required a delicate balance between preserving historical authenticity and meeting contemporary needs. The original kitchen had been modified many times over the decades, losing much of its original character.\n\nOur approach involved extensive research into traditional Danish farmhouse kitchens, sourcing period-appropriate materials, and employing traditional construction techniques wherever possible. The result is a kitchen that feels authentically historical while functioning perfectly for modern family life.`,
+				'Comprehensive campus expansion with new classrooms, laboratories, and student facilities.',
+			fullDescription: `This educational campus expansion project involved creating new classrooms, laboratories, and student facilities to accommodate growing enrollment. The project required careful coordination with educational operations and compliance with educational facility standards.\n\nOur approach involved extensive research into educational facility requirements, sourcing appropriate materials, and employing construction techniques that meet educational standards. The result is a campus expansion that supports 21st-century education while maintaining the campus's architectural character.`,
 			clientQuote:
-				"It's exactly what we imagined when we bought this old farmhouse. Authentic but completely functional.",
+				'The new facilities have enhanced our educational capabilities significantly.',
 			fullTestimonial:
-				"Renovating a historic farmhouse kitchen was daunting, but the team made it feel effortless. They researched the history of our home and the region, bringing knowledge and materials we never could have found ourselves. The craftsmanship is extraordinary - you can see the care in every joint, every finish. Our kitchen now feels like it's been part of the house for 200 years, which is exactly what we wanted.",
-			clientName: 'Henrik & Ingrid Petersen',
-			clientLocation: 'Silkeborg',
-			investment: { min: 380000, max: 450000 },
+				'The campus expansion has transformed our educational capabilities. The new facilities provide modern learning environments that support our educational mission. The team worked closely with our faculty and staff to ensure the spaces meet our specific needs. The quality of construction and attention to detail is evident throughout, and the new facilities have become a source of pride for our entire community.',
+			clientName: 'Aarhus University',
+			clientLocation: 'Aarhus C',
+			investment: { min: 35000000, max: 45000000 },
 			images: {
 				main: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop',
 				gallery: [
@@ -492,68 +506,69 @@ const ProjectTransformationsGallery = () => {
 				],
 			},
 			features: [
-				'Reclaimed wood cabinetry',
-				'Traditional tile backsplash',
-				'Farmhouse sink restoration',
-				'Period-appropriate hardware',
-				'Wood-burning stove integration',
-				'Hand-painted details',
+				'Modern learning spaces',
+				'State-of-the-art laboratories',
+				'Student amenities',
+				'Educational facility standards',
+				'Campus integration',
+				'Sustainable design',
 			],
 			processSteps: [
 				{
-					title: 'Historical Research',
-					description: 'Studying original farmhouse kitchen designs',
-					duration: '2 weeks',
-				},
-				{
-					title: 'Material Sourcing',
-					description: 'Finding authentic reclaimed materials',
-					duration: '4 weeks',
-				},
-				{
-					title: 'Structural Work',
-					description: 'Reinforcing floors and walls',
-					duration: '2 weeks',
-				},
-				{
-					title: 'Traditional Carpentry',
+					title: 'Educational Planning',
 					description:
-						'Hand-building cabinetry using period techniques',
-					duration: '6 weeks',
+						'Coordinating with faculty and educational staff',
+					duration: '8 weeks',
 				},
 				{
-					title: 'Finishing Work',
-					description: 'Traditional painting and detailing',
-					duration: '2 weeks',
+					title: 'Design Development',
+					description: 'Creating modern learning environments',
+					duration: '12 weeks',
+				},
+				{
+					title: 'Permit Process',
+					description: 'Obtaining educational facility approvals',
+					duration: '16 weeks',
+				},
+				{
+					title: 'Construction Phase',
+					description: 'Building with educational standards',
+					duration: '48 weeks',
+				},
+				{
+					title: 'Campus Integration',
+					description:
+						'Connecting new facilities with existing campus',
+					duration: '8 weeks',
 				},
 			],
 			materials: [
 				{
-					category: 'Cabinetry',
-					description: 'Reclaimed pine with traditional joinery',
-					quality: 'Heritage Authentic',
+					category: 'Structure',
+					description: 'Reinforced concrete with steel framework',
+					quality: 'Educational Grade',
 				},
 				{
-					category: 'Countertops',
-					description: 'Thick butcher block oak',
-					quality: 'Traditional Craft',
+					category: 'Laboratory Systems',
+					description: 'Specialized laboratory infrastructure',
+					quality: 'Research Standard',
 				},
 				{
-					category: 'Tiles',
-					description: 'Hand-made ceramic in traditional patterns',
-					quality: 'Artisan Made',
+					category: 'HVAC',
+					description: 'High-efficiency educational systems',
+					quality: 'Energy Star Certified',
 				},
 				{
-					category: 'Hardware',
-					description: 'Forged iron handles and hinges',
-					quality: 'Period Reproduction',
+					category: 'Lighting',
+					description: 'LED lighting with smart controls',
+					quality: 'Educational Standard',
 				},
 			],
 		},
 	]);
 
 	const [filters, setFilters] = useState({
-		spaceType: 'all',
+		projectType: 'all',
 		style: 'all',
 		scope: 'all',
 		investment: 'all',
@@ -572,10 +587,10 @@ const ProjectTransformationsGallery = () => {
 
 	// Filter projects based on current filters
 	const filteredProjects = projects?.filter((project) => {
-		// Space type filter
+		// Project type filter
 		if (
-			filters?.spaceType !== 'all' &&
-			project?.type?.toLowerCase() !== filters?.spaceType
+			filters?.projectType !== 'all' &&
+			project?.type?.toLowerCase() !== filters?.projectType
 		) {
 			return false;
 		}
@@ -668,7 +683,7 @@ const ProjectTransformationsGallery = () => {
 
 	const handleClearFilters = () => {
 		setFilters({
-			spaceType: 'all',
+			projectType: 'all',
 			style: 'all',
 			scope: 'all',
 			investment: 'all',
@@ -703,22 +718,24 @@ const ProjectTransformationsGallery = () => {
 			<Header />
 			{/* Hero Section */}
 			<section className='pt-20 pb-12 bg-gradient-to-b from-muted to-background'>
-				<div className='max-w-7xl mx-auto px-6 lg:px-8'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center max-w-4xl mx-auto'>
-						<h1 className='headline-primary text-4xl lg:text-5xl font-bold text-foreground mb-6'>
-							Project Transformations Gallery
+						<h1 className='headline-primary text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6'>
+							Professional Construction Portfolio
 						</h1>
-						<p className='body-primary text-xl text-muted-foreground mb-8 leading-relaxed'>
-							Discover how thoughtful Danish craftsmanship
-							transforms spaces into sanctuaries. Each project
-							tells a story of heritage, innovation, and the
-							pursuit of hygge through design.
+						<p className='body-primary text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed'>
+							Explore our comprehensive portfolio of large-scale
+							construction projects, government contracts, and
+							infrastructure developments. Each project
+							demonstrates our commitment to professional
+							excellence, regulatory compliance, and delivering
+							exceptional results for our B2B clients.
 						</p>
 						<div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
 							<Button
 								variant='default'
 								size='lg'
-								iconName='Calendar'
+								iconName='FileText'
 								iconPosition='left'
 								className='bg-conversion-accent hover:bg-brand-primary text-foreground hover:text-primary-foreground'
 								onClick={() =>
@@ -726,22 +743,22 @@ const ProjectTransformationsGallery = () => {
 										'/consultation-journey')
 								}
 							>
-								Start Your Transformation
+								Request Project Proposal
 							</Button>
 							<Button
 								variant='outline'
 								size='lg'
-								iconName='Play'
+								iconName='Building'
 								iconPosition='left'
 								onClick={() => handleOpenGallery(projects?.[0])}
 							>
-								View Gallery Tour
+								View Project Gallery
 							</Button>
 						</div>
 					</div>
 				</div>
 			</section>
-			<div className='max-w-7xl mx-auto px-6 lg:px-8 py-12'>
+			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12'>
 				{/* Portfolio Stats */}
 				<div className='mb-12'>
 					<ProjectStats
@@ -811,7 +828,7 @@ const ProjectTransformationsGallery = () => {
 
 						{/* Projects Grid */}
 						{sortedProjects?.length > 0 ? (
-							<div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+							<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8'>
 								{sortedProjects?.map((project) => (
 									<ProjectCard
 										key={project?.id}

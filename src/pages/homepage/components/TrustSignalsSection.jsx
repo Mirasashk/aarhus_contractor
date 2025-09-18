@@ -6,130 +6,146 @@ const TrustSignalsSection = () => {
 	const certifications = [
 		{
 			id: 1,
+			name: 'EU Public Procurement Directive',
+			description: 'Compliant Contractor',
+			icon: 'Shield',
+			verified: true,
+			number: 'EU-PP-2024-1847',
+		},
+		{
+			id: 2,
 			name: 'Danish Building Authority',
 			description: 'Licensed General Contractor',
-			icon: 'Shield',
+			icon: 'Award',
 			verified: true,
 			number: 'DK-2024-GC-1847',
 		},
 		{
-			id: 2,
-			name: 'Aarhus Municipality',
-			description: 'Registered Local Business',
-			icon: 'MapPin',
-			verified: true,
-			number: 'AAR-BUS-2009-0234',
-		},
-		{
 			id: 3,
-			name: 'Danish Insurance',
-			description: 'Comprehensive Coverage',
-			icon: 'Umbrella',
+			name: 'ISO 14001 Environmental',
+			description: 'Environmental Management',
+			icon: 'Leaf',
 			verified: true,
-			number: 'INS-COV-5M-DKK',
+			number: 'ISO-14001-2024',
 		},
 		{
 			id: 4,
-			name: 'Quality Assurance',
-			description: '10-Year Workmanship Guarantee',
-			icon: 'Award',
+			name: 'OHSAS 18001 Safety',
+			description: 'Safety Management System',
+			icon: 'Shield',
 			verified: true,
-			number: 'QA-GUARANTEE-10Y',
+			number: 'OHSAS-18001-2024',
+		},
+		{
+			id: 5,
+			name: 'CVR Registration',
+			description: 'Danish Business Registry',
+			icon: 'FileText',
+			verified: true,
+			number: 'CVR: 12345678',
+		},
+		{
+			id: 6,
+			name: 'EU VAT Number',
+			description: 'European Union VAT',
+			icon: 'Globe',
+			verified: true,
+			number: 'DK12345678',
 		},
 	];
 
 	const partnerships = [
 		{
 			id: 1,
-			name: 'Danish Design Centre',
-			role: 'Design Partner',
+			name: 'Aarhus Municipality',
+			role: 'Government Client',
 			logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop',
-			description: 'Collaborative design excellence',
+			description: 'Municipal housing projects',
 		},
 		{
 			id: 2,
-			name: 'Aarhus Timber Co.',
-			role: 'Premium Materials Supplier',
+			name: 'Danish Housing Association',
+			role: 'Housing Partner',
 			logo: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=120&h=60&fit=crop',
-			description: 'Sustainable Danish oak and pine',
+			description: 'Social housing development',
 		},
 		{
 			id: 3,
-			name: 'Nordic Stone Works',
-			role: 'Natural Stone Specialist',
+			name: 'Central Denmark Region',
+			role: 'Regional Government',
 			logo: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=120&h=60&fit=crop',
-			description: 'Premium Danish granite and marble',
+			description: 'Public infrastructure projects',
 		},
 		{
 			id: 4,
-			name: 'Hygge Interiors',
-			role: 'Interior Design Consultant',
+			name: 'Aarhus University',
+			role: 'Educational Client',
 			logo: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=120&h=60&fit=crop',
-			description: 'Authentic Danish interior styling',
+			description: 'Student housing development',
 		},
 	];
 
 	const mediaFeatures = [
 		{
 			id: 1,
-			publication: 'Aarhus Stiftstidende',
-			title: 'Local Contractor Brings Danish Design to Modern Homes',
+			publication: 'Construction Today',
+			title: 'Aarhus Contractor Wins Major Government Housing Contract',
 			date: 'August 2024',
-			type: 'Feature Article',
+			type: 'Industry News',
 		},
 		{
 			id: 2,
-			publication: 'Danish Architecture Review',
-			title: 'Preserving Heritage Through Modern Renovation',
+			publication: 'Danish Building Review',
+			title: 'Sustainable Construction Practices in Public Projects',
 			date: 'June 2024',
 			type: 'Case Study',
 		},
 		{
 			id: 3,
-			publication: 'Hygge Living Magazine',
-			title: 'Creating Authentic Danish Interiors',
+			publication: 'Public Sector Construction',
+			title: 'Innovative Approaches to Municipal Building Projects',
 			date: 'April 2024',
-			type: 'Design Feature',
+			type: 'Industry Feature',
 		},
 	];
 
 	const awards = [
 		{
 			year: '2024',
-			title: 'Best Residential Renovation',
-			organization: 'Aarhus Construction Guild',
-			project: 'Historic Townhouse Revival',
+			title: 'Best Government Project',
+			organization: 'Danish Construction Association',
+			project: 'Municipal Office Renovation',
 		},
 		{
 			year: '2023',
 			title: 'Sustainable Building Excellence',
 			organization: 'Danish Green Building Council',
-			project: 'Eco-Friendly Kitchen Transformation',
+			project: 'Social Housing Development',
 		},
 		{
 			year: '2022',
-			title: 'Craftsmanship Award',
-			organization: 'Danish Contractors Association',
-			project: 'Custom Oak Cabinetry Installation',
+			title: 'Public Sector Innovation Award',
+			organization: 'Central Denmark Region',
+			project: 'Student Housing Complex',
 		},
 	];
 
 	return (
-		<section className='py-20 bg-muted/20'>
+		<section className='py-8 bg-muted/20'>
 			<div className='max-w-7xl mx-auto px-6 lg:px-8'>
 				{/* Section Header */}
-				<div className='text-center space-y-6 mb-16'>
+				<div className='text-center space-y-6 mb-2'>
 					<h2 className='headline-secondary text-3xl lg:text-5xl font-bold text-foreground max-w-3xl mx-auto'>
-						Your Peace of Mind is
+						Professional Excellence
 						<span className='block text-brand-primary'>
-							Our Priority
+							Built on Trust
 						</span>
 					</h2>
 
 					<p className='body-primary text-lg text-muted-foreground max-w-2xl mx-auto'>
-						Fully licensed, insured, and committed to the highest
-						standards of Danish craftsmanship and professional
-						excellence.
+						Fully certified, government compliant, and committed to
+						the highest standards of Danish construction and
+						professional excellence.
 					</p>
 				</div>
 
