@@ -97,8 +97,12 @@ export const pinService = {
 					pins.push({
 						id: doc.id,
 						pin: data.pin,
-						createdAt: data.createdAt?.toDate?.()?.toISOString() || data.createdAt,
-						updatedAt: data.updatedAt?.toDate?.()?.toISOString() || data.updatedAt,
+						createdAt:
+							data.createdAt?.toDate?.()?.toISOString() ||
+							data.createdAt,
+						updatedAt:
+							data.updatedAt?.toDate?.()?.toISOString() ||
+							data.updatedAt,
 					});
 				}
 			});
@@ -121,7 +125,7 @@ export const pinService = {
 	verifyPIN: async (inputPIN) => {
 		try {
 			const result = await pinService.getCurrentPIN();
-			
+
 			if (!result.success) {
 				return {
 					success: false,
@@ -130,7 +134,7 @@ export const pinService = {
 			}
 
 			const isValid = result.pin === inputPIN;
-			
+
 			return {
 				success: true,
 				isValid: isValid,
