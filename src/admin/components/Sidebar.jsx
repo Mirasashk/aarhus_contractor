@@ -16,8 +16,10 @@ import {
 	FolderIcon,
 	HomeIcon,
 	UsersIcon,
+	UserIcon,
 	XMarkIcon,
 	ChatBubbleBottomCenterTextIcon,
+	Cog6ToothIcon,
 } from '@heroicons/react/24/outline';
 import { useAuth } from '../../hooks/useFirebase';
 
@@ -27,6 +29,11 @@ const navigation = [
 		name: 'Projects',
 		href: '/admin/projects',
 		icon: FolderIcon,
+	},
+	{
+		name: 'Employees',
+		href: '/admin/employees',
+		icon: UserIcon,
 	},
 	{
 		name: 'Consultations',

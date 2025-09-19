@@ -15,6 +15,7 @@ import CraftProcessPhilosophy from './pages/craft-process-philosophy';
 import ServiceSpecializations from './pages/service-specializations';
 import AboutOurCraft from './pages/about-our-craft';
 import Homepage from './pages/homepage';
+import QRProfile from './pages/qrProfile';
 
 // Admin Routes
 import AdminLogin from './admin/pages/login';
@@ -26,6 +27,7 @@ import AdminTeam from './admin/pages/team';
 import AdminTestimonials from './admin/pages/testimonials';
 import AdminLayout from './admin/components/AdminLayout';
 import ProtectedRoute from './components/ProtectedRoute';
+import AdminEmployees from './admin/pages/employees';
 
 const Routes = () => {
 	return (
@@ -90,6 +92,10 @@ const Routes = () => {
 							element={<AdminProjects />}
 						/>
 						<Route
+							path='employees'
+							element={<AdminEmployees />}
+						/>
+						<Route
 							path='feedback'
 							element={<AdminFeedback />}
 						/>
@@ -116,6 +122,10 @@ const Routes = () => {
 								replace
 							/>
 						}
+					/>
+					<Route
+						path='qr-profile/:id'
+						element={<QRProfile />}
 					/>
 				</RouterRoutes>
 			</ErrorBoundary>
