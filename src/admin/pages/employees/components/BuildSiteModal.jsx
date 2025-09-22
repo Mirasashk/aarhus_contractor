@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import BuildSite from '../../../utils/models/BuildSite';
+import { buildSiteService } from '../../../../firebase/buildSiteService';
 
 const BuildSiteModal = ({ isOpen, onClose, onSave, buildSite = null }) => {
 	const [formData, setFormData] = useState({
@@ -62,6 +63,16 @@ const BuildSiteModal = ({ isOpen, onClose, onSave, buildSite = null }) => {
 		}
 	};
 
+	// Helper function to format website URL
+	const formatWebsiteUrl = (url) => {
+		if (!url) return '';
+		// If URL doesn't start with http:// or https://, add https://
+		if (!url.match(/^https?:\/\//)) {
+			return `https://${url}`;
+		}
+		return url;
+	};
+
 	const validateForm = () => {
 		const newErrors = {};
 
@@ -81,41 +92,93 @@ const BuildSiteModal = ({ isOpen, onClose, onSave, buildSite = null }) => {
 			newErrors.email = 'Please enter a valid email address';
 		}
 
-		if (formData.website && !/^https?:\/\/.+/.test(formData.website)) {
-			newErrors.website =
-				'Please enter a valid website URL (starting with http:// or https://)';
+		// Updated website validation - accept simple domain names or full URLs
+		if (formData.website && formData.website.trim()) {
+			// Simple validation: must contain at least one dot and valid characters
+			const urlPattern =
+				/^(https?:\/\/)?[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.([a-zA-Z]{2,})(\/.*)?$/;
+			if (!urlPattern.test(formData.website)) {
+				newErrors.website =
+					'Please enter a valid website URL (e.g., example.com)';
+			}
 		}
 
 		setErrors(newErrors);
 		return Object.keys(newErrors).length === 0;
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 
 		if (!validateForm()) {
 			return;
 		}
 
-		const now = new Date().toISOString();
-		const newBuildSite = new BuildSite(
-			buildSite?.id || Date.now().toString(),
-			formData.name,
-			formData.address,
-			formData.city,
-			formData.state,
-			formData.zip,
-			formData.country,
-			formData.phone,
-			formData.email,
-			formData.website,
-			formData.notes,
-			buildSite?.createdAt || now,
-			now
-		);
+		try {
+			// Format the website URL
+			const formattedWebsite = formatWebsiteUrl(formData.website);
 
-		onSave(newBuildSite);
-		onClose();
+			const buildSiteData = {
+				name: formData.name,
+				address: formData.address,
+				city: formData.city,
+				state: formData.state,
+				zip: formData.zip,
+				country: formData.country,
+				phone: formData.phone,
+				email: formData.email,
+				website: formattedWebsite,
+				notes: formData.notes,
+			};
+
+			let result;
+			if (buildSite) {
+				// Update existing build site
+				result = await buildSiteService.updateBuildSite(
+					buildSite.id,
+					buildSiteData
+				);
+			} else {
+				// Create new build site
+				result = await buildSiteService.createBuildSite(buildSiteData);
+			}
+
+			if (result.success) {
+				// Create BuildSite object for the parent component
+				const now = new Date().toISOString();
+				const newBuildSite = new BuildSite(
+					result.buildSiteId || buildSite?.id,
+					buildSiteData.name,
+					buildSiteData.address,
+					buildSiteData.city,
+					buildSiteData.state,
+					buildSiteData.zip,
+					buildSiteData.country,
+					buildSiteData.phone,
+					buildSiteData.email,
+					buildSiteData.website,
+					buildSiteData.notes,
+					buildSite?.createdAt || now,
+					now
+				);
+
+				onSave(newBuildSite);
+				onClose();
+			} else {
+				alert(
+					`Error ${buildSite ? 'updating' : 'creating'} build site: ${
+						result.error
+					}`
+				);
+			}
+		} catch (error) {
+			console.error('Error saving build site:', error);
+			alert(
+				`Failed to ${
+					buildSite ? 'update' : 'create'
+				} build site. Please try again.`
+			);
+		}
 	};
 
 	const handleClose = () => {
@@ -325,7 +388,7 @@ const BuildSiteModal = ({ isOpen, onClose, onSave, buildSite = null }) => {
 									Website
 								</label>
 								<input
-									type='url'
+									type='text'
 									name='website'
 									value={formData.website}
 									onChange={handleChange}
@@ -334,7 +397,7 @@ const BuildSiteModal = ({ isOpen, onClose, onSave, buildSite = null }) => {
 											? 'border-red-500'
 											: 'border-gray-300'
 									}`}
-									placeholder='https://example.com'
+									placeholder='example.com or https://example.com'
 								/>
 								{errors.website && (
 									<p className='text-red-500 text-xs mt-1'>

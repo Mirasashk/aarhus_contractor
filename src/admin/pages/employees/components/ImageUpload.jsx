@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const ImageUpload = ({
 	onImageSelect,
@@ -10,6 +10,11 @@ const ImageUpload = ({
 	const [previewUrl, setPreviewUrl] = useState(currentImageUrl);
 	const [isDragOver, setIsDragOver] = useState(false);
 	const fileInputRef = useRef(null);
+
+	// Update previewUrl when currentImageUrl prop changes
+	useEffect(() => {
+		setPreviewUrl(currentImageUrl);
+	}, [currentImageUrl]);
 
 	const handleFileSelect = (file) => {
 		if (!file) return;

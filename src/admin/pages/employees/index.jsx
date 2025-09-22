@@ -6,6 +6,7 @@ import EmployeeModal from './components/EmployeeModal';
 import BuildSiteModal from './components/BuildSiteModal';
 import PINManagementModal from './components/PINManagementModal';
 import { employeeService } from '../../../firebase/employeeService';
+import { buildSiteService } from '../../../firebase/buildSiteService';
 
 const Employees = () => {
 	const [employees, setEmployees] = useState([]);
@@ -20,17 +21,18 @@ const Employees = () => {
 	const [error, setError] = useState(null);
 	const [isPinSettingsModalOpen, setIsPinSettingsModalOpen] = useState(false);
 
-	// Load employees from Firebase on component mount
+	// Load employees and build sites from Firebase on component mount
 	useEffect(() => {
-		const loadEmployees = async () => {
+		const loadData = async () => {
 			setIsLoading(true);
 			setError(null);
 
 			try {
-				const result = await employeeService.getEmployees();
-				if (result.success) {
+				// Load employees
+				const employeesResult = await employeeService.getEmployees();
+				if (employeesResult.success) {
 					// Convert Firebase data to Employee objects
-					const employeeObjects = result.employees.map(
+					const employeeObjects = employeesResult.employees.map(
 						(emp) =>
 							new Employee(
 								emp.id,
@@ -53,17 +55,51 @@ const Employees = () => {
 					setEmployees(employeeObjects);
 					console.log('Employees loaded:', employeeObjects);
 				} else {
-					setError(result.error);
+					setError(employeesResult.error);
+				}
+
+				// Load build sites
+				const buildSitesResult = await buildSiteService.getBuildSites();
+				if (buildSitesResult.success) {
+					// Convert Firebase data to BuildSite objects
+					const buildSiteObjects = buildSitesResult.buildSites.map(
+						(site) =>
+							new BuildSite(
+								site.id,
+								site.name,
+								site.address,
+								site.city,
+								site.state,
+								site.zip,
+								site.country,
+								site.phone,
+								site.email,
+								site.website,
+								site.notes,
+								site.createdAt?.toDate?.()?.toISOString() ||
+									site.createdAt,
+								site.updatedAt?.toDate?.()?.toISOString() ||
+									site.updatedAt
+							)
+					);
+					setBuildSites(buildSiteObjects);
+					console.log('Build sites loaded:', buildSiteObjects);
+				} else {
+					console.error(
+						'Error loading build sites:',
+						buildSitesResult.error
+					);
+					// Don't set error for build sites as they're not critical for employees
 				}
 			} catch (err) {
-				console.error('Error loading employees:', err);
-				setError('Failed to load employees');
+				console.error('Error loading data:', err);
+				setError('Failed to load data');
 			} finally {
 				setIsLoading(false);
 			}
 		};
 
-		loadEmployees();
+		loadData();
 	}, []);
 
 	// Filter employees based on search term
@@ -164,6 +200,28 @@ const Employees = () => {
 		} else {
 			// Add new build site
 			setBuildSites((prev) => [...prev, buildSite]);
+		}
+	};
+
+	const handleDeleteBuildSite = async (buildSite) => {
+		if (
+			window.confirm(`Are you sure you want to delete ${buildSite.name}?`)
+		) {
+			try {
+				const result = await buildSiteService.deleteBuildSite(
+					buildSite.id
+				);
+				if (result.success) {
+					setBuildSites((prev) =>
+						prev.filter((site) => site.id !== buildSite.id)
+					);
+				} else {
+					alert(`Error deleting build site: ${result.error}`);
+				}
+			} catch (error) {
+				console.error('Error deleting build site:', error);
+				alert('Failed to delete build site. Please try again.');
+			}
 		}
 	};
 
