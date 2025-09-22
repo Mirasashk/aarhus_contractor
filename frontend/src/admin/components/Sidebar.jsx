@@ -382,9 +382,12 @@ export default function Sidebar({ children }) {
 										</button>
 
 										{/* User Profile */}
-										<a
-											href='#'
-											className='flex items-center gap-x-4 px-6 py-3 text-sm/6 font-semibold text-white hover:bg-indigo-700 dark:hover:bg-indigo-950/25'
+										<Link
+											to='/admin/profile'
+											className='flex items-center gap-x-4
+											px-6 py-3 text-sm/6 font-semibold
+											text-white hover:bg-indigo-700
+											dark:hover:bg-indigo-950/25'
 										>
 											<UserAvatar user={user} />
 											<span className='sr-only'>
@@ -397,7 +400,7 @@ export default function Sidebar({ children }) {
 													  user?.email ||
 													  'Guest'}
 											</span>
-										</a>
+										</Link>
 									</div>
 								</li>
 							</ul>
@@ -417,10 +420,10 @@ export default function Sidebar({ children }) {
 							className='size-6'
 						/>
 					</button>
-					<a href='#'>
+					<Link to='/admin/profile'>
 						<span className='sr-only'>Your profile</span>
 						<UserAvatar user={user} />
-					</a>
+					</Link>
 				</div>
 
 				<main className='py-10 lg:pl-72'>

@@ -1,107 +1,85 @@
-# React
+# Aarhus Contractor - Full Stack Application
 
-A modern React-based project utilizing the latest frontend technologies and tools for building responsive web applications.
+A full-stack application with React frontend and Express.js backend using Firebase Admin SDK.
 
-## 🚀 Features
-
-- **React 18** - React version with improved rendering and concurrent features
-- **Vite** - Lightning-fast build tool and development server
-- **Redux Toolkit** - State management with simplified Redux setup
-- **TailwindCSS** - Utility-first CSS framework with extensive customization
-- **React Router v6** - Declarative routing for React applications
-- **Data Visualization** - Integrated D3.js and Recharts for powerful data visualization
-- **Form Management** - React Hook Form for efficient form handling
-- **Animation** - Framer Motion for smooth UI animations
-- **Testing** - Jest and React Testing Library setup
-
-## 📋 Prerequisites
-
-- Node.js (v14.x or higher)
-- npm or yarn
-
-## 🛠️ Installation
-
-1. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-   
-2. Start the development server:
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
-
-## 📁 Project Structure
+## Project Structure
 
 ```
-react_app/
-├── public/             # Static assets
-├── src/
-│   ├── components/     # Reusable UI components
-│   ├── pages/          # Page components
-│   ├── styles/         # Global styles and Tailwind configuration
-│   ├── App.jsx         # Main application component
-│   ├── Routes.jsx      # Application routes
-│   └── index.jsx       # Application entry point
-├── .env                # Environment variables
-├── index.html          # HTML template
-├── package.json        # Project dependencies and scripts
-├── tailwind.config.js  # Tailwind CSS configuration
-└── vite.config.js      # Vite configuration
+aarhus_contractor/
+├── frontend/          # React application (Vite + React)
+├── backend/           # Express.js API server
+├── package.json       # Root package.json for managing both apps
+└── README.md
 ```
 
-## 🧩 Adding Routes
+## Quick Start
 
-To add new routes to the application, update the `Routes.jsx` file:
-
-```jsx
-import { useRoutes } from "react-router-dom";
-import HomePage from "pages/HomePage";
-import AboutPage from "pages/AboutPage";
-
-const ProjectRoutes = () => {
-  let element = useRoutes([
-    { path: "/", element: <HomePage /> },
-    { path: "/about", element: <AboutPage /> },
-    // Add more routes as needed
-  ]);
-
-  return element;
-};
-```
-
-## 🎨 Styling
-
-This project uses Tailwind CSS for styling. The configuration includes:
-
-- Forms plugin for form styling
-- Typography plugin for text styling
-- Aspect ratio plugin for responsive elements
-- Container queries for component-specific responsive design
-- Fluid typography for responsive text
-- Animation utilities
-
-## 📱 Responsive Design
-
-The app is built with responsive design using Tailwind CSS breakpoints.
-
-
-## 📦 Deployment
-
-Build the application for production:
+### Install all dependencies
 
 ```bash
-npm run build
+npm run install:all
 ```
 
-## 🙏 Acknowledgments
+### Development (run both frontend and backend)
 
-- Built with [Rocket.new](https://rocket.new)
-- Powered by React and Vite
-- Styled with Tailwind CSS
+```bash
+npm run dev
+```
 
-Built with ❤️ on Rocket.new
+This will start:
+
+-   Frontend on http://localhost:3000
+-   Backend on http://localhost:5000
+
+### Individual Development
+
+#### Frontend only
+
+```bash
+npm run dev:frontend
+```
+
+#### Backend only
+
+```bash
+npm run dev:backend
+```
+
+## Available Scripts
+
+-   `npm run dev` - Run both frontend and backend in development mode
+-   `npm run dev:frontend` - Run only frontend
+-   `npm run dev:backend` - Run only backend
+-   `npm run build` - Build frontend for production
+-   `npm run start` - Run both apps in production mode
+-   `npm run install:all` - Install dependencies for all apps
+-   `npm run clean` - Clean all node_modules
+
+## Firebase Setup
+
+### Backend (Firebase Admin SDK)
+
+1. Go to Firebase Console > Project Settings > Service Accounts
+2. Generate a new private key
+3. Place the JSON file in the `backend/` folder
+4. Update `backend/index.js` to use the correct path
+5. Or set up environment variables (recommended for production)
+
+### Frontend (Firebase Client SDK)
+
+The frontend Firebase configuration should be in `frontend/src/firebase/` (already configured).
+
+## Development Notes
+
+-   The backend uses Express.js with Firebase Admin SDK
+-   The frontend uses React with Vite
+-   Both apps can run independently or together
+-   CORS is configured to allow frontend-backend communication
+-   Environment variables are used for configuration
+
+## Production Deployment
+
+1. Build the frontend: `npm run build`
+2. Deploy the backend to your preferred hosting service
+3. Update CORS settings in production
+4. Use environment variables for Firebase configuration

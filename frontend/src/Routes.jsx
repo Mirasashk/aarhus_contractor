@@ -28,6 +28,7 @@ import AdminTestimonials from './admin/pages/testimonials';
 import AdminLayout from './admin/components/AdminLayout';
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminEmployees from './admin/pages/employees';
+import AdminProfile from './admin/pages/profile';
 
 const Routes = () => {
 	return (
@@ -110,6 +111,10 @@ const Routes = () => {
 						<Route
 							path='testimonials'
 							element={<AdminTestimonials />}
+						/>
+						<Route
+							path='profile'
+							element={<AdminProfile />}
 						/>
 						{/* Add more admin routes here as needed */}
 					</Route>
