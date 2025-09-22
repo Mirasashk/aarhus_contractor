@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useUsersContext } from '../../../contexts/UsersContext';
 import UsersStats from './components/UsersStats';
 import SearchAndFilters from './components/SearchAndFilters';
 import UsersTable from './components/UsersTable';
 import CreateUserModal from './components/CreateUserModal';
+import { employeesService } from '../../../firebase/employeesService';
 
 /**
  * Users Page
@@ -27,6 +28,13 @@ const Users = () => {
 	const [sortBy, setSortBy] = useState('');
 	const [sortOrder, setSortOrder] = useState('asc');
 	const [showCreateModal, setShowCreateModal] = useState(false);
+	const [showPreCreateModal, setShowPreCreateModal] = useState(false);
+	const [showEmployeeSelect, setShowEmployeeSelect] = useState(false);
+	const [employees, setEmployees] = useState([]);
+	const [employeesLoading, setEmployeesLoading] = useState(false);
+	const [employeesError, setEmployeesError] = useState(null);
+	const [selectedEmployeeId, setSelectedEmployeeId] = useState('');
+	const [initialUserData, setInitialUserData] = useState(null);
 
 	/**
 	 * Handle search change
@@ -72,7 +80,7 @@ const Users = () => {
 	 * Handle create user modal
 	 */
 	const handleCreateUser = () => {
-		setShowCreateModal(true);
+		setShowPreCreateModal(true);
 	};
 
 	/**
@@ -80,6 +88,66 @@ const Users = () => {
 	 */
 	const handleCloseCreateModal = () => {
 		setShowCreateModal(false);
+		setInitialUserData(null);
+	};
+
+	const handleCreateUserSubmit = async (data) => {
+		await createUser(data);
+		await refreshUsers();
+	};
+
+	// Load active employees when employee select modal opens
+	useEffect(() => {
+		const loadEmployees = async () => {
+			setEmployeesLoading(true);
+			setEmployeesError(null);
+			try {
+				const res = await employeesService.getActiveEmployees();
+				if (res.success) setEmployees(res.data);
+				else setEmployeesError(res.error || 'Failed to load employees');
+			} catch (e) {
+				setEmployeesError(e.message || 'Failed to load employees');
+			} finally {
+				setEmployeesLoading(false);
+			}
+		};
+
+		if (showEmployeeSelect) {
+			loadEmployees();
+		}
+	}, [showEmployeeSelect]);
+
+	const handlePreCreateChoice = (fromEmployees) => {
+		setShowPreCreateModal(false);
+		if (fromEmployees) {
+			setShowEmployeeSelect(true);
+		} else {
+			setInitialUserData(null);
+			setShowCreateModal(true);
+		}
+	};
+
+	const handleEmployeeSelectConfirm = () => {
+		const emp = employees.find((e) => e.id === selectedEmployeeId);
+		if (emp) {
+			const mapped = {
+				firstName: emp.name?.split(' ')[0] || '',
+				lastName: emp.name?.split(' ').slice(1).join(' ') || '',
+				email: emp.email || '',
+				phone: emp.phone || '',
+				photoURL: emp.image || '',
+				role: 'employee',
+				isActive: true,
+			};
+			setInitialUserData(mapped);
+		}
+		setShowEmployeeSelect(false);
+		setShowCreateModal(true);
+	};
+
+	const handleEmployeeSelectCancel = () => {
+		setShowEmployeeSelect(false);
+		setSelectedEmployeeId('');
 	};
 
 	return (
@@ -155,8 +223,97 @@ const Users = () => {
 			<CreateUserModal
 				isOpen={showCreateModal}
 				onClose={handleCloseCreateModal}
-				createUser={createUser}
+				createUser={handleCreateUserSubmit}
+				initialData={initialUserData}
 			/>
+
+			{/* Pre-create choice modal */}
+			{showPreCreateModal && (
+				<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
+					<div className='bg-white rounded-lg shadow-xl p-6 w-full max-w-md'>
+						<h2 className='text-lg font-semibold text-gray-900'>
+							Create from employees?
+						</h2>
+						<p className='mt-2 text-sm text-gray-600'>
+							Would you like to prefill from active employees?
+						</p>
+						<div className='mt-4 flex justify-end gap-2'>
+							<button
+								onClick={() => handlePreCreateChoice(false)}
+								className='px-4 py-2 rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-50'
+							>
+								No
+							</button>
+							<button
+								onClick={() => handlePreCreateChoice(true)}
+								className='px-4 py-2 rounded-md text-white bg-blue-600 hover:bg-blue-700'
+							>
+								Yes
+							</button>
+						</div>
+					</div>
+				</div>
+			)}
+
+			{/* Employee select modal */}
+			{showEmployeeSelect && (
+				<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
+					<div className='bg-white rounded-lg shadow-xl p-6 w-full max-w-lg'>
+						<h2 className='text-lg font-semibold text-gray-900'>
+							Select Employee
+						</h2>
+						<div className='mt-4'>
+							{employeesLoading ? (
+								<p className='text-sm text-gray-600'>
+									Loading employees...
+								</p>
+							) : employeesError ? (
+								<p className='text-sm text-red-600'>
+									{employeesError}
+								</p>
+							) : employees.length === 0 ? (
+								<p className='text-sm text-gray-600'>
+									No active employees found.
+								</p>
+							) : (
+								<select
+									value={selectedEmployeeId}
+									onChange={(e) =>
+										setSelectedEmployeeId(e.target.value)
+									}
+									className='mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+								>
+									<option value=''>Select an employee</option>
+									{employees.map((emp) => (
+										<option
+											key={emp.id}
+											value={emp.id}
+										>
+											{`${emp.name || ''}`}
+											{emp.email ? `- ${emp.email}` : ''}
+										</option>
+									))}
+								</select>
+							)}
+						</div>
+						<div className='mt-6 flex justify-end gap-2'>
+							<button
+								onClick={handleEmployeeSelectCancel}
+								className='px-4 py-2 rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-50'
+							>
+								Cancel
+							</button>
+							<button
+								disabled={!selectedEmployeeId}
+								onClick={handleEmployeeSelectConfirm}
+								className='px-4 py-2 rounded-md text-white bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed'
+							>
+								Continue
+							</button>
+						</div>
+					</div>
+				</div>
+			)}
 		</div>
 	);
 };

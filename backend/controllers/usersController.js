@@ -1,4 +1,4 @@
-const { auth } = require('../firebase');
+const { auth, db } = require('../firebase');
 const {
 	formatFirebaseUsers,
 	formatFirebaseUser,
@@ -103,34 +103,46 @@ const createUser = async (req, res) => {
 			}
 		}
 
-		// Generate employee ID if not provided
-		if (!userData.employeeId) {
-			userData.employeeId = generateEmployeeId(
-				userData.firstName,
-				userData.lastName
-			);
-		}
-
 		// Generate PIN if not provided
 		if (!userData.pin) {
 			userData.pin = generatePin();
 		}
 
 		// Create user in Firebase Auth
-		const userRecord = await auth.createUser({
+		const isValidUrl = (value) => {
+			try {
+				if (!value || typeof value !== 'string') return false;
+				new URL(value);
+				return true;
+			} catch (_) {
+				return false;
+			}
+		};
+
+		const authCreateData = {
 			email: userData.email,
 			password: userData.password || 'TempPassword123!', // Default password
 			displayName: `${userData.firstName} ${userData.lastName}`.trim(),
-			photoURL: userData.photoURL || '',
-			disabled: !userData.isActive,
-		});
+			disabled:
+				userData.isActive !== undefined ? !userData.isActive : false,
+		};
+
+		if (isValidUrl(userData.photoURL)) {
+			authCreateData.photoURL = userData.photoURL;
+		}
+
+		const userRecord = await auth.createUser(authCreateData);
 
 		// Create User model instance with additional data
 		const user = new User({
 			...userData,
-			createdAt: new Date().toISOString(),
-			updatedAt: new Date().toISOString(),
 		});
+
+		// Persist user custom data in Firestore keyed by Auth UID
+		await db
+			.collection('users')
+			.doc(userRecord.uid)
+			.set(user.toObject(), { merge: true });
 
 		// Set custom claims for role
 		if (userData.role) {

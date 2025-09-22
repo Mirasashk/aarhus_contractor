@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 /**
  * CreateUserModal Component
  * Modal for creating new users
  */
-const CreateUserModal = ({ isOpen, onClose, createUser }) => {
+const CreateUserModal = ({ isOpen, onClose, createUser, initialData = {} }) => {
 	const [formData, setFormData] = useState({
 		email: '',
 		firstName: '',
@@ -14,6 +14,35 @@ const CreateUserModal = ({ isOpen, onClose, createUser }) => {
 		isActive: true,
 		photoURL: '',
 	});
+
+	// Prefill when initialData provided or when modal opens
+	useEffect(() => {
+		if (isOpen) {
+			setFormData((prev) => ({
+				...prev,
+				...filterInitialData(initialData),
+			}));
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isOpen, initialData]);
+
+	const filterInitialData = (data) => {
+		if (!data) return {};
+		const allowed = [
+			'email',
+			'firstName',
+			'lastName',
+			'phone',
+			'role',
+			'isActive',
+			'photoURL',
+		];
+		return Object.fromEntries(
+			Object.entries(data).filter(
+				([k, v]) => allowed.includes(k) && v !== undefined && v !== null
+			)
+		);
+	};
 	const [errors, setErrors] = useState({});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 

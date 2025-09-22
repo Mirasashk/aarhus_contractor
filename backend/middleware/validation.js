@@ -8,7 +8,16 @@ const { validateUserData } = require('../utils/userUtils');
  */
 const validateUserCreation = (req, res, next) => {
 	try {
-		const userData = req.body;
+		const userData = { ...req.body };
+
+		// Normalize inputs
+		if (typeof userData.firstName === 'string')
+			userData.firstName = userData.firstName.trim();
+		if (typeof userData.lastName === 'string')
+			userData.lastName = userData.lastName.trim();
+		if (typeof userData.email === 'string')
+			userData.email = userData.email.trim();
+		if (userData.role === 'user') userData.role = 'employee';
 
 		// Validate the user data
 		const validation = validateUserData(userData);
@@ -42,7 +51,16 @@ const validateUserCreation = (req, res, next) => {
  */
 const validateUserUpdate = (req, res, next) => {
 	try {
-		const updateData = req.body;
+		const updateData = { ...req.body };
+
+		// Normalize inputs
+		if (typeof updateData.firstName === 'string')
+			updateData.firstName = updateData.firstName.trim();
+		if (typeof updateData.lastName === 'string')
+			updateData.lastName = updateData.lastName.trim();
+		if (typeof updateData.email === 'string')
+			updateData.email = updateData.email.trim();
+		if (updateData.role === 'user') updateData.role = 'employee';
 
 		// For updates, we only validate provided fields
 		if (Object.keys(updateData).length === 0) {

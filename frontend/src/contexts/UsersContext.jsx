@@ -6,6 +6,7 @@ import React, {
 	useCallback,
 } from 'react';
 import { usersService } from '../firebase/usersService';
+import usersApi from '../services/usersApi';
 
 /**
  * Users Context
@@ -95,15 +96,10 @@ export const UsersProvider = ({ children }) => {
 		setError(null);
 
 		try {
-			const response = await usersService.createUser(userData);
-			if (response.success) {
-				// Add the new user to the list
-				setUsers((prevUsers) => [...prevUsers, response.data]);
-				return response.data;
-			} else {
-				setError(response.error || 'Failed to create user');
-				throw new Error(response.error);
-			}
+			const response = await usersApi.createUser(userData);
+			// Add the new user to the list
+			setUsers((prevUsers) => [...prevUsers, response.user]);
+			return response.user;
 		} catch (err) {
 			setError(err.message || 'Failed to create user');
 			console.error('Error creating user:', err);
@@ -153,16 +149,11 @@ export const UsersProvider = ({ children }) => {
 		setError(null);
 
 		try {
-			const response = await usersService.deleteUser(userId);
-			if (response.success) {
-				// Remove the user from the list
-				setUsers((prevUsers) =>
-					prevUsers.filter((user) => user.id !== userId)
-				);
-			} else {
-				setError(response.error || 'Failed to delete user');
-				throw new Error(response.error);
-			}
+			await usersApi.deleteUser(userId);
+			// Remove the user from the list
+			setUsers((prevUsers) =>
+				prevUsers.filter((user) => user.id !== userId)
+			);
 		} catch (err) {
 			setError(err.message || 'Failed to delete user');
 			console.error('Error deleting user:', err);

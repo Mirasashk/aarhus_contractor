@@ -6,7 +6,7 @@
 class User {
 	constructor(data = {}) {
 		this.activity = data.activity || [];
-		this.createdAt = data.createdAt || new Date().toISOString();
+		this.createdAt = data.createdAt || new Date();
 		this.email = data.email || '';
 		this.employeeId = data.employeeId || '';
 		this.firstName = data.firstName || '';
@@ -17,7 +17,7 @@ class User {
 		this.pin = data.pin || null;
 		this.role = data.role || 'employee';
 		this.unlockedBy = data.unlockedBy || [];
-		this.updatedAt = data.updatedAt || new Date().toISOString();
+		this.updatedAt = data.updatedAt || new Date();
 	}
 
 	/**
@@ -42,10 +42,6 @@ class User {
 			errors.push('Last name is required');
 		}
 
-		if (!this.employeeId || !this.employeeId.trim()) {
-			errors.push('Employee ID is required');
-		}
-
 		// Optional field validation
 		if (this.phone && !this.isValidPhone(this.phone)) {
 			errors.push('Phone number format is invalid');
@@ -60,10 +56,6 @@ class User {
 
 		if (this.role && !this.isValidRole(this.role)) {
 			errors.push('Invalid role specified');
-		}
-
-		if (this.photoURL && !this.isValidURL(this.photoURL)) {
-			errors.push('Photo URL format is invalid');
 		}
 
 		// Array validation
