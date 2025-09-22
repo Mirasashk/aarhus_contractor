@@ -28,7 +28,9 @@ import AdminTestimonials from './admin/pages/testimonials';
 import AdminLayout from './admin/components/AdminLayout';
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminEmployees from './admin/pages/employees';
+import { UsersProvider } from './contexts/UsersContext';
 import AdminProfile from './admin/pages/profile';
+import AdminUsers from './admin/pages/users';
 
 const Routes = () => {
 	return (
@@ -80,13 +82,19 @@ const Routes = () => {
 						path='/admin'
 						element={
 							<ProtectedRoute>
-								<AdminLayout />
+								<UsersProvider>
+									<AdminLayout />
+								</UsersProvider>
 							</ProtectedRoute>
 						}
 					>
 						<Route
 							index
 							element={<AdminDashboard />}
+						/>
+						<Route
+							path='users'
+							element={<AdminUsers />}
 						/>
 						<Route
 							path='projects'

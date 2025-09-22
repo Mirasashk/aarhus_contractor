@@ -31,6 +31,11 @@ const navigation = [
 		icon: FolderIcon,
 	},
 	{
+		name: 'Users',
+		href: '/admin/users',
+		icon: UsersIcon,
+	},
+	{
 		name: 'Employees',
 		href: '/admin/employees',
 		icon: UserIcon,
