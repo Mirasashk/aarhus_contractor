@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Icon from '../../../../components/AppIcon';
 /**
  * UsersStats Component
  * Displays user statistics and metrics
@@ -113,19 +113,11 @@ const UsersStats = ({ users = [], loading = false }) => {
 						<div className='flex items-center'>
 							<div className='flex-shrink-0'>
 								<div className='w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center'>
-									<svg
-										className='w-5 h-5 text-white'
-										fill='none'
-										stroke='currentColor'
-										viewBox='0 0 24 24'
-									>
-										<path
-											strokeLinecap='round'
-											strokeLinejoin='round'
-											strokeWidth={2}
-											d='M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z'
-										/>
-									</svg>
+									<Icon
+										name='Users'
+										color='white'
+										size={20}
+									/>
 								</div>
 							</div>
 							<div className='ml-5 w-0 flex-1'>
@@ -147,19 +139,11 @@ const UsersStats = ({ users = [], loading = false }) => {
 						<div className='flex items-center'>
 							<div className='flex-shrink-0'>
 								<div className='w-8 h-8 bg-green-500 rounded-md flex items-center justify-center'>
-									<svg
-										className='w-5 h-5 text-white'
-										fill='none'
-										stroke='currentColor'
-										viewBox='0 0 24 24'
-									>
-										<path
-											strokeLinecap='round'
-											strokeLinejoin='round'
-											strokeWidth={2}
-											d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-										/>
-									</svg>
+									<Icon
+										name='CircleCheck'
+										color='white'
+										size={20}
+									/>
 								</div>
 							</div>
 							<div className='ml-5 w-0 flex-1'>
@@ -181,19 +165,11 @@ const UsersStats = ({ users = [], loading = false }) => {
 						<div className='flex items-center'>
 							<div className='flex-shrink-0'>
 								<div className='w-8 h-8 bg-red-500 rounded-md flex items-center justify-center'>
-									<svg
-										className='w-5 h-5 text-white'
-										fill='none'
-										stroke='currentColor'
-										viewBox='0 0 24 24'
-									>
-										<path
-											strokeLinecap='round'
-											strokeLinejoin='round'
-											strokeWidth={2}
-											d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z'
-										/>
-									</svg>
+									<Icon
+										name='CircleX'
+										color='white'
+										size={20}
+									/>
 								</div>
 							</div>
 							<div className='ml-5 w-0 flex-1'>
@@ -215,19 +191,11 @@ const UsersStats = ({ users = [], loading = false }) => {
 						<div className='flex items-center'>
 							<div className='flex-shrink-0'>
 								<div className='w-8 h-8 bg-purple-500 rounded-md flex items-center justify-center'>
-									<svg
-										className='w-5 h-5 text-white'
-										fill='none'
-										stroke='currentColor'
-										viewBox='0 0 24 24'
-									>
-										<path
-											strokeLinecap='round'
-											strokeLinejoin='round'
-											strokeWidth={2}
-											d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'
-										/>
-									</svg>
+									<Icon
+										name='ChartNoAxesCombined'
+										color='white'
+										size={20}
+									/>
 								</div>
 							</div>
 							<div className='ml-5 w-0 flex-1'>
@@ -244,9 +212,8 @@ const UsersStats = ({ users = [], loading = false }) => {
 					</div>
 				</div>
 			</div>
-
 			{/* Role Distribution */}
-			<div className='bg-white shadow rounded-lg p-6'>
+			{/* <div className='bg-white shadow rounded-lg p-6'>
 				<h3 className='text-lg font-medium text-gray-900 mb-4'>
 					Users by Role
 				</h3>
@@ -286,9 +253,8 @@ const UsersStats = ({ users = [], loading = false }) => {
 						</div>
 					))}
 				</div>
-			</div>
-
-			{/* Additional Metrics */}
+			</div> */}
+			{/* Additional Metrics
 			<div className='mt-6 grid grid-cols-1 md:grid-cols-2 gap-6'>
 				<div className='bg-white shadow rounded-lg p-6'>
 					<h4 className='text-md font-medium text-gray-900 mb-2'>
@@ -316,7 +282,7 @@ const UsersStats = ({ users = [], loading = false }) => {
 						%
 					</p>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

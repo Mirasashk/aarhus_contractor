@@ -31,6 +31,7 @@ import AdminEmployees from './admin/pages/employees';
 import { UsersProvider } from './contexts/UsersContext';
 import AdminProfile from './admin/pages/profile';
 import AdminUsers from './admin/pages/users';
+import UserDetail from './admin/pages/userDetails/components/UserDetail';
 
 const Routes = () => {
 	return (
@@ -95,6 +96,10 @@ const Routes = () => {
 						<Route
 							path='users'
 							element={<AdminUsers />}
+						/>
+						<Route
+							path='users/:userId'
+							element={<UserDetail />}
 						/>
 						<Route
 							path='projects'

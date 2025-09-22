@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Icon from '../../../../components/AppIcon';
 
 /**
  * UsersTable Component
@@ -16,8 +18,7 @@ const UsersTable = ({
 	sortBy,
 	sortOrder,
 }) => {
-	const [editingUser, setEditingUser] = useState(null);
-	const [editForm, setEditForm] = useState({});
+	const navigate = useNavigate();
 
 	/**
 	 * Filter and sort users based on props
@@ -111,37 +112,10 @@ const UsersTable = ({
 	};
 
 	/**
-	 * Start editing user
+	 * Navigate to user detail page
 	 */
-	const startEditing = (user) => {
-		setEditingUser(user.uid);
-		setEditForm({
-			firstName: user.firstName || '',
-			lastName: user.lastName || '',
-			email: user.email || '',
-			phone: user.phone || '',
-			role: user.role || 'employee',
-		});
-	};
-
-	/**
-	 * Cancel editing
-	 */
-	const cancelEditing = () => {
-		setEditingUser(null);
-		setEditForm({});
-	};
-
-	/**
-	 * Save user edits
-	 */
-	const saveEdit = async () => {
-		try {
-			await updateUser(editingUser, editForm);
-			cancelEditing();
-		} catch (error) {
-			console.error('Error updating user:', error);
-		}
+	const handleViewUser = (userId) => {
+		navigate(`/admin/users/${userId}`);
 	};
 
 	/**
@@ -247,123 +221,29 @@ const UsersTable = ({
 										</div>
 										<div className='ml-4'>
 											<div className='text-sm font-medium text-gray-900'>
-												{editingUser === user.uid ? (
-													<div className='space-y-1'>
-														<input
-															type='text'
-															value={
-																editForm.firstName
-															}
-															onChange={(e) =>
-																setEditForm({
-																	...editForm,
-																	firstName:
-																		e.target
-																			.value,
-																})
-															}
-															className='block w-full text-sm border-gray-300 rounded-md'
-														/>
-														<input
-															type='text'
-															value={
-																editForm.lastName
-															}
-															onChange={(e) =>
-																setEditForm({
-																	...editForm,
-																	lastName:
-																		e.target
-																			.value,
-																})
-															}
-															className='block w-full text-sm border-gray-300 rounded-md'
-														/>
-													</div>
-												) : (
-													`${user.firstName} ${user.lastName}`
-												)}
-											</div>
-											<div className='text-sm text-gray-500'>
-												ID: {user.employeeId}
+												{`${user.firstName} ${user.lastName}`}
 											</div>
 										</div>
 									</div>
 								</td>
 								<td className='px-6 py-4 whitespace-nowrap'>
 									<div className='text-sm text-gray-900'>
-										{editingUser === user.uid ? (
-											<div className='space-y-1'>
-												<input
-													type='email'
-													value={editForm.email}
-													onChange={(e) =>
-														setEditForm({
-															...editForm,
-															email: e.target
-																.value,
-														})
-													}
-													className='block w-full text-sm border-gray-300 rounded-md'
-												/>
-												<input
-													type='tel'
-													value={editForm.phone}
-													onChange={(e) =>
-														setEditForm({
-															...editForm,
-															phone: e.target
-																.value,
-														})
-													}
-													className='block w-full text-sm border-gray-300 rounded-md'
-													placeholder='Phone'
-												/>
+										<div>{user.email}</div>
+										{user.phone && (
+											<div className='text-gray-500'>
+												{user.phone}
 											</div>
-										) : (
-											<>
-												<div>{user.email}</div>
-												{user.phone && (
-													<div className='text-gray-500'>
-														{user.phone}
-													</div>
-												)}
-											</>
 										)}
 									</div>
 								</td>
 								<td className='px-6 py-4 whitespace-nowrap'>
-									{editingUser === user.uid ? (
-										<select
-											value={editForm.role}
-											onChange={(e) =>
-												setEditForm({
-													...editForm,
-													role: e.target.value,
-												})
-											}
-											className='block w-full text-sm border-gray-300 rounded-md'
-										>
-											<option value='employee'>
-												Employee
-											</option>
-											<option value='manager'>
-												Manager
-											</option>
-											<option value='admin'>Admin</option>
-											<option value='contractor'>
-												Contractor
-											</option>
-										</select>
-									) : (
-										<span
-											className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getRoleBadgeColor(
-												user.role
-											)}`}
-										>
-											{user.role}
-										</span>
-									)}
+									<span
+										className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getRoleBadgeColor(
+											user.role
+										)}`}
+									>
+										{user.role}
+									</span>
 								</td>
 								<td className='px-6 py-4 whitespace-nowrap'>
 									<span
@@ -377,58 +257,43 @@ const UsersTable = ({
 									</span>
 								</td>
 								<td className='px-6 py-4 whitespace-nowrap text-sm text-gray-500'>
-									{formatDate(user.createdAt)}
+									{formatDate(user.createdAt.toDate())}
 								</td>
 								<td className='px-6 py-4 whitespace-nowrap text-sm font-medium'>
-									{editingUser === user.uid ? (
-										<div className='flex space-x-2'>
-											<button
-												onClick={saveEdit}
-												className='text-green-600 hover:text-green-900'
-											>
-												Save
-											</button>
-											<button
-												onClick={cancelEditing}
-												className='text-gray-600 hover:text-gray-900'
-											>
-												Cancel
-											</button>
-										</div>
-									) : (
-										<div className='flex space-x-2'>
-											<button
-												onClick={() =>
-													startEditing(user)
-												}
-												className='text-blue-600 hover:text-blue-900'
-											>
-												Edit
-											</button>
-											<button
-												onClick={() =>
-													handleToggleStatus(user)
-												}
-												className={`${
-													user.isActive
-														? 'text-yellow-600 hover:text-yellow-900'
-														: 'text-green-600 hover:text-green-900'
-												}`}
-											>
-												{user.isActive
-													? 'Deactivate'
-													: 'Activate'}
-											</button>
-											<button
-												onClick={() =>
-													handleDeleteUser(user.uid)
-												}
-												className='text-red-600 hover:text-red-900'
-											>
-												Delete
-											</button>
-										</div>
-									)}
+									<div className='flex space-x-2'>
+										<button
+											onClick={() =>
+												handleViewUser(user.id)
+											}
+											className='text-blue-600 hover:text-blue-900'
+										>
+											<Icon name='Eye' />
+										</button>
+										<button
+											onClick={() =>
+												handleToggleStatus(user)
+											}
+											className={`${
+												user.isActive
+													? 'text-yellow-600 hover:text-yellow-900'
+													: 'text-green-600 hover:text-green-900'
+											}`}
+										>
+											{user.isActive ? (
+												<Icon name='CircleX' />
+											) : (
+												<Icon name='CircleCheck' />
+											)}
+										</button>
+										<button
+											onClick={() =>
+												handleDeleteUser(user.uid)
+											}
+											className='text-red-600 hover:text-red-900'
+										>
+											<Icon name='Trash' />
+										</button>
+									</div>
 								</td>
 							</tr>
 						))}

@@ -12,7 +12,10 @@
 		"start:frontend": "cd frontend && npm run serve",
 		"start:backend": "cd backend && npm start",
 		"install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
-		"clean": "rm -rf node_modules frontend/node_modules backend/node_modules"
+		"clean": "rm -rf node_modules frontend/node_modules backend/node_modules",
+		"deploy": "npm run deploy:frontend && npm run deploy:backend",
+		"deploy:frontend": "cd frontend && firebase deploy --only hosting",
+		"deploy:backend": "cd backend && firebase deploy --only apphosting"
 	},
 	"devDependencies": {
 		"concurrently": "^8.2.2"

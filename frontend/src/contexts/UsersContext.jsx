@@ -5,7 +5,7 @@ import React, {
 	useEffect,
 	useCallback,
 } from 'react';
-import usersApi from '../services/usersApi';
+import { usersService } from '../firebase/usersService';
 
 /**
  * Users Context
@@ -45,9 +45,14 @@ export const UsersProvider = ({ children }) => {
 			setError(null);
 
 			try {
-				const response = await usersApi.getAllUsers();
-				setUsers(response.users || []);
-				setLastFetch(now);
+				const response = await usersService.getAllUsers();
+				if (response.success) {
+					setUsers(response.data || []);
+					setLastFetch(now);
+					console.log(response.data);
+				} else {
+					setError(response.error || 'Failed to fetch users');
+				}
 			} catch (err) {
 				setError(err.message || 'Failed to fetch users');
 				console.error('Error fetching users:', err);
@@ -66,8 +71,13 @@ export const UsersProvider = ({ children }) => {
 		setError(null);
 
 		try {
-			const response = await usersApi.getUserById(userId);
-			return response.user;
+			const response = await usersService.getUserById(userId);
+			if (response.success) {
+				return response.data;
+			} else {
+				setError(response.error || 'Failed to fetch user');
+				throw new Error(response.error);
+			}
 		} catch (err) {
 			setError(err.message || 'Failed to fetch user');
 			console.error('Error fetching user:', err);
@@ -85,10 +95,15 @@ export const UsersProvider = ({ children }) => {
 		setError(null);
 
 		try {
-			const response = await usersApi.createUser(userData);
-			// Add the new user to the list
-			setUsers((prevUsers) => [...prevUsers, response.user]);
-			return response.user;
+			const response = await usersService.createUser(userData);
+			if (response.success) {
+				// Add the new user to the list
+				setUsers((prevUsers) => [...prevUsers, response.data]);
+				return response.data;
+			} else {
+				setError(response.error || 'Failed to create user');
+				throw new Error(response.error);
+			}
 		} catch (err) {
 			setError(err.message || 'Failed to create user');
 			console.error('Error creating user:', err);
@@ -106,14 +121,21 @@ export const UsersProvider = ({ children }) => {
 		setError(null);
 
 		try {
-			const response = await usersApi.updateUser(userId, updateData);
-			// Update the user in the list
-			setUsers((prevUsers) =>
-				prevUsers.map((user) =>
-					user.uid === userId ? { ...user, ...response.user } : user
-				)
-			);
-			return response.user;
+			const response = await usersService.updateUser(userId, updateData);
+			if (response.success) {
+				// Update the user in the list
+				setUsers((prevUsers) =>
+					prevUsers.map((user) =>
+						user.id === userId
+							? { ...user, ...response.data }
+							: user
+					)
+				);
+				return response.data;
+			} else {
+				setError(response.error || 'Failed to update user');
+				throw new Error(response.error);
+			}
 		} catch (err) {
 			setError(err.message || 'Failed to update user');
 			console.error('Error updating user:', err);
@@ -131,11 +153,16 @@ export const UsersProvider = ({ children }) => {
 		setError(null);
 
 		try {
-			await usersApi.deleteUser(userId);
-			// Remove the user from the list
-			setUsers((prevUsers) =>
-				prevUsers.filter((user) => user.uid !== userId)
-			);
+			const response = await usersService.deleteUser(userId);
+			if (response.success) {
+				// Remove the user from the list
+				setUsers((prevUsers) =>
+					prevUsers.filter((user) => user.id !== userId)
+				);
+			} else {
+				setError(response.error || 'Failed to delete user');
+				throw new Error(response.error);
+			}
 		} catch (err) {
 			setError(err.message || 'Failed to delete user');
 			console.error('Error deleting user:', err);
