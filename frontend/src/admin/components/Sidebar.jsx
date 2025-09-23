@@ -20,6 +20,7 @@ import {
 	XMarkIcon,
 	ChatBubbleBottomCenterTextIcon,
 	Cog6ToothIcon,
+	BuildingOfficeIcon,
 } from '@heroicons/react/24/outline';
 import { useAuth } from '../../hooks/useFirebase';
 
@@ -34,6 +35,11 @@ const navigation = [
 		name: 'Users',
 		href: '/admin/users',
 		icon: UsersIcon,
+	},
+	{
+		name: 'Build Sites',
+		href: '/admin/build-sites',
+		icon: BuildingOfficeIcon,
 	},
 	{
 		name: 'Employees',
