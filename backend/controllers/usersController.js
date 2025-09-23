@@ -156,6 +156,7 @@ const createUser = async (req, res) => {
 		const userWithCustomData = {
 			...formattedUser,
 			...user.toObject(),
+			uid: userRecord.uid, // Include the Firebase Auth UID
 		};
 
 		res.status(201).json({
@@ -330,10 +331,73 @@ const deleteUser = async (req, res) => {
 	}
 };
 
+/**
+ * Update user photo URL
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
+const updateUserPhoto = async (req, res) => {
+	try {
+		const { uid } = req.params;
+		const { photoURL } = req.body;
+
+		if (!uid) {
+			return res.status(400).json({
+				success: false,
+				error: 'User ID is required',
+			});
+		}
+
+		if (!photoURL) {
+			return res.status(400).json({
+				success: false,
+				error: 'Photo URL is required',
+			});
+		}
+
+		// Check if user exists
+		try {
+			await auth.getUser(uid);
+		} catch (error) {
+			if (error.code === 'auth/user-not-found') {
+				return res.status(404).json({
+					success: false,
+					error: 'User not found',
+				});
+			}
+			throw error;
+		}
+
+		// Update Firebase Auth user photoURL
+		await auth.updateUser(uid, {
+			photoURL: photoURL,
+		});
+
+		// Update Firestore user document
+		await db.collection('users').doc(uid).update({
+			photoURL: photoURL,
+			updatedAt: new Date().toISOString(),
+		});
+
+		res.json({
+			success: true,
+			message: 'User photo updated successfully',
+		});
+	} catch (error) {
+		console.error('Error updating user photo:', error);
+		res.status(500).json({
+			success: false,
+			error: 'Failed to update user photo',
+			message: error.message,
+		});
+	}
+};
+
 module.exports = {
 	getAllUsers,
 	getUserById,
 	createUser,
 	updateUser,
 	deleteUser,
+	updateUserPhoto,
 };

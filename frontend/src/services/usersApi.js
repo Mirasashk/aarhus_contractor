@@ -85,6 +85,25 @@ export const deleteUser = async (userId) => {
 };
 
 /**
+ * Update user photo URL
+ * @param {string} userId - User ID
+ * @param {string} photoURL - Photo URL
+ * @returns {Promise<Object>} API response
+ */
+export const updateUserPhoto = async (userId, photoURL) => {
+	try {
+		const response = await api.patch(
+			`${API_ENDPOINTS.USERS.BASE}/${userId}/photo`,
+			{ photoURL }
+		);
+		return response.data;
+	} catch (error) {
+		console.error(`Error updating user photo ${userId}:`, error);
+		throw error;
+	}
+};
+
+/**
  * Health check
  * @returns {Promise<Object>} API response with health status
  */
@@ -105,6 +124,7 @@ const usersApi = {
 	createUser,
 	updateUser,
 	deleteUser,
+	updateUserPhoto,
 	healthCheck,
 };
 

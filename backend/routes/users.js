@@ -5,6 +5,7 @@ const {
 	createUser,
 	updateUser,
 	deleteUser,
+	updateUserPhoto,
 } = require('../controllers/usersController');
 const { verifyToken } = require('../middleware/auth');
 const {
@@ -31,5 +32,8 @@ router.put('/:uid', validateUserUpdate, updateUser);
 
 // DELETE /api/users/:uid - Delete user
 router.delete('/:uid', deleteUser);
+
+// PATCH /api/users/:uid/photo - Update user photo URL
+router.patch('/:uid/photo', updateUserPhoto);
 
 module.exports = router;

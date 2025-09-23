@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import ImageUpload from './ImageUpload';
+import { userImageService } from '../../../../firebase/userImageService';
+import usersApi from '../../../../services/usersApi';
 
 /**
  * CreateUserModal Component
  * Modal for creating new users
  */
-const CreateUserModal = ({ isOpen, onClose, createUser, initialData = {} }) => {
+const CreateUserModal = ({
+	isOpen,
+	onClose,
+	createUser,
+	updateUser,
+	initialData = {},
+}) => {
 	const [formData, setFormData] = useState({
 		email: '',
 		firstName: '',
@@ -45,6 +54,8 @@ const CreateUserModal = ({ isOpen, onClose, createUser, initialData = {} }) => {
 	};
 	const [errors, setErrors] = useState({});
 	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [selectedImageFile, setSelectedImageFile] = useState(null);
+	const [isUploadingImage, setIsUploadingImage] = useState(false);
 
 	/**
 	 * Handle form input changes
@@ -115,6 +126,31 @@ const CreateUserModal = ({ isOpen, onClose, createUser, initialData = {} }) => {
 	};
 
 	/**
+	 * Handle image selection
+	 */
+	const handleImageSelect = (file) => {
+		setSelectedImageFile(file);
+		// Clear any image-related errors
+		if (errors.photoURL) {
+			setErrors((prev) => ({
+				...prev,
+				photoURL: '',
+			}));
+		}
+	};
+
+	/**
+	 * Handle image removal
+	 */
+	const handleImageRemove = () => {
+		setSelectedImageFile(null);
+		setFormData((prev) => ({
+			...prev,
+			photoURL: '',
+		}));
+	};
+
+	/**
 	 * Handle form submission
 	 */
 	const handleSubmit = async (e) => {
@@ -125,8 +161,73 @@ const CreateUserModal = ({ isOpen, onClose, createUser, initialData = {} }) => {
 		}
 
 		setIsSubmitting(true);
+		setIsUploadingImage(false);
+
 		try {
-			await createUser(formData);
+			// First, create the user without the image
+			const userData = {
+				...formData,
+				photoURL: '', // Will be updated after image upload
+			};
+
+			const createdUser = await createUser(userData);
+			console.log('Created user:', createdUser);
+
+			// If user was created successfully and we have an image file, upload it
+			if (createdUser && selectedImageFile) {
+				console.log(
+					'Starting image upload for user:',
+					createdUser.uid || createdUser.id
+				);
+				setIsUploadingImage(true);
+
+				try {
+					const uploadResult = await userImageService.uploadUserImage(
+						createdUser.uid || createdUser.id,
+						selectedImageFile
+					);
+
+					if (uploadResult.success) {
+						// Update the user with the image URL
+						try {
+							await usersApi.updateUserPhoto(
+								createdUser.uid || createdUser.id,
+								uploadResult.imageUrl
+							);
+							console.log('User photo updated successfully');
+
+							// Update the user in the context with the new photoURL
+							if (updateUser) {
+								await updateUser(
+									createdUser.uid || createdUser.id,
+									{ photoURL: uploadResult.imageUrl }
+								);
+								console.log(
+									'User updated in context with new photoURL'
+								);
+							}
+						} catch (updateError) {
+							console.error(
+								'Failed to update user photo:',
+								updateError
+							);
+							// Don't fail the entire operation if photo update fails
+						}
+					} else {
+						console.error(
+							'Failed to upload image:',
+							uploadResult.error
+						);
+						// Don't fail the entire operation if image upload fails
+					}
+				} catch (imageError) {
+					console.error('Error uploading image:', imageError);
+					// Don't fail the entire operation if image upload fails
+				} finally {
+					setIsUploadingImage(false);
+				}
+			}
+
 			handleClose();
 		} catch (error) {
 			console.error('Error creating user:', error);
@@ -149,6 +250,7 @@ const CreateUserModal = ({ isOpen, onClose, createUser, initialData = {} }) => {
 			}
 		} finally {
 			setIsSubmitting(false);
+			setIsUploadingImage(false);
 		}
 	};
 
@@ -166,6 +268,8 @@ const CreateUserModal = ({ isOpen, onClose, createUser, initialData = {} }) => {
 			photoURL: '',
 		});
 		setErrors({});
+		setSelectedImageFile(null);
+		setIsUploadingImage(false);
 		onClose();
 	};
 
@@ -337,22 +441,19 @@ const CreateUserModal = ({ isOpen, onClose, createUser, initialData = {} }) => {
 									</div>
 								</div>
 
-								{/* Photo URL */}
+								{/* Profile Image */}
 								<div>
-									<label className='block text-sm font-medium text-gray-700'>
-										Photo URL
+									<label className='block text-sm font-medium text-gray-700 mb-2'>
+										Profile Image
 									</label>
-									<input
-										type='url'
-										name='photoURL'
-										value={formData.photoURL}
-										onChange={handleInputChange}
-										className={`mt-1 block w-full border rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm ${
-											errors.photoURL
-												? 'border-red-300'
-												: 'border-gray-300'
-										}`}
-										placeholder='https://example.com/photo.jpg'
+									<ImageUpload
+										onImageSelect={handleImageSelect}
+										onImageRemove={handleImageRemove}
+										currentImageUrl={formData.photoURL}
+										disabled={
+											isSubmitting || isUploadingImage
+										}
+										className='mb-2'
 									/>
 									{errors.photoURL && (
 										<p className='mt-1 text-sm text-red-600'>
@@ -381,10 +482,14 @@ const CreateUserModal = ({ isOpen, onClose, createUser, initialData = {} }) => {
 						<div className='bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse'>
 							<button
 								type='submit'
-								disabled={isSubmitting}
+								disabled={isSubmitting || isUploadingImage}
 								className='w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm disabled:opacity-50 disabled:cursor-not-allowed'
 							>
-								{isSubmitting ? 'Creating...' : 'Create User'}
+								{isUploadingImage
+									? 'Uploading image...'
+									: isSubmitting
+									? 'Creating...'
+									: 'Create User'}
 							</button>
 							<button
 								type='button'

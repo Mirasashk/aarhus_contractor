@@ -92,8 +92,9 @@ const Users = () => {
 	};
 
 	const handleCreateUserSubmit = async (data) => {
-		await createUser(data);
+		const result = await createUser(data);
 		await refreshUsers();
+		return result;
 	};
 
 	// Load active employees when employee select modal opens
@@ -224,6 +225,7 @@ const Users = () => {
 				isOpen={showCreateModal}
 				onClose={handleCloseCreateModal}
 				createUser={handleCreateUserSubmit}
+				updateUser={updateUser}
 				initialData={initialUserData}
 			/>
 
